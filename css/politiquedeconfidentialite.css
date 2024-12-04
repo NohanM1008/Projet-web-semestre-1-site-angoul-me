@@ -1,0 +1,112 @@
+/* Politique de confidentialité - Styles principaux */
+
+
+/* Le corps de la page */
+body {
+    font-family: Arial, sans-serif; /* Utilisation de la police Arial, sans-serif en cas de problème avec Arial */
+    line-height: 1.6; /* Espacement des lignes pour une meilleure lisibilité */
+    margin: 0; /* Suppression des marges par défaut */
+    padding: 0; /* Suppression du padding par défaut */
+    background-color: #f4f4f9; /* Couleur de fond douce et claire pour le site */
+    color: #333; /* Couleur de texte sombre pour un bon contraste avec le fond */
+}
+
+
+/* Style pour le titre principal */
+.titre {
+    font-size: 2rem; /* Taille de police relativement grande pour les titres */
+    font-weight: bold; /* Mise en gras du titre */
+    text-align: center; /* Centrage du titre */
+    margin: 20px 0; /* Marges verticales autour du titre */
+    color: #2c3e50; /* Couleur sombre et professionnelle pour le titre */
+}
+
+
+/* Style pour les textes principaux */
+.texte {
+    margin: 10px 20px; /* Espacement autour du texte */
+    font-size: 1rem; /* Taille de police normale pour le texte */
+    color: #2c3e50; /* Couleur sombre pour une bonne lisibilité */
+}
+
+
+/* Style des liens */
+.lien {
+    color: #3498db; /* Couleur bleue pour les liens */
+    text-decoration: none; /* Suppression du soulignement par défaut */
+    font-weight: bold; /* Mise en gras des liens pour les rendre plus visibles */
+}
+
+
+/* Effet au survol des liens */
+.lien:hover {
+    color: #1abc9c; /* Changement de couleur au survol */
+    text-decoration: underline; /* Soulignement au survol */
+}
+
+
+/* Style pour les listes ordonnées */
+ol {
+    margin: 20px 40px; /* Espacement autour de la liste */
+    padding: 0; /* Suppression du padding */
+    list-style: decimal inside; /* Utilisation de chiffres pour les listes, avec une indentation */
+}
+
+
+ol li {
+    margin-bottom: 10px; /* Espacement entre les éléments de la liste */
+}
+
+
+p {
+    margin: 10px 20px; /* Marges autour des paragraphes */
+    font-size: 1rem; /* Taille de police standard pour les paragraphes */
+}
+
+
+/* Media Query pour les écrans de moins de 768px de large (téléphones et petits écrans) */
+@media (max-width: 768px) {
+    .titre {
+        font-size: 1.5rem; /* Réduction de la taille du titre pour les petits écrans */
+    }
+
+
+    .texte {
+        font-size: 0.9rem; /* Réduction de la taille de texte pour améliorer la lisibilité sur petits écrans */
+    }
+
+
+    ol {
+        margin: 10px 20px; /* Réduction des marges de la liste pour mieux s'adapter à l'écran */
+    }
+}
+
+
+/* Media Query pour les écrans de moins de 480px de large (smartphones très petits) */
+@media (max-width: 480px) {
+    .titre {
+        font-size: 1.3rem; /* Réduction supplémentaire de la taille du titre pour les écrans très petits */
+    }
+
+
+    .texte {
+        font-size: 0.8rem; /* Réduction de la taille du texte pour s'adapter aux petits écrans */
+        margin: 5px 10px; /* Réduction des marges autour du texte */
+    }
+
+
+    ol {
+        margin: 10px 15px; /* Réduction des marges de la liste */
+    }
+
+
+    ol li {
+        font-size: 0.9rem; /* Réduction de la taille de la police des éléments de la liste */
+    }
+
+
+    p {
+        font-size: 0.9rem; /* Réduction de la taille des paragraphes */
+        margin: 5px 10px; /* Espacement réduit pour mieux s'adapter à l'écran */
+    }
+}

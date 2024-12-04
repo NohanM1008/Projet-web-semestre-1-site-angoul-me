@@ -1,0 +1,226 @@
+/* Styles généraux pour toute la page */
+* {
+    font-family: Arial, Helvetica, sans-serif; /* Définit la police de la page */
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime les espacements par défaut */
+    box-sizing: border-box; /* Inclut les bordures et le padding dans la taille des éléments */
+}
+
+
+/* Styles pour les boîtes de contenu */
+.encadre, .encadre2 {
+    max-width: 500px; /* Largeur maximale de la boîte */
+    width: 100%; /* La boîte prend toute la largeur disponible */
+    margin: 0 auto 30px; /* Centre la boîte et ajoute un espace en bas */
+    padding: 20px; /* Ajoute de l'espace à l'intérieur de la boîte */
+    border: 1px solid #ddd; /* Ajoute une bordure légère */
+    border-radius: 8px; /* Arrondit les coins de la boîte */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une ombre subtile autour de la boîte */
+    background-color: #f9f9f9; /* Définit une couleur de fond claire */
+    display: flex; /* Utilise le flexbox pour organiser le contenu */
+    flex-direction: column; /* Organise les éléments en colonne */
+    justify-content: center; /* Centre les éléments verticalement */
+    align-items: center; /* Centre les éléments horizontalement */
+    text-align: center; /* Centre le texte */
+}
+
+
+.encadre:first-of-type {
+    margin-bottom: 30px; /* Ajoute un espace en bas du premier encadré */
+}
+
+
+/* Styles des boutons */
+input[type="submit"], input[type="reset"] {
+    background-color: #4CAF50; /* Fond vert */
+    color: #fff; /* Texte blanc */
+    padding: 10px 20px; /* Ajoute de l'espace à l'intérieur du bouton */
+    border: none; /* Supprime la bordure par défaut */
+    border-radius: 4px; /* Arrondit légèrement les coins du bouton */
+    cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */
+    margin-top: 10px; /* Ajoute un espace au-dessus du bouton */
+    font-weight: bold; /* Met le texte en gras */
+    transition: background-color 0.3s, transform 0.3s; /* Animation au survol */
+}
+
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #45a049; /* Change la couleur au survol */
+    transform: scale(1.05); /* Agrandit légèrement le bouton au survol */
+}
+
+
+/* Styles des liens dans le deuxième encadré */
+.encadre2 a {
+    text-decoration: none; /* Enlève le soulignement du lien */
+    font-size: 18px; /* Définit la taille du texte */
+    color: #007bff; /* Définit la couleur du texte */
+    font-weight: bold; /* Met le texte en gras */
+    transition: color 0.3s, transform 0.3s; /* Animation au survol */
+}
+
+
+.encadre2 a:hover {
+    color: #0056b3; /* Change la couleur du lien au survol */
+    transform: scale(1.1); /* Agrandit légèrement le lien au survol */
+}
+
+
+/* Styles pour le footer */
+footer {
+    display: flex; /* Utilise le flexbox pour organiser les éléments du footer */
+    justify-content: space-between; /* Espacement égal entre les éléments */
+    align-items: flex-start; /* Aligne les éléments en haut */
+    background-color: #f0f8ff; /* Définit la couleur de fond du footer */
+    color: #fff; /* Texte blanc */
+    padding: 20px; /* Ajoute de l'espace à l'intérieur du footer */
+    flex-wrap: wrap; /* Permet aux éléments de se répartir sur plusieurs lignes */
+}
+
+
+.footer-gauche img {
+    max-width: 150px; /* Limite la largeur des images */
+    margin: 15%; /* Ajoute un espace autour de l'image */
+}
+
+
+.footer-centre {
+    display: flex; /* Utilise le flexbox pour organiser le contenu du centre */
+    flex-direction: column; /* Organise les éléments en colonne */
+    align-items: center; /* Centre les éléments horizontalement */
+    gap: 20px; /* Ajoute un espace entre les éléments */
+}
+
+
+.carte iframe {
+    width: 100%; /* Prend toute la largeur disponible */
+    height: 250px; /* Définit la hauteur de la carte */
+    border: none; /* Supprime la bordure */
+    border-radius: 8px; /* Arrondit les coins */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une ombre autour de l'iframe */
+}
+
+
+.logos a img {
+    width: 40px; /* Définit la taille des icônes des réseaux sociaux */
+    height: 40px; /* Définit la taille des icônes des réseaux sociaux */
+    margin: 0 10px; /* Ajoute un espace horizontal entre les icônes */
+    transition: transform 0.3s; /* Animation au survol */
+}
+
+
+.logos a img:hover {
+    transform: scale(1.2); /* Agrandit les icônes au survol */
+}
+
+
+.footer-droite {
+    margin: 5%; /* Ajoute un espace autour de la section de droite */
+}
+
+
+.footer-droite ul {
+    list-style: none; /* Enlève les puces des listes */
+    padding: 0; /* Supprime le padding par défaut */
+    color: #6db784; /* Définit la couleur du texte */
+}
+
+
+.footer-droite li {
+    margin-bottom: 10px; /* Ajoute un espace entre les éléments de la liste */
+}
+
+
+.contact {
+    color: #4CAF50; /* Définit la couleur du lien de contact */
+    text-decoration: none; /* Enlève le soulignement du lien */
+    font-weight: bold; /* Met le texte en gras */
+    transition: color 0.3s; /* Animation au survol */
+}
+
+
+.contact:hover {
+    color: #37a645; /* Change la couleur du lien au survol */
+}
+
+
+.lien {
+    text-decoration: none; /* Enlève le soulignement du lien */
+    color: #d3d3d3; /* Définit la couleur du texte */
+    transition: color 0.3s; /* Animation au survol */
+}
+
+
+.lien:hover {
+    color: #4f4f4f; /* Change la couleur du lien au survol */
+}
+
+
+/* Media Queries pour les appareils mobiles */
+
+
+@media (max-width: 768px) {
+    /* Pour les tablettes et petits écrans */
+    .encadre, .encadre2 {
+        padding: 15px; /* Réduit l'espace à l'intérieur des boîtes */
+        margin: 10px; /* Réduit l'espace autour des boîtes */
+    }
+
+
+    footer {
+        flex-direction: column; /* Organise les éléments du footer en colonne */
+        align-items: center; /* Centre les éléments du footer */
+    }
+
+
+    .footer-gauche img {
+        margin: 10%; /* Réduit l'espace autour de l'image */
+        max-width: 120px; /* Réduit la taille de l'image */
+    }
+
+
+    .footer-centre {
+        gap: 10px; /* Réduit l'espace entre les éléments du centre */
+    }
+
+
+    .footer-droite ul {
+        text-align: center; /* Centre le texte dans la liste */
+    }
+}
+
+
+@media (max-width: 480px) {
+    /* Pour les très petits écrans, comme les téléphones */
+    input[type="submit"], input[type="reset"] {
+        padding: 8px 15px; /* Réduit la taille des boutons */
+    }
+
+
+    .encadre, .encadre2 {
+        max-width: 90%; /* Réduit la largeur des boîtes */
+        margin: 10px; /* Réduit l'espace autour des boîtes */
+    }
+
+
+    footer {
+        padding: 10px; /* Réduit l'espace à l'intérieur du footer */
+    }
+
+
+    .footer-gauche img {
+        max-width: 100px; /* Réduit la taille de l'image dans le footer */
+        margin: 5%; /* Réduit l'espace autour de l'image */
+    }
+
+
+    .footer-centre {
+        gap: 5px; /* Réduit l'espace entre les éléments du centre */
+    }
+
+
+    .logos a img {
+        width: 35px; /* Réduit la taille des icônes des réseaux sociaux */
+        height: 35px; /* Réduit la taille des icônes des réseaux sociaux */
+    }
+}
