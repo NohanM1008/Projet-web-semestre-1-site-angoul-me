@@ -1,0 +1,68 @@
+:root {
+    --bleufonce: darkslateblue;
+    --bleuclair: lightsteelblue;
+    --blanc: white;
+    --gris: gainsboro;
+    --noir: black;
+}
+
+header {
+    background-color: var(--bleufonce);
+    color: var(--blanc);
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+
+}
+
+header img {
+    width: 24%;
+    position: relative;
+}
+
+header h1 {
+    font-size: 40px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+}
+
+header a {
+    color: var(--blanc);
+    font-size: 18px;
+    text-decoration: none;
+    margin-left: auto; /* Pousse le lien "Se connecter" à l'extrême droite */
+}
+
+nav {
+    background-color: var(--bleuclair);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+nav h1 {
+    font-size: 22px;
+    color: var(--bleufonce);
+    margin-right: 20px;
+}
+
+nav ol {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ol li {
+    margin: 0;
+}
+
+nav ol li a {
+    color: var(--bleufonce);
+    font-size: 20px;
+}
+
+nav ol li a:hover {
+    text-decoration: underline;
+}
