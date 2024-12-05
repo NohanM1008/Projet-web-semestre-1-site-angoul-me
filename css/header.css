@@ -19,9 +19,11 @@ header {
 }
 
 header img {
-    width: 24%;
-    position: relative;
+    width: 4%;
+    position: absolute;
     margin-right: auto; /* Assure que le logo reste à gauche */
+    left:0%;
+    top:1%;
 }
 
 header h1 {
