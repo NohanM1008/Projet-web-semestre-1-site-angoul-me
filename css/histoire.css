@@ -1,0 +1,46 @@
+:root {
+    --bleufonce: darkslateblue;
+    --bleuclair: lightsteelblue;
+    --blanc: white;
+    --gris: gainsboro;
+    --noir: black;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: var(--gris);
+    color: var(--noir);
+}
+main {
+    background-color: var(--blanc);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+main h1 {
+    font-size: 32px;
+    color: var(--bleufonce);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+main h2, main h3 {
+    color: var(--bleufonce);
+    margin-bottom: 10px;
+}
+
+main p {
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
