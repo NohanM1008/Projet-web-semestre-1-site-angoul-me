@@ -5,6 +5,9 @@
     --gris: gainsboro;
     --noir: black;
 }
+logo-site{
+    display: flex;
+}
 
 header {
     background-color: var(--bleufonce);
@@ -65,4 +68,5 @@ nav ol li a {
 
 nav ol li a:hover {
     text-decoration: underline;
+    
 }
