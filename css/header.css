@@ -11,6 +11,7 @@ logo-site{
 
 header {
     background-color: var(--bleufonce);
+    height: 80px;
     color: var(--blanc);
     display: flex;
     align-items: center;

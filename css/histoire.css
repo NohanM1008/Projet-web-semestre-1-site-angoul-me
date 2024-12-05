@@ -16,6 +16,8 @@
 }
 body {
     background-color: var(--gris);
+    background-image: url('/histoire/imgbghistoire.jpg');
+    background-size: cover;
     color: var(--noir);
 }
 main {
