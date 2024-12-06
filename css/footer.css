@@ -72,7 +72,7 @@ footer {
     justify-content: space-between; /* Espacement égal entre les éléments */
     align-items: flex-start; /* Aligne les éléments en haut */
     background-color: #f0f8ff; /* Définit la couleur de fond du footer */
-    color: #fff; /* Texte blanc */
+    color: black; /* Texte noir */
     padding: 20px; /* Ajoute de l'espace à l'intérieur du footer */
     flex-wrap: wrap; /* Permet aux éléments de se répartir sur plusieurs lignes */
 }
