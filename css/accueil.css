@@ -1,13 +1,3 @@
-/* Définition des couleurs et des variables */
-:root {
-    --bleufonce: darkslateblue;
-    --bleuclair: lightsteelblue;
-    --blanc: white;
-    --gris: gainsboro;
-    --noir: black;
-    --grisclair: #f2f2f2;
-}
-
 /* Généralités sur la mise en page */
 * {
     box-sizing: border-box;
@@ -35,14 +25,16 @@ body {
 }
 
 #container .diapo img {
+    width: 100%;
     height: 100%;
-    width: 25%;
-    object-fit: cover;
+    object-fit: cover; /* Remplit le cadre sans déformation */
+    display: block;
 }
 
 #container .diapo {
+    display: flex; /* Aligne les images en ligne */
     height: 100%;
-    width: 400%;
+    width: 400%; /* 4 images */
     position: relative;
     animation-name: diaporama;
     animation-duration: 10s;
@@ -63,27 +55,13 @@ body {
     }
 }
 
-/* Main Content */
-main {
-    background-color: var(--blanc);
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 1200px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-
-main h1 {
-    font-size: 32px;
-    color: var(--bleufonce);
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-section {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+/* Articles dans la section */
+section article img {
+    width: 100%;
+    height: 200px; /* Taille fixe pour les images des articles */
+    object-fit: cover; /* Remplit le cadre sans déformation */
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
 section article {
@@ -100,37 +78,15 @@ section article:hover {
     transform: translateY(-10px);
 }
 
-section h2 {
-    color: var(--bleufonce);
-    font-size: 24px;
-    margin-bottom: 15px;
-}
-
-section p {
-    font-size: 16px;
-    color: var(--noir);
-    margin-bottom: 20px;
-}
-
-section a {
-    color: var(--bleufonce);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-section a:hover {
-    text-decoration: underline;
-}
-
 /* Responsive design */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
+    #container {
+        width: 90%;
+        height: 300px; /* Réduit la hauteur du diaporama */
     }
 
-    nav ol {
-        flex-direction: column;
+    #container .diapo img {
+        object-fit: contain; /* Ajuste les images pour les petits écrans */
     }
 
     section {
@@ -139,19 +95,9 @@ section a:hover {
 
     section article {
         width: 100%;
-        margin-bottom: 20px;
     }
 
-    footer {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    footer .footer-gauche,
-    footer .footer-centre,
-    footer .footer-droite {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 20px;
+    section article img {
+        height: 150px; /* Taille réduite pour les petits écrans */
     }
 }
