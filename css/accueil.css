@@ -1,49 +1,157 @@
-:root{
-    --bleufonce:darkslateblue;
+/* Définition des couleurs et des variables */
+:root {
+    --bleufonce: darkslateblue;
+    --bleuclair: lightsteelblue;
+    --blanc: white;
+    --gris: gainsboro;
+    --noir: black;
+    --grisclair: #f2f2f2;
 }
 
-
-.nav{
-	width: 100%;
-	margin: auto;
-	height: 50px;
+/* Généralités sur la mise en page */
+* {
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
 }
 
+body {
+    background-color: var(--grisclair);
+    color: var(--noir);
+    line-height: 1.6;
+}
+
+/* Diaporama */
 #container {
-	width: 70%;
-	margin: auto;
-	height: 400px;
-	overflow: hidden;
-  }
-  
-  #container .diapo img {
-	height: 400px;
-	width: 25%;
-  }
-  
-  #container .diapo {
-	height: 400px;
-	width: 400%;
-	position: relative;
-	animation-name: diaporama;
-	animation-duration: 10s;
-	animation-direction: alternate;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
-  }
+    width: 75%;
+    margin: auto;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
 
+#container .diapo img {
+    height: 100%;
+    width: 25%;
+    object-fit: cover;
+}
 
-  @keyframes diaporama {
-	0%, 20% {
-	  left: 0%;
-	}
-	
-	40%, 60% {
-	  left: -100%;
-	}
-	
-	80%, 100% {
-	  left: -200%;
-	}
-	
-  }
+#container .diapo {
+    height: 100%;
+    width: 400%;
+    position: relative;
+    animation-name: diaporama;
+    animation-duration: 10s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes diaporama {
+    0%, 20% {
+        left: 0%;
+    }
+    40%, 60% {
+        left: -100%;
+    }
+    80%, 100% {
+        left: -200%;
+    }
+}
+
+/* Main Content */
+main {
+    background-color: var(--blanc);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+main h1 {
+    font-size: 32px;
+    color: var(--bleufonce);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+section article {
+    width: 30%;
+    background-color: var(--grisclair);
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+section article:hover {
+    transform: translateY(-10px);
+}
+
+section h2 {
+    color: var(--bleufonce);
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+section p {
+    font-size: 16px;
+    color: var(--noir);
+    margin-bottom: 20px;
+}
+
+section a {
+    color: var(--bleufonce);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ol {
+        flex-direction: column;
+    }
+
+    section {
+        flex-direction: column;
+    }
+
+    section article {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .footer-gauche,
+    footer .footer-centre,
+    footer .footer-droite {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
