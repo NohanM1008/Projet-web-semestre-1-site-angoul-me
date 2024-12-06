@@ -1,62 +1,51 @@
 <!DOCTYPE html>
 <html lang="fr"> <!-- Déclare que la page est en français -->
     <head>  <!-- La balise head contient des informations non visibles sur la page -->
-        <title> Ville d'Angoulême </title> <!-- Définit le titre de la page qui apparaîtra dans l'onglet du navigateur -->
-        <meta charset="utf-8"> <!-- Définit l'encodage des caractères à UTF-8 pour supporter les caractères spéciaux -->
+        <title> Ville d'Angoulême </title> <!-- On définit le titre de la page -->
+        <meta charset="utf-8"> <!-- On définit l'encodage des caractères à UTF-8 pour que les caractères spéciaux fonctionnent -->
         <link rel="stylesheet" href="../css/compte.css"> <!-- Lien vers le fichier CSS pour le style de cette page -->
-        <link rel="stylesheet" href="../css/footer.css"> <!-- Lien vers le fichier CSS pour le style du footer -->
-        <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/footer.css"> <!-- Lien vers le fichier CSS pour le style du footer de cette page -->
     </head>
     <body> <!-- La balise body contient tout ce qui sera visible sur la page -->
-        <header>
-            <a href="../index.html"><img src="../images/logo.png" alt="Angoulême Logo"></a>
-            <h1>Ville d'Angoulême</h1>
+        <header> <!-- Balise qui contient le contenu de l'ne tête de la page-->
+            <a href="index.html"><img src="../images/logo.png" alt="Angoulême Logo"></a> <!-- Lien vers la page d'accueil avec le logo d'Angoulême -->
+            <h1>Ville d'Angoulême</h1> <!-- Titre principal affiché sur la page -->
         </header>
-        <nav>
-            <h1>Boutique</h1>
-            <ol>
-                <li><a href="../index.html">Accueil</a></li>
-                <li><a href="../html/contact.html">Contact</a></li>
-                <li><a href="../html/loisirs.html">Tourisme et Loisirs</a></li>
-                <li><a href="../html/histoire.html">Histoire</a></li>
-                <li><a href="../html/connexion.html">Se connecter</a></li>
-            </ol>
-        </nav>
         <main> <!-- Balise principale contenant le contenu principal de la page -->
             <h1>Créer un compte</h1> <!-- Titre de la section pour la création d'un compte -->
-            <form method="post" action="transition.html"> <!-- Formulaire pour envoyer les données à un serveur, ici à la page transition -->
+            <form method="post" action="transition.html"> <!-- On définit notre formulaire qui, une fois rempli, renverra vers une page de transition -->
                 <fieldset class="encadre"> <!-- Encadré pour regrouper les champs du formulaire -->
                     <legend class="creercompte">Créer un compte</legend> <!-- Légende qui indique le but du formulaire -->
                     <br>
                     <label>Genre</label> <!-- Label pour le choix du genre -->
-                    <div class="alignement"> <!-- Division pour organiser les boutons radio sur une même ligne -->
+                    <div class="alignement"> <!-- L'utilisation de la balis div pour organiser les boutons radio sur une même ligne -->
                         <input type="radio" name="genre" id="mme" class="grossir"> <!-- Bouton radio pour "Madame" -->
                         <label for="mme">Madame</label> <!-- Label pour le bouton radio "Madame" -->
                         <input type="radio" name="genre" id="mr" class="grossir"> <!-- Bouton radio pour "Monsieur" -->
                         <label for="mr">Monsieur</label> <!-- Label pour le bouton radio "Monsieur" -->
                     </div>
-                    <br><br>
+                    <br><br> <!-- Retour à la ligne -->
                     <label for="nom">Nom :</label> <!-- Label pour le champ "Nom" -->
                     <input type="text" name="nom" id="nom" placeholder="ex : Montagne" class="grossir" required> <!-- Champ de texte pour le nom -->
-                    <br><br>                      
+                    <br><br> <!-- Retour à la ligne -->              
                     <label for="prenom">Prénom :</label> <!-- Label pour le champ "Prénom" -->
                     <input type="text" name="prenom" id="prenom" placeholder="ex : Rosalie" class="grossir" required> <!-- Champ de texte pour le prénom -->
-                    <br><br>
+                    <br><br> <!-- Retour à la ligne -->
                     <label>Date de naissance :</label> <!-- Label pour la date de naissance -->
                     <input type="date"/> <!-- Champ pour entrer la date de naissance -->
                     <br><br> <!-- Retour à la ligne -->
                     <label for="mail">Mail : </label> <!-- Label pour l'email -->
                     <input type="email" name="mail" id="mail" placeholder="ex : alexdelplace@gmail.com" class="grossir" required> <!-- Champ pour l'adresse email -->
-                    <br><br>
+                    <br><br> <!-- Retour à la ligne -->
                     <label for="identifiant">Identifiant : </label> <!-- Label pour l'identifiant -->
                     <input type="text" name="identifiant" id="identifiant" placeholder="ex : TheodortleBison" class="grossir" required> <!-- Champ pour l'identifiant -->
-                    <br><br>
+                    <br><br> <!-- Retour à la ligne -->
                     <label for="mdp">Mot de passe : </label> <!-- Label pour le mot de passe -->
                     <input type="password" name="mdp" id="mdp" placeholder="•••••••••••" class="grossir" required> <!-- Champ pour le mot de passe -->
-                    <br><br>
+                    <br><br> <!-- Retour à la ligne -->
                     <label for="mdp2">Confirmer le mot de passe : </label> <!-- Label pour confirmer le mot de passe -->
                     <input type="password" name="mdp2" id="mdp2" placeholder="•••••••••••" class="grossir" required> <!-- Champ pour la confirmation du mot de passe -->
-                    <br><br>                  
+                    <br><br> <!-- Retour à la ligne -->
                     <input type="submit" name="connexion" id="connexion" value="Créer un compte"> <!-- Bouton pour envoyer le formulaire -->
                     <input type="reset"> <!-- Bouton pour réinitialiser le formulaire -->
                 </fieldset>
@@ -74,16 +63,17 @@
             <div class="footer-centre"> <!-- Partie centrale du footer -->
                 <!-- Section Carte -->
                 <div class="carte">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44627.94880314658!2d0.10382750595865571!3d45.64586530034062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fe2d85032bc499%3A0x405d39260eec0f0!2sAngoulême!5e0!3m2!1sfr!2sfr!4v1733300128398!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=..." class="carte2" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe> <!-- Carte Google Maps intégrée pour localiser Angoulême -->
                 </div>
-       
+        
                 <!-- Section Infos  -->
                 <div class="infos">
                     <dl class="infos2">
                         <dd>Angoulême 16000</dd> <!-- Adresse de la ville -->
                     </dl>
                 </div>
-       
+        
                 <!-- Section Logos -->
                 <div class="logos">
                     <a href="https://www.facebook.com/villeangouleme" target="_blank"><img src="../images/footer/facebook.png" alt="Facebook d'Angoulême" /></a> <!-- Lien vers le Facebook d'Angoulême -->
@@ -97,9 +87,9 @@
                 <ul class="infos1">
                     <li><p>Téléphone :</p><p>05 45 38 92 89</p></li> <!-- Affiche le numéro de téléphone -->
                     <li><a href="contact.html" class="contact">Nous contacter</a></li> <!-- Lien vers la page de contact -->
-                    <li><a href="politiquedeconfidentialite.html" class="lien">Politique de confidentialité</a></li> <!-- Lien vers la politique de confidentialité -->
+                    <li><a href="politiquedeconfidentialite.html" class="lien">Politique de confidentialité</a></li> <!-- Lien vers la politique de confidentialité du site -->
                 </ul>
             </div>
-        </footer>              
+        </footer>               
     </body>
 </html>

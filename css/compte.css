@@ -1,123 +1,99 @@
-/* Application d'une police de caractères à toute la page */
 * {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
+    font-family: Arial, Helvetica, sans-serif; /* On applique la police Arial à toute la page */
+    margin: 0; /* On définit de base qu'on supprime toutes les marges externes à toute la page */
+    padding: 0; /* On définit de base qu'on supprime toutes les espaces internes à toute la page */
+}
+:root {
+    --background-color: #f9f9f9; /* On définit des variables pour les couleurs utlilisées dasn notre code (pour le mode clair) */
+    --background-color2: #F4F4F4; /* Couleur de fond des encadrés */
+    --text-color: #000000; /* Couleur du texte */
+    --button-background-color: #007BFF; /* Couleur de l'arrière-plan dans le bouton */
+    --button-text-color: #ffffff; /* Couleur du texte dans le bouton */
+    --border-color: #ddd; /* Couleur de la bordure de l'encadré */
 }
 
-
-/* Style pour l'encadré principal, avec des propriétés pour la taille, les bordures, et l'alignement */
-.encadre {
-    max-width: 500px;
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
-   
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: center;
-    gap: 10px; /* Réduction de l'espace entre chaque élément */
+@media (prefers-color-scheme: dark) { /* Ce media permet de détecter si l'utilisateur du site est en mode sombre ou non, s'il est en mode sombre, les variables de couleurs changeront avvec celles qui sont définies ci-dessous */
+    :root {
+        --background-color: #1F1F1F; /* Définition de variables pour le mode sombre, ici de la couleur de fond de la page */
+        --background-color2: #2F2F2F; /* Couleur de fond des encadrés */
+        --text-color: #ffffff; /* Couleur du texte */
+        --button-background-color: #d4edda; /* Couleur de l'arrière-plan dans le bouton */
+        --button-text-color: #000000; /* Couleur du texte dans le bouton */
+        --border-color: #000000; /* Couleur de la bordure de l'encadré */
+    }
+}
+body{
+    background-color: var(--background-color); /* On applique un fond d'écran à toute la page */
 }
 
+label, legend {
+    color: var(--text-color); /* On colore les textes dans le formulaire */
+}
+/* Style pour les 2 encadrés */
+.encadre, .encadre2 {
+    width: 500px; /* On définit la longueur de l'encadré */ 
+    height: auto; /* On définit la hauteur de l'encadré comme auto, celà signifie qu'elle sera adaptée à la taille nécessaire du formulaire */
+    margin: 0 auto; /* On centre les éléments horizontalement dans le conteneur */
+    padding: 20px; /* Chaque élément prend un espace de 20px dans les 4 directions (afin d'espacer les éléments) */
+    border: 1px solid var(--border-color) !important; /* On définit la taille de la bordure de l'encadré ainsi que de sa taille et du fait qu'on le voit (solid), de plus, le !important permet de bypass certains problèmes css qui empêchait la couleur de la bordure d'apparaître */
+    border-radius: 8px; /* On définit l'arondissement des bord de l'encadré */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* On définit l'ombre que l'on met au niveau de la bordure de l'encadré afin d'ajouter une touche de style dans notre formulaire */
+    background-color: var(--background-color2) !important; /* On définit la couleur de l'arrière plan de l'intérieur de l'encadré, de plus, le !important permet de bypass certains problèmes css qui empêchait la couleur de l'arrière-plan d'apparaître */
+    display: flex; /* On définit en mode flex, afin de pouvoir bien organiser nos éléments */
+    flex-direction: column; /* Les éléments iront de haut en bas (et non de gauche à droite comme habituellement) */
+    justify-content: flex-start; /* Les éléments dans l'axe principal (la colonne) partent de la gauche */
+    align-items: center; /* Les éléments dans l'axe secondaire (la ligne) seront centrés */
+    text-align: center; /* Le texte sera centré */
+    gap: 10px; /* On met un espace de 10 pixels entre chaque éléments afin que le formulaire soit propre */
+}
 
 /* Style pour les boutons "submit" et "reset" */
 input[type="submit"], input[type="reset"] {
-    background-color: #4CAF50;
-    color: #d4edda;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 10px;
-    font-weight: bold;
-    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    background-color: #4CAF50; /* On met une couleur à l'arrière plan du bouton  */
+    color: #d4edda; /* On met une couleur de texte dans le bouton */
+    padding: 10px 20px; /* On redéfinit un espace interne de 10 pixels en haut et en bas ainsi que 20 pixels à gauche et à droite. */
+    border: none; /* La bordure du bouton est invisible, n'a rien de particulier */
+    border-radius: 4px; /* On met un angle à la bordure */
+    cursor: pointer; /* Cela signifie que l'élément est cliquable, la souris se transforme en "main" */
+    margin-top: 10px; /* Cela met un espace de 10px entre l'élémen concerné et l'élement du dessus */
+    font-weight: bold; /*  La police du texte sera foncé */
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Cette transition permet que le changement de couleur de fond ne se fasse pas instantanément mais qu'elle se fasse sur une durée de 0,3s */
 }
 
-
-/* Effet au survol des boutons */
 input[type="submit"]:hover, input[type="reset"]:hover {
-    background-color: #d4edda;
-    color: #4CAF50;
+    background-color: var(--button-background-color) !important; /* Au survol du curseur, la couleur de fond du bouton change, de plus, le !important permet de bypass certains problèmes css qui empêchait la couleur de l'arrière-plan d'apparaître */
+    color: var(--button-text-color); /* Au survol du curseur, la couleur du texte du bouton change */
 }
 
-
-/* Style pour le titre de la section "Créer un compte" */
 .creercompte {
-    font-size: large;
+    font-size: large; /* Je définit une police plutôt grande pour le titre de cette page */
 }
 
-
-/* Espace supplémentaire entre les deux encadrés */
 .encadre:first-of-type {
-    margin-bottom: 30px;
+    margin-bottom: 30px; /* On met un espace de 30px en plus entre les 2 encadrés */
 }
-
-
-/* Style pour le deuxième encadré */
-.encadre2 {
-    max-width: 500px;
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
-   
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: center;
-    gap: 10px; /* Réduction de l'espace entre chaque élément */
-}
-
 
 /* Media Query pour les écrans avec une hauteur maximale de 480px */
-@media (max-height: 480px) {
+@media (max-height: 480px) { /* Les styles définis dans ce bloc ne s'appliqueront que si la hauteur de le viewport est inférieur ou égal à 480 pixels correspondant à des écran de petite hauteur */
     .encadre, .encadre2 {
-        max-height: none;
-        height: auto;
-        padding: 15px;
+        height: auto; /* On définit la hauteur comme automatique en fonction de la taille de son contenu */
+        padding: 15px; /* On redéfinit l'espace que prend chaque élément dans l'encadré des 4 directions à 15px */
     }
-
 
     input[type="submit"], input[type="reset"] {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
-
-
-    .message-box {
-        height: 100px;
+        font-size: 14px; /* Pour les boutons, on définit la taille du texte des boutons à 14 pixels. */
+        padding: 8px 16px; /* On redéfinit un espace interne de 8 pixels en haut et en bas ainsi que 16 pixels à gauche et à droite. */
     }
 }
 
-
 /* Media Query pour les écrans avec une hauteur maximale de 768px */
-@media (max-height: 768px) {
+@media (max-height: 768px) and (min-height: 480px) { /* Les styles définis dans ce bloc ne s'appliqueront que si la hauteur de le viewport est inférieur ou égal à 780 pixels et supérieur et égale à 480 pixels correspondant à des écran de moyen hauteur */
     .encadre, .encadre2 {
-        max-height: none;
-        height: auto;
-        padding: 20px;
+        height: auto; /* On définit la hauteur comme automatique en fonction de la taille de son contenu */
     }
-
 
     input[type="submit"], input[type="reset"] {
-        font-size: 16px;
-        padding: 10px 18px;
-    }
-
-
-    .message-box {
-        height: 120px;
+        font-size: 16px; /* Pour les boutons, on définit la taille du texte des boutons à 16 pixels. */
+        padding: 10px 18px; /* On redéfinit un espace interne de 10 pixels en haut et en bas ainsi que 18 pixels à gauche et à droite. */
     }
 }
