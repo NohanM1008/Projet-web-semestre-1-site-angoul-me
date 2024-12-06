@@ -15,28 +15,26 @@ article {
     text-align: center;
     padding: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-article:hover {
-    transform: translateY(-5px); /* L'article bouge légèrement vers le haut */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Accentuation de l'ombre */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 300px; /* Uniformiser la hauteur */
+    transition: transform 0.3s ease; /* Ajout d'une animation de transition */
 }
 
 article img {
-    max-width: 100%;
-    height: auto;
+    width: 150px; /* Taille fixe pour les images */
+    height: 150px;
+    object-fit: cover; /* Assure une bonne mise à l'échelle des images */
     border-radius: 5px;
-    transition: transform 0.3s ease; /* Ajout de la transition pour l'agrandissement */
-}
-
-article:hover img {
-    transform: scale(1.1); /* Agrandit légèrement l'image */
+    transition: transform 0.3s ease; /* Transition pour l'agrandissement */
+    margin-bottom: 10px;
 }
 
 article p {
     font-size: 16px;
-    margin: 10px 0;
+    margin: 5px 0;
     color: #333;
 }
 
@@ -51,6 +49,67 @@ article a {
     color: inherit;
 }
 
-article a:hover p {
-    color: #007BFF;
+/* Effet au survol */
+article:hover img {
+    transform: scale(1.2); /* Agrandit l'image de 20% */
+}
+
+/* Ajout d'un léger effet visuel sur l'article */
+article:hover {
+    transform: translateY(-5px); /* L'article se soulève légèrement */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+}
+
+/* Conteneur global pour la grille et les avis */
+.container-wrapper {
+    display: flex;
+    align-items: flex-start; /* Aligne les deux sections en haut */
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px; /* Espacement entre la grille et le carré des avis */
+    padding: 20px;
+}
+
+/* Centrer les avis et les étoiles */
+.avis {
+    flex: 1;
+    position: sticky;
+    top: 20px;
+    background-color: #f3f3f3;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-height: 400px;
+    overflow-y: auto;
+    text-align: center; /* Centrer tout le texte dans la section */
+}
+
+.avis h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+}
+
+.avis-item {
+    margin-bottom: 20px;
+}
+
+.stars {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: gold;
+}
+
+.avis-item p {
+    font-size: 14px;
+    margin: 0;
+    color: #555;
+    line-height: 1.5;
+}
+
+.avis-item strong {
+    font-weight: bold;
+    color: #333;
 }
