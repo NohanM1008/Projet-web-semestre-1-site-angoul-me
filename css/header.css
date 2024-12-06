@@ -40,7 +40,7 @@ header a {
     font-size: 18px;
     text-decoration: none;
     margin-left: auto; /* Pousse le lien "Se connecter" à l'extrême droite */
-    font-family: 'Raleway', sans-serif
+    font-family: 'Raleway', sans-serif;
 }
 
 nav {
@@ -69,7 +69,7 @@ nav ol li {
 nav ol li a {
     color: var(--bleufonce);
     font-size: 20px;
-    font-family: 'Raleway', sans-serif
+    font-family: 'Raleway', sans-serif;
 }
 
 nav ol li a:hover {
