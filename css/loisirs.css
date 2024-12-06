@@ -1,116 +1,75 @@
-/* --- Global Styles --- */
+:root {
+    --bleufonce: darkslateblue;
+    --bleuclair: lightsteelblue;
+    --blanc: white;
+    --gris: gainsboro;
+    --noir: black;
+}
+
 * {
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    font-size: 20px;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
 body {
-    background-color: #f5f5f5;
-    color: #333;
+    background-color: var(--gris);
+    color: var(--noir);
     line-height: 1.6;
 }
 
 main {
+    background-color: var(--blanc);
     padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
-section {
-    margin-bottom: 40px;
-}
-
-section h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #003366;
-}
-
-section p {
-    font-size: 16px;
+main h1 {
+    font-size: 32px;
+    color: var(--bleufonce);
+    text-align: center;
     margin-bottom: 20px;
 }
 
-ul {
-    list-style: none;
-    padding-left: 20px;
+main h2, main h3 {
+    color: var(--bleufonce);
+    margin-bottom: 15px;
+    font-size: 24px;
 }
 
-ul li {
+main p {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+main ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+main ul li {
     font-size: 18px;
-    margin: 10px 0;
+    color: var(--bleufonce);
 }
 
-ul li a {
-    color: #006699;
-    text-decoration: none;
-}
-
-ul li a:hover {
-    text-decoration: underline;
-}
-
-article {
-    margin-bottom: 20px;
-}
-
-article h3 {
-    font-size: 22px;
-    color: #003366;
-}
-
-article p {
-    font-size: 16px;
-    margin-top: 10px;
-}
-
-/* --- Social Media Icons --- */
-.logos a {
-    margin-right: 10px;
-}
-
-.logos img {
-    width: 30px;
-    height: auto;
-    transition: transform 0.3s;
-}
-
-.logos img:hover {
-    transform: scale(1.1);
-}
-
-/* --- Google Map --- */
-.carte iframe {
-    width: 100%;
-    max-width: 600px;
-    height: 350px;
-    border: 0;
-}
-
-/* --- Responsive Styles --- */
 @media (max-width: 768px) {
-    header {
+    main {
+        margin: 10px;
+    }
+
+    nav ul {
         flex-direction: column;
-        text-align: center;
+        align-items: center;
     }
 
-    .footer-gauche,
-    .footer-centre,
-    .footer-droite {
-        width: 100%;
-        margin-bottom: 20px;
+    nav ul li {
+        margin: 10px 0;
     }
-
-    .logos {
-        display: flex;
-        justify-content: center;
-    }
-}
-
-ul.infos1 {
-    list-style: none;
-}
-
-ul.infos1 li {
-    margin: 10px 0;
 }
