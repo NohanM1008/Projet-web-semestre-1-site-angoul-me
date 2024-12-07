@@ -76,6 +76,7 @@ section article {
 
 section article:hover {
     transform: translateY(-10px);
+    cursor: pointer; /* Cela signifie que l'élément est cliquable, la souris se transforme en "main" */
 }
 
 /* Responsive design */
@@ -100,4 +101,21 @@ section article:hover {
     section article img {
         height: 150px; /* Taille réduite pour les petits écrans */
     }
+}
+
+.conteneur{
+    margin-top: 40px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 200 px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.conteneur1{
+    margin-left: 100px;
+}
+.conteneur2{
+    margin-right: 100px;
 }
