@@ -1,91 +1,127 @@
 <!DOCTYPE html>
-<html lang="fr"> <!-- Je commence pas page html en définissant le langage (ici français)-->
-    <head>  <!-- La balise head anglobe tout ce qui n'apparaîtra pas dans notre page Web-->
-        <title> Ville d'Angoulême </title> <!-- On définit le titre-->
-        <meta charset="utf-8"> <!-- On utilisera la chaîne de caractère utf-8-->
-        <link rel="stylesheet" href="../css/boutique.css"> <!-- On link la page html avec la page css afin d'ajouter de l'esthétique à notre page WEB -->
-        <link rel="stylesheet" href="../css/footer.css">
-        <link rel="stylesheet" href="../css/header.css">
-    </head>
-    <body> <!-- La balise body anglobe tout ce qui apparaîtra dans notre page Web-->
-        <header>
-            <a href="../index.html"><img src="../images/logo.png" alt="Angoulême Logo"></a>
-            <a href="../html/connexion.html">Se connecter</a>
-            <h1>Ville d'Angoulême</h1>
-        </header>
-        <nav>
-            <ol>
-                <li><a href="../index.html">Accueil</a></li>
-                <li><a href="../html/contact.html">Contact</a></li>
-                <li><a href="../html/loisirs.html">Tourisme et Loisirs</a></li>
-                <li><a href="../html/histoire.html">Histoire</a></li>
-            </ol>
-        </nav>
-        <main>
-            <article>
+<html lang="fr">
+<head>
+    <title>Ville d'Angoulême - Magnet</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/article.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/header.css">
+</head>
+<body>
+    <header>
+        <a href="../index.html"><img src="../images/logo.png" alt="Angoulême Logo"></a>
+        <a href="../html/connexion.html">Se connecter</a>
+        <h1>Ville d'Angoulême</h1>
+    </header>
+    <nav>
+        <ol>
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="../html/contact.html">Contact</a></li>
+            <li><a href="../html/loisirs.html">Tourisme et Loisirs</a></li>
+            <li><a href="../html/histoire.html">Histoire</a></li>
+        </ol>
+    </nav>
+    <main>
+        <!-- Article principal -->
+        <section class="article-principal">
+            <div class="image-container">
                 <img src="../images/boutique/magnet.png" alt="Magnet d'Angoulême">
-                <h1>Magnet d'Angoulême : 3,50€</h1>
-                <p>
-                    Ajoutez un morceau d'Angoulême à votre quotidien avec notre magnet exclusif ! Ce magnet unique célèbre le charme intemporel
-                    d'Angoulême, avec des détails soignés qui rappellent ses paysages historiques et son atmosphère artistique. Fabriqué avec
-                    des matériaux de haute qualité, il est à la fois résistant et magnifiquement détaillé, parfait pour décorer votre réfrigérateur
-                    ou tout autre espace métallique. Idéal comme souvenir pour les amoureux de la Charente ou comme cadeau original, ce magnet
-                    saura donner une touche artistique et locale à votre maison. Emportez un peu de l'âme d'Angoulême chez vous !
+            </div>
+            <div class="description">
+                <h1 class="article-title">Magnet d'Angoulême</h1>
+                <h2 class="article-price">3,50€</h2>
+                <p class="article-text">
+                    Ajoutez un morceau d'Angoulême à votre quotidien avec notre magnet exclusif ! Ce magnet unique célèbre le charme intemporel
+                    d'Angoulême, avec des détails soignés qui rappellent ses paysages historiques et son atmosphère artistique.
                 </p>
-            </article>
-            <br>
-            <p>D'autres produits locaux d'Angoulême :</p>
+                <p class="article-text">
+                    Fabriqué avec des matériaux de haute qualité, il est parfait pour décorer votre réfrigérateur ou tout autre espace métallique.
+                </p>
+                <button class="cta-button">Ajouter au panier</button>
+            </div>
+        </section>
+
+        <!-- Liste des autres produits -->
+        <h2>D'autres produits locaux d'Angoulême :</h2>
+        <section class="container">
             <article>
-                <a href="cartepostale.html"><img src="../images/boutique/cartepostale.png" alt="Carte postale d'Angoulême"><p>Carte postale d'Angoulême</p></a>
+                <a href="cartepostale.html">
+                    <img src="../images/boutique/cartepostale.png" alt="Carte postale d'Angoulême">
+                    <p>Carte postale d'Angoulême</p>
+                </a>
                 <h3>5€</h3>
             </article>
             <article>
-                <a href="bracelet.html"><img src="../images/boutique/bracelet.png" alt="Bracelet d'Angoulême"><p>Bracelet d'Angoulême</p></a>
+                <a href="bracelet.html">
+                    <img src="../images/boutique/bracelet.png" alt="Bracelet d'Angoulême">
+                    <p>Bracelet d'Angoulême</p>
+                </a>
                 <h3>50€</h3>
             </article>
             <article>
-                <a href="portecle.html"><img src="../images/boutique/portecle.png" alt="Porte-clé d'Angoulême"><p>Porte-clé d'Angoulême</p></a>
+                <a href="portecle.html">
+                    <img src="../images/boutique/portecle.png" alt="Porte-clé d'Angoulême">
+                    <p>Porte-clé d'Angoulême</p>
+                </a>
                 <h3>2,50€</h3>
             </article>
             <article>
-                <a href="tasse.html"><img src="../images/boutique/tasse.png" alt="Tasse d'Angoulême"><p>Tasse d'Angoulême</p></a>
+                <a href="tasse.html">
+                    <img src="../images/boutique/tasse.png" alt="Tasse d'Angoulême">
+                    <p>Tasse d'Angoulême</p>
+                </a>
                 <h3>10€</h3>
             </article>
-        </main>
-        <footer> <!-- La section footer contenant les informations de bas de page -->
-            <div class="footer-gauche"> <!-- Partie gauche du footer -->
-                <img src="../images/footer/angouleme.png" alt="Logo d'Angoulême" /> <!-- Logo d'Angoulême -->
-                <img src="../images/footer/unesco.png" alt="Membre des villes de l'Unesco" /> <!-- Logo de l'Unesco -->
+        </section>
+
+        <!-- Section des avis -->
+        <aside class="avis">
+            <h4>Avis des clients</h4>
+            <div class="avis-item">
+                <div class="stars">★★★★★</div>
+                <p><strong>Camille:</strong> Magnifique magnet, un excellent souvenir d'Angoulême !</p>
             </div>
-            <div class="footer-centre"> <!-- Partie centrale du footer -->
-                <!-- Section Carte -->
-                <div class="carte">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44627.94880314658!2d0.10382750595865571!3d45.64586530034062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fe2d85032bc499%3A0x405d39260eec0f0!2sAngoulême!5e0!3m2!1sfr!2sfr!4v1733300128398!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-       
-                <!-- Section Infos  -->
-                <div class="infos">
-                    <dl class="infos2">
-                        <dd>Angoulême 16000</dd> <!-- Adresse de la ville -->
-                    </dl>
-                </div>
-       
-                <!-- Section Logos -->
-                <div class="logos">
-                    <a href="https://www.facebook.com/villeangouleme" target="_blank"><img src="../images/footer/facebook.png" alt="Facebook d'Angoulême" /></a> <!-- Lien vers le Facebook d'Angoulême -->
-                    <a href="https://www.instagram.com/villeangouleme/" target="_blank"><img src="../images/footer/instagram.png" alt="Instagram d'Angoulême" /></a> <!-- Lien vers l'Instagram d'Angoulême -->
-                    <a href="https://www.youtube.com/@VilleAngoulemeTV" target="_blank"><img src="../images/footer/youtube.png" alt="Youtube d'Angoulême" /></a> <!-- Lien vers la chaîne Youtube d'Angoulême -->
-                    <a href="https://twitter.com/villeangouleme" target="_blank"><img src="../images/footer/twitter.png" alt="Twitter d'Angoulême" /></a> <!-- Lien vers le Twitter d'Angoulême -->
-                    <a href="https://fr.linkedin.com/company/villeangouleme" target="_blank"><img src="../images/footer/linkedin.png" alt="Linkedin d'Angoulême" /></a> <!-- Lien vers le LinkedIn d'Angoulême -->
-                </div>
+            <div class="avis-item">
+                <div class="stars">★★★★☆</div>
+                <p><strong>Lucas:</strong> Bonne qualité, mais j'aurais aimé un design un peu plus coloré.</p>
             </div>
-            <div class="footer-droite"> <!-- Partie droite du footer -->
-                <ul class="infos1">
-                    <li><p>Téléphone :</p><p>05 45 38 92 89</p></li> <!-- Affiche le numéro de téléphone -->
-                    <li><a href="contact.html" class="contact">Nous contacter</a></li> <!-- Lien vers la page de contact -->
-                    <li><a href="politiquedeconfidentialite.html" class="lien">Politique de confidentialité</a></li> <!-- Lien vers la politique de confidentialité -->
-                </ul>
+            <div class="avis-item">
+                <div class="stars">★★★★★</div>
+                <p><strong>Emma:</strong> Parfait pour décorer mon réfrigérateur, je l'adore !</p>
             </div>
-        </footer>
-    </body>
+        </aside>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <div class="footer-gauche">
+            <img src="../images/footer/angouleme.png" alt="Logo d'Angoulême" />
+            <img src="../images/footer/unesco.png" alt="Membre des villes de l'Unesco" />
+        </div>
+        <div class="footer-centre">
+            <div class="carte">
+                <iframe src="https://www.google.com/maps/embed?pb=..." width="600" height="450" style="border:0;" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="infos">
+                <dl class="infos2">
+                    <dd>Angoulême 16000</dd>
+                </dl>
+            </div>
+            <div class="logos">
+                <a href="https://www.facebook.com/villeangouleme" target="_blank"><img src="../images/footer/facebook.png" alt="Facebook d'Angoulême" /></a>
+                <a href="https://www.instagram.com/villeangouleme/" target="_blank"><img src="../images/footer/instagram.png" alt="Instagram d'Angoulême" /></a>
+                <a href="https://www.youtube.com/@VilleAngoulemeTV" target="_blank"><img src="../images/footer/youtube.png" alt="Youtube d'Angoulême" /></a>
+                <a href="https://twitter.com/villeangouleme" target="_blank"><img src="../images/footer/twitter.png" alt="Twitter d'Angoulême" /></a>
+                <a href="https://fr.linkedin.com/company/villeangouleme" target="_blank"><img src="../images/footer/linkedin.png" alt="Linkedin d'Angoulême" /></a>
+            </div>
+        </div>
+        <div class="footer-droite">
+            <ul class="infos1">
+                <li><p>Téléphone :</p><p>05 45 38 92 89</p></li>
+                <li><a href="contact.html" class="contact">Nous contacter</a></li>
+                <li><a href="politiquedeconfidentialite.html" class="lien">Politique de confidentialité</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
 </html>
