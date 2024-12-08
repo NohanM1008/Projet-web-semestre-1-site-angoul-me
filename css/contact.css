@@ -3,6 +3,29 @@
     font-family: Arial, Helvetica, sans-serif; /* Applique la police de caractères Arial, Helvetica ou sans-serif à tout le texte de la page */
 }
 
+:root{
+    --background-color: darkslateblue;
+    --background-color2: lightsteelblue;
+    --text-color: white;
+    --text-color2: black;
+    --background-color3: gainsboro;
+    --button-background-color: #007BFF; /* Couleur de l'arrière-plan dans le bouton */
+    --button-text-color: #ffffff; /* Couleur du texte dans le bouton */
+    --border-color: #ddd; /* Couleur de la bordure de l'encadré */
+}
+
+@media (prefers-color-scheme: dark) { /* Ce media permet de détecter si l'utilisateur du site est en mode sombre ou non, s'il est en mode sombre, les variables de couleurs changeront avvec celles qui sont définies ci-dessous */
+    :root {
+        --background-color: #1F1F1F; /* Définition de variables pour le mode sombre, ici de la couleur de fond de la page */
+        --background-color2: #2F2F2F; /* Couleur de fond des encadrés */
+        --text-color: #d4edda; /* Couleur du texte */
+        --text-color2: #ffffff;
+        --background-color3: #313338;
+        --button-background-color: #d4edda; /* Couleur de l'arrière-plan dans le bouton */
+        --button-text-color: #000000; /* Couleur du texte dans le bouton */
+        --border-color: #000000; /* Couleur de la bordure de l'encadré */
+    }
+}
 
 /* Zone de texte non redimensionnable */
 .message-box {
@@ -20,10 +43,10 @@
     margin: 0 auto; /* Centre l'encadré horizontalement */
     margin-top: 30px;
     padding: 20px; /* Ajoute un espacement intérieur de 20px */
-    border: 1px solid #ddd; /* Ajoute une bordure grise claire autour de l'encadré */
+    border: 1px solid var(--background-color) !important; /* Ajoute une bordure grise claire autour de l'encadré */
     border-radius: 8px; /* Arrondit les coins de la bordure */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une légère ombre portée autour de l'encadré pour un effet de profondeur */
-    background-color: #f9f9f9; /* Définit un fond de couleur gris très clair */
+    background-color: var(--background-color) !important; /* Définit un fond de couleur gris très clair */
     display: flex; /* Utilise le modèle de mise en page flexbox */
     flex-direction: column; /* Organise les éléments en colonne */
     justify-content: flex-start; /* Aligne verticalement les éléments en haut */
@@ -37,14 +60,15 @@
     width: 100%; /* Utilise toute la largeur disponible */
     margin: 0 auto; /* Centre les éléments horizontalement */
     padding: 20px; /* Ajoute un espacement intérieur de 20px */
-    border: 1px solid #ddd; /* Ajoute une bordure grise claire autour de l'élément */
+    border: 1px solid var(--background-color2) !important; /* Ajoute une bordure grise claire autour de l'élément */
     border-radius: 8px; /* Arrondit les coins de la bordure */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une légère ombre portée autour de l'élément */
-    background-color: #f9f9f9; /* Définit un fond de couleur gris très clair */
+    background-color: var(--background-color2) !important; /* Définit un fond de couleur gris très clair */
     display: flex; /* Utilise le modèle de mise en page flexbox */
     flex-direction: column; /* Organise les éléments en colonne */
     justify-content: flex-start; /* Aligne verticalement les éléments en haut */
     align-items: center; /* Centre les éléments horizontalement */
+    color: var(--text-color2);
 }
 
 
@@ -98,8 +122,8 @@
 
 /* Style pour les boutons de soumission et de réinitialisation */
 input[type="submit"], input[type="reset"] {
-    background-color: #4CAF50; /* Définit un fond vert clair pour les boutons */
-    color: #d4edda; /* Définit une couleur de texte blanche pour les boutons */
+    background-color: var(--button-background-color); /* Définit un fond vert clair pour les boutons */
+    color: var(--button-text-color); /* Définit une couleur de texte blanche pour les boutons */
     padding: 10px 20px; /* Ajoute de l'espace autour du texte du bouton */
     border: none; /* Retire les bordures par défaut des boutons */
     border-radius: 4px; /* Arrondit les coins des boutons */
@@ -112,13 +136,10 @@ input[type="submit"], input[type="reset"] {
 
 /* Effet au survol des boutons */
 input[type="submit"]:hover, input[type="reset"]:hover {
-    color: #4CAF50; /* Change la couleur du texte en vert clair au survol */
-    background-color: #d4edda; /* Change la couleur de fond en vert très clair au survol */
-    transform: scale(1,1); /* Réinitialise la transformation de mise à l'échelle lorsque le bouton est survolé */
+    background-color: var(--button-background-color) !important; /* Au survol du curseur, la couleur de fond du bouton change, de plus, le !important permet de bypass certains problèmes css qui empêchait la couleur de l'arrière-plan d'apparaître */
+    color: var(--button-text-color); /* Au survol du curseur, la couleur du texte du bouton change */
 }
 
-
-/* Effet au clic sur les boutons */
-input[type="submit"]:active, input[type="reset"]:active {
-    background-color: #3e8e41; /* Change la couleur de fond des boutons en vert foncé lorsqu'ils sont cliqués */
+body{
+    background-color: var(--background-color3);
 }
