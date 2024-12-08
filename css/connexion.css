@@ -45,6 +45,7 @@
     justify-content: center; /* Centrer verticalement les éléments */
     align-items: center; /* Centrer horizontalement les éléments */
     text-align: center; /* Centrer le texte à l'intérieur des éléments */
+    color: var(--text-color2);
 }
 
 
@@ -193,4 +194,12 @@ input[type="compte"] {
     .message-box {
         height: 120px; /* Limite la hauteur de la zone de texte */
     }
+}
+
+body{
+    background-color: var(--background-color3);
+}
+
+input[type="compte"]:hover{
+    transform: scale(1,1) !important;
 }
