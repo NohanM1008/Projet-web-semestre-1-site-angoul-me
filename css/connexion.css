@@ -3,6 +3,29 @@
     font-family: Arial, Helvetica, sans-serif; /* Définit la police utilisée sur toute la page, avec des polices de secours */
 }
 
+:root{
+    --background-color: darkslateblue;
+    --background-color2: lightsteelblue;
+    --text-color: #555;
+    --text-color2: #333;
+    --background-color3: gainsboro;
+    --button-background-color: #007BFF; /* Couleur de l'arrière-plan dans le bouton */
+    --button-text-color: #ffffff; /* Couleur du texte dans le bouton */
+    --border-color: #ddd; /* Couleur de la bordure de l'encadré */
+}
+
+@media (prefers-color-scheme: dark) { /* Ce media permet de détecter si l'utilisateur du site est en mode sombre ou non, s'il est en mode sombre, les variables de couleurs changeront avvec celles qui sont définies ci-dessous */
+    :root {
+        --background-color: #1F1F1F; /* Définition de variables pour le mode sombre, ici de la couleur de fond de la page */
+        --background-color2: #2F2F2F; /* Couleur de fond des encadrés */
+        --text-color: #313338; /* Couleur du texte */
+        --text-color2: #ffffff;
+        --background-color3: #313338;
+        --button-background-color: #d4edda; /* Couleur de l'arrière-plan dans le bouton */
+        --button-text-color: #000000; /* Couleur du texte dans le bouton */
+        --border-color: #000000; /* Couleur de la bordure de l'encadré */
+    }
+}
 
 /* Style de l'encadré principal */
 .encadre {
@@ -11,10 +34,10 @@
     height: auto; /* La hauteur de l'encadré s'adapte à son contenu */
     margin: 0 auto; /* Centrer l'encadré horizontalement */
     padding: 20px; /* Espacement interne autour du contenu de l'encadré */
-    border: 1px solid #ddd; /* Bordure grise claire autour de l'encadré */
+    border: 1px solid var(--background-color) !important; /* Bordure grise claire autour de l'encadré */
     border-radius: 8px; /* Coins arrondis de l'encadré */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée légère pour un effet de profondeur */
-    background-color: #f9f9f9; /* Couleur de fond claire pour l'encadré */
+    background-color: var(--background-color) !important; /* Couleur de fond claire pour l'encadré */
    
     /* Permet de centrer le texte et les éléments enfants (comme les boutons) par rapport à l'encadré */
     display: flex;
@@ -27,8 +50,8 @@
 
 /* Style des boutons submit et reset */
 input[type="submit"], input[type="reset"] {
-    background-color: #4CAF50; /* Couleur de fond verte pour les boutons */
-    color: #d4edda; /* Couleur du texte verte claire */
+    background-color: var(--button-background-color); /* Couleur de fond verte pour les boutons */
+    color: var(--button-text-color); /* Couleur du texte verte claire */
     padding: 10px 20px; /* Espacement interne du bouton */
     border: none; /* Enlever la bordure par défaut */
     border-radius: 4px; /* Coins arrondis du bouton */
@@ -40,9 +63,9 @@ input[type="submit"], input[type="reset"] {
 
 
 /* Effets au survol des boutons */
-input[type="submit"]:hover, input[type="reset"]:hover {
-    background-color: #d4edda; /* Change la couleur de fond au survol */
-    color: #4CAF50; /* Change la couleur du texte au survol */
+input[type="submit"]:hover, input[type="reset"]:hover, input[type="compte"]:hover {
+    background-color: var(--button-background-color) !important; /* Au survol du curseur, la couleur de fond du bouton change, de plus, le !important permet de bypass certains problèmes css qui empêchait la couleur de l'arrière-plan d'apparaître */
+    color: var(--button-text-color); /* Au survol du curseur, la couleur du texte du bouton change */
 }
 
 
@@ -62,8 +85,8 @@ input[type="submit"]:hover, input[type="reset"]:hover {
 
 /* Style du bouton "Créer un compte" */
 input[type="compte"] {
-    background-color: #dcdcdc; /* Couleur de fond gris clair pour le bouton "Créer un compte" */
-    color: #343a40; /* Couleur du texte gris foncé */
+    background-color: var(--button-background-color) !important; /* Couleur de fond gris clair pour le bouton "Créer un compte" */
+    color: var(--button-text-color); /* Couleur du texte gris foncé */
     padding: 10px 20px; /* Espacement interne du bouton */
     border: none; /* Enlever la bordure par défaut */
     border-radius: 4px; /* Coins arrondis du bouton */
@@ -73,14 +96,6 @@ input[type="compte"] {
     text-align: center; /* Centre le texte dans le bouton */
     transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Transition douce au survol */
 }
-
-
-/* Effet au survol du bouton "Créer un compte" */
-input[type="compte"]:hover {
-    background-color: #343a40; /* Change la couleur de fond en gris foncé au survol */
-    color: #dcdcdc; /* Change la couleur du texte en gris clair au survol */
-}
-
 
 /* Espacement spécifique pour le premier encadré */
 .encadre:first-of-type {
@@ -95,11 +110,10 @@ input[type="compte"]:hover {
     height: auto; /* La hauteur de l'encadré s'adapte à son contenu */
     margin: 0 auto; /* Centre l'encadré horizontalement */
     padding: 20px; /* Espacement interne autour du contenu */
-    border: 1px solid #ddd; /* Bordure grise claire autour de l'encadré */
+    border: 1px solid var(--background-color2) !important; /* Bordure grise claire autour de l'encadré */
     border-radius: 8px; /* Coins arrondis de l'encadré */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée légère pour un effet de profondeur */
-    background-color: #f9f9f9; /* Couleur de fond claire pour l'encadré */
-   
+    background-color: var(--background-color2) !important; /* Couleur de fond claire pour l'encadré */
     /* Permet de centrer le texte et les éléments enfants à l'intérieur de l'encadré */
     display: flex;
     flex-direction: column; /* Les éléments sont disposés en colonne */
@@ -113,7 +127,7 @@ input[type="compte"]:hover {
 .encadre2 a {
     text-decoration: none; /* Enlever le soulignement du lien */
     font-size: 18px; /* Taille de la police du lien */
-    color: #007bff; /* Couleur bleue pour le lien */
+    color: grey; /* Couleur bleue pour le lien */
     font-weight: bold; /* Met le texte en gras */
     transition: color 0.3s, transform 0.3s; /* Transition douce pour l'effet au survol */
 }
@@ -121,7 +135,6 @@ input[type="compte"]:hover {
 
 /* Effet au survol du lien dans le deuxième encadré */
 .encadre2 a:hover {
-    color: #0056b3; /* Change la couleur du lien au survol */
     transform: scale(1.1); /* Agrandit légèrement le lien au survol */
 }
 
