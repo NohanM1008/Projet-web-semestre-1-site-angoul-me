@@ -5,9 +5,6 @@
     --gris: gainsboro;
     --noir: black;
 }
-logo-site{
-    display: flex;
-}   
 
 header {
     background-color: var(--bleufonce);
@@ -21,7 +18,7 @@ header {
 header img {
     width: 4%;
     position: absolute;
-    margin-right: auto; /* Assure que le logo reste à gauche */
+    margin-right: left; 
     left:0%;
     top:1%;
 }
@@ -39,7 +36,7 @@ header a {
     color: var(--blanc);
     font-size: 18px;
     text-decoration: none;
-    margin-left: auto; /* Pousse le lien "Se connecter" à l'extrême droite */
+    margin-left: auto; 
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -59,7 +56,7 @@ nav h1 {
 nav ol {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 100px;
 }
 
 nav ol li {
@@ -74,5 +71,4 @@ nav ol li a {
 
 nav ol li a:hover {
     text-decoration: underline;
-    
 }
