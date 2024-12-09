@@ -1,5 +1,20 @@
 /* Politique de confidentialité - Styles principaux */
 
+:root{
+    --text-color7: #333;
+    --background-color7: #f4f4f9;
+    --link-color: #3498db;
+    --title-color: #2c3e50;
+}
+
+@media (prefers-color-scheme: dark) { /* Ce media permet de détecter si l'utilisateur du site est en mode sombre ou non, s'il est en mode sombre, les variables de couleurs changeront avvec celles qui sont définies ci-dessous */
+    :root {
+        --text-color7: #f4f4f9;
+        --background-color7: #313338;
+        --link-color: grey;
+        --title-color: #d4edda;
+    }
+}
 
 /* Le corps de la page */
 body {
@@ -7,8 +22,8 @@ body {
     line-height: 1.6; /* Espacement des lignes pour une meilleure lisibilité */
     margin: 0; /* Suppression des marges par défaut */
     padding: 0; /* Suppression du padding par défaut */
-    background-color: #f4f4f9; /* Couleur de fond douce et claire pour le site */
-    color: #333; /* Couleur de texte sombre pour un bon contraste avec le fond */
+    background-color: var(--background-color7); /* Couleur de fond douce et claire pour le site */
+    color: var(--text-color7); /* Couleur de texte sombre pour un bon contraste avec le fond */
 }
 
 
@@ -18,7 +33,7 @@ body {
     font-weight: bold; /* Mise en gras du titre */
     text-align: center; /* Centrage du titre */
     margin: 20px 0; /* Marges verticales autour du titre */
-    color: #2c3e50; /* Couleur sombre et professionnelle pour le titre */
+    color: var(--title-color); /* Couleur sombre et professionnelle pour le titre */
 }
 
 
@@ -26,13 +41,13 @@ body {
 .texte {
     margin: 10px 20px; /* Espacement autour du texte */
     font-size: 1rem; /* Taille de police normale pour le texte */
-    color: #2c3e50; /* Couleur sombre pour une bonne lisibilité */
+    color: var(--title-color); /* Couleur sombre pour une bonne lisibilité */
 }
 
 
 /* Style des liens */
 .lien {
-    color: #3498db; /* Couleur bleue pour les liens */
+    color: var(--link-color); /* Couleur bleue pour les liens */
     text-decoration: none; /* Suppression du soulignement par défaut */
     font-weight: bold; /* Mise en gras des liens pour les rendre plus visibles */
 }
