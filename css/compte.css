@@ -16,7 +16,7 @@
     :root {
         --background-color: #1F1F1F; /* Définition de variables pour le mode sombre, ici de la couleur de fond de la page */
         --background-color2: #2F2F2F; /* Couleur de fond des encadrés */
-        --text-color: #121212; /* Couleur du texte */
+        --text-color: #B4B4B4; /* Couleur du texte */
         --button-background-color: #d4edda; /* Couleur de l'arrière-plan dans le bouton */
         --button-text-color: #000000; /* Couleur du texte dans le bouton */
         --border-color: #000000; /* Couleur de la bordure de l'encadré */
