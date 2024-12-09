@@ -1,3 +1,25 @@
+:root {
+    --background-color: darkslateblue;
+    --background-color2: lightsteelblue;
+    --text-color: white;
+    --text-color2: black;
+    --background-color3: gainsboro;
+    --text-color15: #333;
+    --text-color16: #555;
+    --background-color17: #b4b4b4;
+}
+
+@media (prefers-color-scheme: dark) { /* Ce media permet de détecter si l'utilisateur du site est en mode sombre ou non, s'il est en mode sombre, les variables de couleurs changeront avvec celles qui sont définies ci-dessous */
+    :root {
+        --background-color: #1F1F1F; /* Définition de variables pour le mode sombre, ici de la couleur de fond de la page */
+        --background-color2: #2F2F2F; /* Couleur de fond des encadrés */
+        --text-color: #d4edda; /* Couleur du texte */
+        --text-color15: #B4B4B4;
+        --background-color3: #313338;
+        --text-color16: #d4edda;
+        --background-color: #686868;
+    }
+}
 /* Conteneur global pour la grille et les avis */
 .container-wrapper {
     display: flex;
@@ -15,8 +37,8 @@
     justify-content: center;
     gap: 40px;
     padding: 40px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    background-color: var(--background-color3);
+    border: 1px solid var(--background-color3);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 20px auto;
@@ -43,7 +65,7 @@
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 10px;
-    color: #333;
+    color: var(--text-color15);
 }
 
 /* Prix de l'article */
@@ -59,7 +81,7 @@
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 1.8;
-    color: #555;
+    color: var(--text-color16);
     margin-bottom: 15px;
 }
 
@@ -94,8 +116,8 @@
 }
 
 article {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    background-color: var(--background-color);
+    border: 1px solid var(--background-color);
     border-radius: 8px;
     text-align: center;
     padding: 10px;
@@ -121,13 +143,13 @@ article p {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     margin: 5px 0;
-    color: #333;
+    color: var(--text-color15);
 }
 
 article h3 {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
-    color: #555;
+    color: var(--text-color16);
     margin: 10px 0 0;
 }
 
@@ -151,8 +173,8 @@ article:hover {
     flex: 1;
     position: sticky;
     top: 20px;
-    background-color: #f3f3f3;
-    border: 1px solid #ddd;
+    background-color: var(--background-color2);
+    border: 1px solid var(--background-color2);
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -164,7 +186,7 @@ article:hover {
 .avis h4 {
     font-size: 18px;
     margin-bottom: 15px;
-    color: #333;
+    color: var(--text-color15);
     text-align: center;
 }
 
@@ -181,11 +203,15 @@ article:hover {
 .avis-item p {
     font-size: 14px;
     margin: 0;
-    color: #555;
+    color: var(--text-color15);
     line-height: 1.5;
 }
 
 .avis-item strong {
     font-weight: bold;
-    color: #333;
+    color: var(--text-color16);
+}
+
+body{
+    background-color: var(--background-color17);
 }
