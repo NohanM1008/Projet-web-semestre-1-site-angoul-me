@@ -23,7 +23,8 @@
     }
 }
 
-/* Conteneur global pour la grille et les avis */
+/* Le conteneur principal organise la mise en page avec une disposition de type flexbox.
+Les éléments sont alors alignés en haut avec un espacement de 20px*/
 .container-wrapper {
     display: flex;
     align-items: flex-start;
@@ -33,7 +34,7 @@
     padding: 20px;
 }
 
-/* Section de l'article principal */
+/* Ce bloc met en forme la section principale de l'article avec un fond de la couleur background-color3, des bordures idem, et un effet d'ombre. */
 .article-principal {
     display: flex;
     align-items: center;
@@ -48,7 +49,7 @@
     max-width: 900px;
 }
 
-/* Conteneur de l'image */
+/*  Ce bloc fait le style des images dans la section principale avec une transition qui est ajoutée pour agrandir l'image au survol avec un effet d'ombre. */
 .image-container img {
     width: 300px;
     height: auto;
@@ -62,7 +63,7 @@
     transform: scale(1.05);
 }
 
-/* Titre de l'article */
+/* Style du titre principal de l'article. */
 .article-title {
     font-family: 'Playfair Display', serif;
     font-size: 36px;
@@ -71,7 +72,7 @@
     color: var(--text-color15);
 }
 
-/* Prix de l'article */
+/* Style du prix de l'article */
 .article-price {
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
@@ -79,7 +80,7 @@
     margin-bottom: 20px;
 }
 
-/* Texte descriptif */
+/* Style du texte descriptif */
 .article-text {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -88,7 +89,7 @@
     margin-bottom: 15px;
 }
 
-/* Bouton CTA */
+/*  Style du bouton CTA */
 .cta-button {
     background-color: #e63946;
     color: white;
@@ -102,13 +103,13 @@
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Effet au survol du bouton */
+/* Effet au survol : le bouton change de couleur et se soulève légèrement. */
 .cta-button:hover {
     background-color: #d62828;
     transform: translateY(-2px);
 }
 
-/* Grille des autres produits */
+/* Ce bloc définit une grille pour afficher des produits, avec deux colonnes faisant pour chacune la moitie de la fenetre soit 1fr pour une meilleure mise en page */
 .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -118,6 +119,7 @@
     padding: 20px;
 }
 
+/* article organise la mise en page avec une disposition de type flexbox*/
 article {
     background-color: var(--background-color68);
     border: 1px solid var(--background-color68);
@@ -125,14 +127,15 @@ article {
     text-align: center;
     padding: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    display: flex; /* Mise en flexbox */
+    flex-direction: column; /* Organisation verticale */
+    align-items: center; /* Centre horizontal des éléments */
+    justify-content: space-between; /* Distribution verticale */
     height: 300px;
     transition: transform 0.3s ease;
 }
 
+/* Définition du style des images des articles */
 article img {
     width: 150px;
     height: 150px;
@@ -142,6 +145,7 @@ article img {
     margin-bottom: 10px;
 }
 
+/* Définition du style des paragraphes de p */
 article p {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -149,6 +153,7 @@ article p {
     color: var(--text-color15);
 }
 
+/* Définition du style des titres h3 d'article*/
 article h3 {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
@@ -156,22 +161,24 @@ article h3 {
     margin: 10px 0 0;
 }
 
+/* Style des liens dans article*/
 article a {
     text-decoration: none;
     color: inherit;
 }
 
-/* Effet au survol */
+/* Effet au survol de l'image */
 article:hover img {
     transform: scale(1.2);
 }
 
+/* Effet au survol*/
 article:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Avis */
+/* Définition du style de avis : position en sticky pour pouvoir faire défiler les avis , ajout de bordure , d'alignement et d'overflow */
 .avis {
     flex: 1;
     position: sticky;
@@ -186,6 +193,7 @@ article:hover {
     text-align: center;
 }
 
+/* style des titres h4 de classe avis*/
 .avis h4 {
     font-size: 18px;
     margin-bottom: 15px;
@@ -193,16 +201,19 @@ article:hover {
     text-align: center;
 }
 
+/* ajout d'une marge*/
 .avis-item {
     margin-bottom: 20px;
 }
 
+/* Style de stars */
 .stars {
     font-size: 20px;
     margin-bottom: 10px;
     color: gold;
 }
 
+/* style des avis des paragraphes*/
 .avis-item p {
     font-size: 14px;
     margin: 0;
@@ -215,10 +226,12 @@ article:hover {
     color: var(--text-color16);
 }
 
+/*style du body */
 body{
     background-color: var(--background-color17);
 }
 
+/* style de section et h2 pour centrer le titre */
 section + h2{
     text-align: center;
 }
