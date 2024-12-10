@@ -99,3 +99,32 @@ a {
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
+
+.article1:hover img,
+.article2:hover img,
+.article3:hover img,
+.article4:hover img,
+.article5:hover img,
+.article6:hover img,
+.article7:hover img,
+.article8:hover img,
+.article9:hover img,
+.article10:hover img,
+.article11:hover img {
+    transform: scale(1.05);
+}
+
+.article1:hover,
+.article2:hover,
+.article3:hover,
+.article4:hover,
+.article5:hover,
+.article6:hover,
+.article7:hover,
+.article8:hover,
+.article9:hover,
+.article10:hover,
+.article11:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
