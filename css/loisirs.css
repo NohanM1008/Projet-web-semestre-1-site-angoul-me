@@ -29,15 +29,11 @@ body {
     background-color: var(--background-color3);
     color: var(--text-color2);
     line-height: 1.6;
+    text-align: center;
 }
-
-main {
-    background-color: var(--background-color3);
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 900px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+img{
+    max-width: 480px;
+    max-height: 480px;
 }
 
 main h1 {
@@ -53,25 +49,15 @@ main h2, main h3 {
     font-size: 24px;
 }
 
-main p {
+main section article p {
     text-align: justify;
     margin-bottom: 20px;
-}
-
-main ul {
-    list-style: disc;
-    margin-left: 20px;
-    margin-bottom: 20px;
-}
-
-main ul li {
-    font-size: 18px;
-    color: var(--background-color);
 }
 
 a {
     text-decoration: none;
     color: grey;
+    font-size: 18px;
 }
 
 @media (max-width: 768px) {
@@ -87,4 +73,29 @@ a {
     nav ul li {
         margin: 10px 0;
     }
+}
+
+.container{
+    background-color: var(--background-color3);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.article1 , .article2, .article3, .article4 , .article5, .article6, .article7 , .article8, .article9, .article10 , .article11{
+    width: 500px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} 
+
+.boite{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
