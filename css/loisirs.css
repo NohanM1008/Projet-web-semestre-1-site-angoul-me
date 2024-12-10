@@ -1,66 +1,67 @@
-:root {
+:root { /* On définit des variables pour les couleurs utlilisées dasn notre code (pour le mode clair) */
     --background-color: darkslateblue;
     --background-color2: lightsteelblue;
     --text-color: white;
     --text-color2: black;
     --background-color3: gainsboro;
+    --background-color92: #F5F5F5;
+    --text-color234: darkslateblue;
+    --text-color237: black;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) { /* Ce media permet de détecter si l'utilisateur du site est en mode sombre ou non, s'il est en mode sombre, les variables de couleurs changeront avvec celles qui sont définies ci-dessous */
     :root {
         --background-color: #1F1F1F;
         --background-color2: #2F2F2F;
         --text-color: #d4edda;
         --text-color2: #B4B4B4;
         --background-color3: #313338;
+        --background-color92: #6E6E6E;
+        --text-color234: #f9f9f9;
+        --text-color237: #B4B4B4;
     }
 }
 
-* {
-    box-sizing: border-box;
+* { /* On applique une police et une taille de police pour toute la page */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-decoration: none;
     font-size: 20px;
-    margin: 0;
-    padding: 0;
 }
 
-body {
+body { /* On applique une couleur de fond, on aligne tous les textes et on définit l'espacement vertical entre les lignes de texte du corps de la page */
     background-color: var(--background-color3);
-    color: var(--text-color2);
     line-height: 1.6;
     text-align: center;
 }
-img{
-    max-width: 480px;
-    max-height: 480px;
+
+img{ /* On définit les dimensions des images */
+    max-width: 470px;
+    max-height: 470px;
 }
 
-main h1 {
+main h1 { /* On définit la taille de police des gros titres ainsi que leurs couleurs et leur espacement */
     font-size: 32px;
-    color: var(--background-color);
-    text-align: center;
+    color: var(--text-color234);
     margin-bottom: 20px;
 }
 
-main h2, main h3 {
-    color: var(--background-color);
+main h2, main h3 { /* On définit la taille de police des gros titres ainsi que leurs couleurs et leur espacement */
+    color: var(--text-color234);
     margin-bottom: 15px;
     font-size: 24px;
 }
 
-main section article p {
+main section article p { /* On définit le centrage des paragraphes et leur espacement */
     text-align: justify;
     margin-bottom: 20px;
 }
 
-a {
+a { /* On retire les défauts du lien pour lui ajouter une couleur et le grossir */
     text-decoration: none;
     color: grey;
-    font-size: 18px;
+    font-weight: bold;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* Les styles définis dans ce bloc ne s'appliqueront que si la hauteur de le viewport est inférieur ou égal à 780 pixels correspondant à des écran de moyen hauteur en modifiant les dimensions et l'utilisation de flexbox*/
     main {
         margin: 10px;
     }
@@ -75,7 +76,7 @@ a {
     }
 }
 
-.container{
+.container{ /* On définit le container principal (correspondant à la page) en stylisant les couleurs, l'arrière plan, les marges et comment seront organisés les objets dans le container */
     background-color: var(--background-color3);
     padding: 20px;
     margin: 20px auto;
@@ -86,21 +87,28 @@ a {
     justify-content: center;
 }
 
+/* On applique au éléments du container des dimensions, du style de bordure, des couleurs de texte et d'arrière plan ainsi que des marges */
 .article1 , .article2, .article3, .article4 , .article5, .article6, .article7 , .article8, .article9, .article10 , .article11{
     width: 500px;
     margin: 5px;
     padding: 5px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-} 
+    background-color: var(--background-color92);
+    color: var(--text-color237);
+}
 
-.boite{
+.entete3, .entete, .entete2, .entete4 { /* On colore des textes de entêtes */
+    color: var(--text-color237);
+}
+
+.boite{ /* Les sous-boîtes sont organisés pour pas qu'il n'y ait de problème d'organisation dans le grand container */
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
-.article1:hover img,
+.article1:hover img, /* Au survol du curseur sur les articles, les images s'aggrandissent */
 .article2:hover img,
 .article3:hover img,
 .article4:hover img,
@@ -124,7 +132,7 @@ a {
 .article8:hover,
 .article9:hover,
 .article10:hover,
-.article11:hover {
+.article11:hover { /* Au survol du curseur sur les articles, ces derniers descendent légèrement en marquant plus fortement l'ombre de la bordure */
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
