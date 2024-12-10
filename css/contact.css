@@ -27,6 +27,10 @@
     }
 }
 
+.contact, .infos, .demande{
+    margin: auto;
+}
+
 /* Zone de texte non redimensionnable */
 .message-box {
     resize: none; /* Empêche l'utilisateur de redimensionner la zone de texte (message) sur la page de contact */
@@ -41,7 +45,8 @@
     width: 100%; /* Prend toute la largeur disponible */
     height: auto; /* Laisse la hauteur s'ajuster automatiquement en fonction du contenu */
     margin: 0 auto; /* Centre l'encadré horizontalement */
-    margin-top: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     padding: 20px; /* Ajoute un espacement intérieur de 20px */
     border: 1px solid var(--background-color) !important; /* Ajoute une bordure grise claire autour de l'encadré */
     border-radius: 8px; /* Arrondit les coins de la bordure */
@@ -69,6 +74,13 @@
     justify-content: flex-start; /* Aligne verticalement les éléments en haut */
     align-items: center; /* Centre les éléments horizontalement */
     color: var(--text-color2);
+}
+
+.encadre2{
+    margin-top: 25px;
+}
+.contact{
+    color: green;
 }
 
 
