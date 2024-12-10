@@ -110,7 +110,7 @@ footer {
 
 .lien {
     text-decoration: none; /* Enlève le soulignement du lien */
-    color: var(--button-text-color); /* Définit la couleur du texte */
+    color: var(--button-text-color2); /* Définit la couleur du texte */
     transition: color 0.3s; /* Animation au survol */
 }
 
