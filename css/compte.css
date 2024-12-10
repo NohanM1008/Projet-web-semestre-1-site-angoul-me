@@ -1,7 +1,15 @@
 * {
-    font-family: Arial, Helvetica, sans-serif; /* On applique la police Arial à toute la page */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* On applique la police Arial à toute la page */
     margin: 0; /* On définit de base qu'on supprime toutes les marges externes à toute la page */
     padding: 0; /* On définit de base qu'on supprime toutes les espaces internes à toute la page */
+}
+main{
+    font-weight: bold;
+}
+.creercompte {
+    margin: auto;
+    color: #556B61 !important;
+    font-size: large;
 }
 :root {
     --background-color: #f9f9f9; /* On définit des variables pour les couleurs utlilisées dasn notre code (pour le mode clair) */
@@ -10,6 +18,7 @@
     --button-background-color: #007BFF; /* Couleur de l'arrière-plan dans le bouton */
     --button-text-color: #ffffff; /* Couleur du texte dans le bouton */
     --border-color: #ddd; /* Couleur de la bordure de l'encadré */
+    --background-color89: #f9f9f9;
 }
 
 @media (prefers-color-scheme: dark) { /* Ce media permet de détecter si l'utilisateur du site est en mode sombre ou non, s'il est en mode sombre, les variables de couleurs changeront avvec celles qui sont définies ci-dessous */
@@ -20,22 +29,24 @@
         --button-background-color: #d4edda; /* Couleur de l'arrière-plan dans le bouton */
         --button-text-color: #000000; /* Couleur du texte dans le bouton */
         --border-color: #000000; /* Couleur de la bordure de l'encadré */
+        --background-color89: #6E6E6E;
     }
 }
 body{
-    background-color: var(--background-color); /* On applique un fond d'écran à toute la page */
+    background-color: var(--background-color89); /* On applique un fond d'écran à toute la page */
 }
 
 label, legend {
     color: var(--text-color); /* On colore les textes dans le formulaire */
 }
+
 /* Style pour les 2 encadrés */
 .encadre, .encadre2 {
     width: 500px; /* On définit la longueur de l'encadré */ 
     height: auto; /* On définit la hauteur de l'encadré comme auto, celà signifie qu'elle sera adaptée à la taille nécessaire du formulaire */
     margin: 0 auto; /* On centre les éléments horizontalement dans le conteneur */
     padding: 20px; /* Chaque élément prend un espace de 20px dans les 4 directions (afin d'espacer les éléments) */
-    border: 1px solid var(--border-color) !important; /* On définit la taille de la bordure de l'encadré ainsi que de sa taille et du fait qu'on le voit (solid), de plus, le !important permet de bypass certains problèmes css qui empêchait la couleur de la bordure d'apparaître */
+    border: 1px solid var(--background-color2) !important; /* On définit la taille de la bordure de l'encadré ainsi que de sa taille et du fait qu'on le voit (solid), de plus, le !important permet de bypass certains problèmes css qui empêchait la couleur de la bordure d'apparaître */
     border-radius: 8px; /* On définit l'arondissement des bord de l'encadré */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* On définit l'ombre que l'on met au niveau de la bordure de l'encadré afin d'ajouter une touche de style dans notre formulaire */
     background-color: var(--background-color2) !important; /* On définit la couleur de l'arrière plan de l'intérieur de l'encadré, de plus, le !important permet de bypass certains problèmes css qui empêchait la couleur de l'arrière-plan d'apparaître */
@@ -45,6 +56,19 @@ label, legend {
     align-items: center; /* Les éléments dans l'axe secondaire (la ligne) seront centrés */
     text-align: center; /* Le texte sera centré */
     gap: 10px; /* On met un espace de 10 pixels entre chaque éléments afin que le formulaire soit propre */
+}
+
+.encadre{
+    margin-top: 25px;
+}
+
+.encadre2{
+    margin-bottom: 25px;
+}
+
+.encadre2 a{
+    text-decoration: none;
+    color: gray;
 }
 
 /* Style pour les boutons "submit" et "reset" */
