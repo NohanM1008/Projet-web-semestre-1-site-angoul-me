@@ -3,6 +3,10 @@
     font-family: Arial, Helvetica, sans-serif; /* Définit la police utilisée sur toute la page, avec des polices de secours */
 }
 
+main{
+    font-weight: bold;
+}
+
 :root{
     --background-color: darkslateblue;
     --background-color2: lightsteelblue;
@@ -12,6 +16,7 @@
     --button-background-color: #007BFF; /* Couleur de l'arrière-plan dans le bouton */
     --button-text-color: #ffffff; /* Couleur du texte dans le bouton */
     --border-color: #ddd; /* Couleur de la bordure de l'encadré */
+    --background-color68:  #9F93FF;
 }
 
 @media (prefers-color-scheme: dark) { /* Ce media permet de détecter si l'utilisateur du site est en mode sombre ou non, s'il est en mode sombre, les variables de couleurs changeront avvec celles qui sont définies ci-dessous */
@@ -24,6 +29,7 @@
         --button-background-color: #d4edda; /* Couleur de l'arrière-plan dans le bouton */
         --button-text-color: #000000; /* Couleur du texte dans le bouton */
         --border-color: #000000; /* Couleur de la bordure de l'encadré */
+        --background-color68: #1F1F1F;
     }
 }
 
@@ -34,10 +40,10 @@
     height: auto; /* La hauteur de l'encadré s'adapte à son contenu */
     margin: 0 auto; /* Centrer l'encadré horizontalement */
     padding: 20px; /* Espacement interne autour du contenu de l'encadré */
-    border: 1px solid var(--background-color) !important; /* Bordure grise claire autour de l'encadré */
+    border: 1px solid var(--background-color68) !important; /* Bordure grise claire autour de l'encadré */
     border-radius: 8px; /* Coins arrondis de l'encadré */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée légère pour un effet de profondeur */
-    background-color: var(--background-color) !important; /* Couleur de fond claire pour l'encadré */
+    background-color: var(--background-color68) !important; /* Couleur de fond claire pour l'encadré */
    
     /* Permet de centrer le texte et les éléments enfants (comme les boutons) par rapport à l'encadré */
     display: flex;

@@ -1,6 +1,10 @@
 /* Application de la police de caractères par défaut */
 * {
-    font-family: Arial, Helvetica, sans-serif; /* Applique la police de caractères Arial, Helvetica ou sans-serif à tout le texte de la page */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;; /* Applique la police de caractères Arial, Helvetica ou sans-serif à tout le texte de la page */
+}
+
+main{
+    font-weight: bold;
 }
 
 :root{
@@ -12,6 +16,7 @@
     --button-background-color: #007BFF; /* Couleur de l'arrière-plan dans le bouton */
     --button-text-color: #ffffff; /* Couleur du texte dans le bouton */
     --border-color: #ddd; /* Couleur de la bordure de l'encadré */
+    --background-color68:  #9F93FF;
 }
 
 @media (prefers-color-scheme: dark) { /* Ce media permet de détecter si l'utilisateur du site est en mode sombre ou non, s'il est en mode sombre, les variables de couleurs changeront avvec celles qui sont définies ci-dessous */
@@ -24,11 +29,13 @@
         --button-background-color: #d4edda; /* Couleur de l'arrière-plan dans le bouton */
         --button-text-color: #000000; /* Couleur du texte dans le bouton */
         --border-color: #000000; /* Couleur de la bordure de l'encadré */
+        --background-color68: #1F1F1F;
     }
 }
 
 .contact, .infos, .demande{
     margin: auto;
+    color: #556B61 !important;
 }
 
 /* Zone de texte non redimensionnable */
@@ -48,10 +55,10 @@
     margin-top: 50px;
     margin-bottom: 50px;
     padding: 20px; /* Ajoute un espacement intérieur de 20px */
-    border: 1px solid var(--background-color) !important; /* Ajoute une bordure grise claire autour de l'encadré */
+    border: 1px solid var(--background-color68) !important; /* Ajoute une bordure grise claire autour de l'encadré */
     border-radius: 8px; /* Arrondit les coins de la bordure */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une légère ombre portée autour de l'encadré pour un effet de profondeur */
-    background-color: var(--background-color) !important; /* Définit un fond de couleur gris très clair */
+    background-color: var(--background-color68) !important; /* Définit un fond de couleur gris très clair */
     display: flex; /* Utilise le modèle de mise en page flexbox */
     flex-direction: column; /* Organise les éléments en colonne */
     justify-content: flex-start; /* Aligne verticalement les éléments en haut */
@@ -75,12 +82,24 @@
     align-items: center; /* Centre les éléments horizontalement */
     color: var(--text-color2);
 }
-
+.alignement{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+.monsieur{
+    position: absolute;
+    left: 20%;
+    top: 3px;
+}
+.madame{
+    position: absolute;
+    right: 20%;
+    top: 3px
+}
 .encadre2{
     margin-top: 25px;
-}
-.contact{
-    color: green;
 }
 
 
