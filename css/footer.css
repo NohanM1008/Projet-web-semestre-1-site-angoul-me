@@ -49,6 +49,9 @@ footer {
     margin: 15%; /* Ajoute un espace autour de l'image */
 }
 
+.infos2{
+    color: var(--text-color58)
+}
 
 .footer-centre {
     display: flex; /* Utilise le flexbox pour organiser le contenu du centre */
