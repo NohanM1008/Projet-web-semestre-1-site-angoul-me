@@ -15,6 +15,7 @@
     --button-text-color: #ffffff; /* Couleur du texte dans le bouton */
     --border-color: #ddd; /* Couleur de la bordure de l'encadré */
     --text-color19: #4f4f4f;
+    --text-color58: #555;
 }
 
 @media (prefers-color-scheme: dark) { /* Ce media permet de détecter si l'utilisateur du site est en mode sombre ou non, s'il est en mode sombre, les variables de couleurs changeront avvec celles qui sont définies ci-dessous */
@@ -28,6 +29,7 @@
         --button-text-color: #000000; /* Couleur du texte dans le bouton */
         --border-color: #000000; /* Couleur de la bordure de l'encadré */
         --text-color19: #2F2F2F;
+        --text-color58: #B4B4B4;
     }
 }
 /* Styles pour le footer */
@@ -47,6 +49,9 @@ footer {
     margin: 15%; /* Ajoute un espace autour de l'image */
 }
 
+.infos2{
+    color: var(--text-color58)
+}
 
 .footer-centre {
     display: flex; /* Utilise le flexbox pour organiser le contenu du centre */
@@ -110,7 +115,7 @@ footer {
 
 .lien {
     text-decoration: none; /* Enlève le soulignement du lien */
-    color: var(--button-text-color); /* Définit la couleur du texte */
+    color: var(--text-color58); /* Définit la couleur du texte */
     transition: color 0.3s; /* Animation au survol */
 }
 
