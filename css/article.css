@@ -216,3 +216,7 @@ article:hover {
 body{
     background-color: var(--background-color17);
 }
+
+section + h2{
+    text-align: center;
+}
