@@ -7,11 +7,44 @@
     margin: 0;
     padding: 0;
 }
+:root{
+    --background-color18: #f0f8ff;
+    --background-color2: lightsteelblue;
+    --text-color: #555;
+    --text-color2: #d4edda;
+    --background-color3: gainsboro;
+    --button-background-color: #007BFF; /* Couleur de l'arrière-plan dans le bouton */
+    --button-text-color: #ffffff; /* Couleur du texte dans le bouton */
+    --border-color: #ddd; /* Couleur de la bordure de l'encadré */
+    --text-color19: #4f4f4f;
+    --text-color22: black;
+    --background-color34: #B4B4B4;
+}
+
+@media (prefers-color-scheme: dark) { /* Ce media permet de détecter si l'utilisateur du site est en mode sombre ou non, s'il est en mode sombre, les variables de couleurs changeront avvec celles qui sont définies ci-dessous */
+    :root {
+        --background-color18: #1F1F1F; /* Définition de variables pour le mode sombre, ici de la couleur de fond de la page */
+        --background-color2: #2F2F2F; /* Couleur de fond des encadrés */
+        --text-color: #313338; /* Couleur du texte */
+        --text-color2: #B4B4B4;
+        --background-color3: #313338;
+        --button-background-color: #d4edda; /* Couleur de l'arrière-plan dans le bouton */
+        --button-text-color: #000000; /* Couleur du texte dans le bouton */
+        --border-color: #000000; /* Couleur de la bordure de l'encadré */
+        --text-color19: #2F2F2F;
+        --text-color22: #f0f8ff;
+        --background-color34: #2C3E50;
+    }
+}
 
 body {
-    background-color: var(--grisclair);
-    color: var(--noir);
+    background-color: var(--background-color3) !important;
+    color: var(--text-color22);
     line-height: 1.6;
+}
+.ville{
+    color: white;
+    width: 1000px;
 }
 
 /* Diaporama */
@@ -66,7 +99,7 @@ section article img {
 
 section article {
     width: 30%;
-    background-color: var(--grisclair);
+    background-color: var(--background-color34);
     margin-bottom: 20px;
     padding: 15px;
     border-radius: 8px;
