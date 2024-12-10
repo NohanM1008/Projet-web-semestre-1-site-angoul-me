@@ -20,10 +20,12 @@
 body {
     font-family: Arial, sans-serif; /* Utilisation de la police Arial, sans-serif en cas de problème avec Arial */
     line-height: 1.6; /* Espacement des lignes pour une meilleure lisibilité */
-    margin: 0; /* Suppression des marges par défaut */
-    padding: 0; /* Suppression du padding par défaut */
     background-color: var(--background-color7); /* Couleur de fond douce et claire pour le site */
     color: var(--text-color7); /* Couleur de texte sombre pour un bon contraste avec le fond */
+}
+main{
+    width: 85%;
+    margin: auto;
 }
 
 
