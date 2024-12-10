@@ -7,6 +7,7 @@
     --button-background-color: #007BFF; /* Couleur de l'arrière-plan dans le bouton */
     --button-text-color: #ffffff; /* Couleur du texte dans le bouton */
     --border-color: #ddd; /* Couleur de la bordure de l'encadré */
+    --background-color74:  #9F93FF;
 }
 
 @media (prefers-color-scheme: dark) { /* Ce media permet de détecter si l'utilisateur du site est en mode sombre ou non, s'il est en mode sombre, les variables de couleurs changeront avvec celles qui sont définies ci-dessous */
@@ -19,6 +20,7 @@
         --button-background-color: #d4edda; /* Couleur de l'arrière-plan dans le bouton */
         --button-text-color: #000000; /* Couleur du texte dans le bouton */
         --border-color: #000000; /* Couleur de la bordure de l'encadré */
+        --background-color74:  #2F2F2F;
     }
 }
 
@@ -33,8 +35,8 @@
 }
 
 article {
-    background-color: var(--background-color2);
-    border: 1px solid var(--background-color2);
+    background-color: var(--background-color74);
+    border: 1px solid var(--background-color74);
     border-radius: 8px;
     text-align: center;
     padding: 10px;
