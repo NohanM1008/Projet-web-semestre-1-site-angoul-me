@@ -1,4 +1,4 @@
-:root{
+:root {
     --background-color: darkslateblue;
     --background-color2: lightsteelblue;
     --text-color: white;
@@ -6,11 +6,11 @@
     --background-color3: gainsboro;
 }
 
-@media (prefers-color-scheme: dark) { /* Ce media permet de détecter si l'utilisateur du site est en mode sombre ou non, s'il est en mode sombre, les variables de couleurs changeront avvec celles qui sont définies ci-dessous */
+@media (prefers-color-scheme: dark) {
     :root {
-        --background-color: #1F1F1F; /* Définition de variables pour le mode sombre, ici de la couleur de fond de la page */
-        --background-color2: #2F2F2F; /* Couleur de fond des encadrés */
-        --text-color: #d4edda; /* Couleur du texte */
+        --background-color: #1F1F1F;
+        --background-color2: #2F2F2F;
+        --text-color: #d4edda;
         --text-color2: #B4B4B4;
         --background-color3: #313338;
     }
@@ -68,7 +68,8 @@ main ul li {
     font-size: 18px;
     color: var(--background-color);
 }
-a{
+
+a {
     text-decoration: none;
     color: grey;
 }
