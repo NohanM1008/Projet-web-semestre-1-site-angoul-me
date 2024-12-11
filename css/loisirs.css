@@ -55,7 +55,7 @@ main section article p { /* On définit le centrage des paragraphes et leur espa
     margin-bottom: 20px;
 }
 
-a { /* On retire les défauts du lien pour lui ajouter une couleur et le grossir */
+article a { /* On retire les défauts du lien pour lui ajouter une couleur et le grossir */
     text-decoration: none;
     color: grey;
     font-weight: bold;
