@@ -15,24 +15,20 @@ main{ /* On grossit la police dans le corp principal */
     color: #556B61 !important;
     font-size: large;
 }
-:root {
-    --background-color: #f9f9f9; /* On définit des variables pour les couleurs utlilisées dasn notre code (pour le mode clair) */
+:root { /* On définit des variables pour les couleurs utlilisées dasn notre code (pour le mode clair) */
     --background-color2: #F4F4F4;
     --text-color: #000000;
     --button-background-color: #007BFF;
     --button-text-color: #ffffff;
-    --border-color: #ddd;
     --background-color89: #f9f9f9;
 }
 
 @media (prefers-color-scheme: dark) { /* Ce media permet de détecter si l'utilisateur du site est en mode sombre ou non, s'il est en mode sombre, les variables de couleurs changeront avvec celles qui sont définies ci-dessous */
-    :root {
-        --background-color: #1F1F1F; /* Définition de variables pour le mode sombre, ici de la couleur de fond de la page */
+    :root { /* Définition de variables pour le mode sombre, ici de la couleur de fond de la page */
         --background-color2: #2F2F2F; /* Couleur de fond des encadrés */
         --text-color: #B4B4B4; /* Couleur du texte */
         --button-background-color: #d4edda; /* Couleur de l'arrière-plan dans le bouton */
-        --button-text-color: #000000; /* Couleur du texte dans le bouton */
-        --border-color: #000000; /* Couleur de la bordure de l'encadré */
+        --button-text-color: #000000; /* Couleur de la bordure de l'encadré */
         --background-color89: #6E6E6E;
     }
 }

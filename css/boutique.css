@@ -4,9 +4,6 @@
     --text-color: #555;
     --text-color2: #333;
     --background-color3: gainsboro;
-    --button-background-color: #007BFF; /* Couleur de l'arrière-plan dans le bouton */
-    --button-text-color: #ffffff; /* Couleur du texte dans le bouton */
-    --border-color: #ddd; /* Couleur de la bordure de l'encadré */
     --background-color74:  #9F93FF;
 }
 
@@ -17,9 +14,6 @@
         --text-color: #313338; /* Couleur du texte */
         --text-color2: #B4B4B4;
         --background-color3: #313338;
-        --button-background-color: #d4edda; /* Couleur de l'arrière-plan dans le bouton */
-        --button-text-color: #000000; /* Couleur du texte dans le bouton */
-        --border-color: #000000; /* Couleur de la bordure de l'encadré */
         --background-color74:  #2F2F2F;
     }
 }
