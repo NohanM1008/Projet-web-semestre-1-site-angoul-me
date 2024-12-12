@@ -119,3 +119,8 @@ article a { /* On retire les défauts du lien pour lui ajouter une couleur et le
 article {
     transition: transform 0.3s ease; /* Ajout d'une animation de transition */
 }
+
+#boutique:hover:hover{
+    font-size: larger;
+    transform: translateY(-5px);
+}
