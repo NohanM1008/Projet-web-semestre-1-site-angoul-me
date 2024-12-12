@@ -135,3 +135,7 @@ article a { /* On retire les défauts du lien pour lui ajouter une couleur et le
     font-weight: bold;
     color: grey;
 }
+
+article {
+    transition: transform 0.3s ease; /* Ajout d'une animation de transition */
+}
