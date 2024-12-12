@@ -6,18 +6,18 @@
     box-sizing: border-box; /* Inclut les bordures et le padding dans la taille des éléments */
 }
 :root{
-    --background-color18: #f0f8ff;
-    --text-color2: #333; /* Couleur de la bordure de l'encadré */
-    --text-color19: #4f4f4f;
-    --text-color58: #555;
+    --background-color8: #f0f8ff;
+    --text-color4: #333;
+    --text-color10: #4f4f4f;
+    --text-color11: #555;
 }
 
 @media (prefers-color-scheme: dark) { /* Ce media permet de détecter si l'utilisateur du site est en mode sombre ou non, s'il est en mode sombre, les variables de couleurs changeront avvec celles qui sont définies ci-dessous */
     :root {
-        --background-color18: #1F1F1F; /* Couleur du texte */
-        --text-color2: #B4B4B4;/* Couleur de la bordure de l'encadré */
-        --text-color19: #2F2F2F;
-        --text-color58: #B4B4B4;
+        --background-color8: #1F1F1F;
+        --text-color4: #B4B4B4;
+        --text-color10: #2F2F2F;
+        --text-color11: #B4B4B4;
     }
 }
 /* Styles pour le footer */
@@ -25,8 +25,8 @@ footer {
     display: flex; /* Utilise le flexbox pour organiser les éléments du footer */
     justify-content: space-between; /* Espacement égal entre les éléments */
     align-items: flex-start; /* Aligne les éléments en haut */
-    background-color: var(--background-color18) !important; /* Définit la couleur de fond du footer */
-    color: var(--text-color2) !important; /* Texte noir */
+    background-color: var(--background-color8) !important; /* Définit la couleur de fond du footer */
+    color: var(--text-color4) !important; /* Texte noir */
     padding: 20px; /* Ajoute de l'espace à l'intérieur du footer */
     flex-wrap: wrap; /* Permet aux éléments de se répartir sur plusieurs lignes */
 }
@@ -38,7 +38,7 @@ footer {
 }
 
 .infos2{
-    color: var(--text-color58)
+    color: var(--text-color11)
 }
 
 .footer-centre {
@@ -103,18 +103,14 @@ footer {
 
 .lien {
     text-decoration: none; /* Enlève le soulignement du lien */
-    color: var(--text-color58); /* Définit la couleur du texte */
+    color: var(--text-color11); /* Définit la couleur du texte */
     transition: color 0.3s; /* Animation au survol */
 }
 
 
 .lien:hover {
-    color: var(--text-color19); /* Change la couleur du lien au survol */
+    color: var(--text-color10); /* Change la couleur du lien au survol */
 }
-
-
-/* Media Queries pour les appareils mobiles */
-
 
 @media (max-width: 768px) {
     /* Pour les tablettes et petits écrans */
@@ -143,41 +139,5 @@ footer {
 
     .footer-droite ul {
         text-align: center; /* Centre le texte dans la liste */
-    }
-}
-
-
-@media (max-width: 480px) {
-    /* Pour les très petits écrans, comme les téléphones */
-    input[type="submit"], input[type="reset"] {
-        padding: 8px 15px; /* Réduit la taille des boutons */
-    }
-
-
-    .encadre, .encadre2 {
-        max-width: 90%; /* Réduit la largeur des boîtes */
-        margin: 10px; /* Réduit l'espace autour des boîtes */
-    }
-
-
-    footer {
-        padding: 10px; /* Réduit l'espace à l'intérieur du footer */
-    }
-
-
-    .footer-gauche img {
-        max-width: 100px; /* Réduit la taille de l'image dans le footer */
-        margin: 5%; /* Réduit l'espace autour de l'image */
-    }
-
-
-    .footer-centre {
-        gap: 5px; /* Réduit l'espace entre les éléments du centre */
-    }
-
-
-    .logos a img {
-        width: 35px; /* Réduit la taille des icônes des réseaux sociaux */
-        height: 35px; /* Réduit la taille des icônes des réseaux sociaux */
     }
 }

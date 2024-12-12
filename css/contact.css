@@ -8,20 +8,20 @@ main{
 }
 
 :root{
-    --background-color2: lightsteelblue;
-    --background-color3: gainsboro;
+    --background-color3: lightsteelblue;
+    --background-color4: gainsboro;
+    --background-color10: #9F93FF;
     --button-background-color: #007BFF; /* Couleur de l'arrière-plan dans le bouton */
     --button-text-color: #ffffff;/* Couleur de la bordure de l'encadré */
-    --background-color68:  #9F93FF;
 }
 
 @media (prefers-color-scheme: dark) { /* Ce media permet de détecter si l'utilisateur du site est en mode sombre ou non, s'il est en mode sombre, les variables de couleurs changeront avvec celles qui sont définies ci-dessous */
     :root { /* Définition de variables pour le mode sombre, ici de la couleur de fond de la page */
-        --background-color2: #2F2F2F;
-        --background-color3: #313338;
+        --background-color3: #2F2F2F;
+        --background-color4: #313338;
+        --background-color10: #1F1F1F;
         --button-background-color: #d4edda; /* Couleur de l'arrière-plan dans le bouton */
         --button-text-color: #000000; /* Couleur de la bordure de l'encadré */
-        --background-color68: #1F1F1F;
     }
 }
 
@@ -48,10 +48,10 @@ main{
     margin-top: 50px;
     margin-bottom: 50px;
     padding: 20px; /* Ajoute un espacement intérieur de 20px */
-    border: 1px solid var(--background-color68) !important; /* Ajoute une bordure grise claire autour de l'encadré */
+    border: 1px solid var(--background-color10) !important; /* Ajoute une bordure grise claire autour de l'encadré */
     border-radius: 8px; /* Arrondit les coins de la bordure */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une légère ombre portée autour de l'encadré pour un effet de profondeur */
-    background-color: var(--background-color68) !important; /* Définit un fond de couleur gris très clair */
+    background-color: var(--background-color10) !important; /* Définit un fond de couleur gris très clair */
     display: flex; /* Utilise le modèle de mise en page flexbox */
     flex-direction: column; /* Organise les éléments en colonne */
     justify-content: flex-start; /* Aligne verticalement les éléments en haut */
@@ -65,10 +65,10 @@ main{
     width: 100%; /* Utilise toute la largeur disponible */
     margin: 0 auto; /* Centre les éléments horizontalement */
     padding: 20px; /* Ajoute un espacement intérieur de 20px */
-    border: 1px solid var(--background-color2) !important; /* Ajoute une bordure grise claire autour de l'élément */
+    border: 1px solid var(--background-color3) !important; /* Ajoute une bordure grise claire autour de l'élément */
     border-radius: 8px; /* Arrondit les coins de la bordure */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une légère ombre portée autour de l'élément */
-    background-color: var(--background-color2) !important; /* Définit un fond de couleur gris très clair */
+    background-color: var(--background-color3) !important; /* Définit un fond de couleur gris très clair */
     display: flex; /* Utilise le modèle de mise en page flexbox */
     flex-direction: column; /* Organise les éléments en colonne */
     justify-content: flex-start; /* Aligne verticalement les éléments en haut */
@@ -94,28 +94,6 @@ main{
 .encadre2{
     margin-top: 25px;
 }
-
-
-/* Media Query pour les écrans avec une hauteur maximale de 480px (smartphones très petits) */
-@media (max-height: 480px) {
-    .encadre, .encadre1, .encadre2 {
-        max-height: none; /* Permet aux éléments de s'ajuster en hauteur sans limite maximale */
-        height: auto; /* Permet aux éléments de se redimensionner automatiquement */
-        padding: 10px; /* Réduit l'espacement intérieur pour un meilleur ajustement */
-    }
-
-
-    input[type="submit"], input[type="reset"] {
-        font-size: 14px; /* Réduit la taille du texte des boutons pour les petits écrans */
-        padding: 8px 16px; /* Réduit l'espace autour du texte des boutons */
-    }
-
-
-    .message-box {
-        height: 100px; /* Définit une hauteur fixe pour la zone de texte */
-    }
-}
-
 
 /* Media Query pour les écrans avec une hauteur maximale de 768px (smartphones et tablettes petites) */
 @media (max-height: 768px) {
@@ -165,5 +143,5 @@ input[type="submit"]:hover, input[type="reset"]:hover {
 }
 
 body{
-    background-color: var(--background-color3);
+    background-color: var(--background-color4);
 }

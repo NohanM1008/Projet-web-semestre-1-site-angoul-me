@@ -1,20 +1,20 @@
 :root {
-    --background-color2: lightsteelblue;
-    --background-color3: gainsboro;
-    --text-color15: #333;
-    --text-color16: #555;
-    --background-color17: #b4b4b4;
-    --background-color68:  #9F93FF;
+    --background-color3: lightsteelblue;
+    --background-color4: gainsboro;
+    --background-color7: #b4b4b4;
+    --background-color10:  #9F93FF;
+    --text-color4: #333;
+    --text-color9: #555;
 }
 
 @media (prefers-color-scheme: dark) { /* Ce media permet de détecter si l'utilisateur du site est en mode sombre ou non, s'il est en mode sombre, les variables de couleurs changeront avvec celles qui sont définies ci-dessous */
     :root {
-        --background-color2: #2F2F2F; /* Couleur de fond des encadrés */
-        --text-color15: #B4B4B4;
-        --background-color3: #313338;
-        --text-color16: #d4edda;
-        --background-color17: #686868;
-        --background-color68: #1F1F1F;
+        --background-color3: #2F2F2F; /* Couleur de fond des encadrés */
+        --background-color4: #313338;
+        --background-color7: #686868;
+        --background-color10: #1F1F1F;
+        --text-color4: #B4B4B4;
+        --text-color9: #d4edda;
     }
 }
 
@@ -64,7 +64,7 @@ Les éléments sont alors alignés en haut avec un espacement de 20px*/
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 10px;
-    color: var(--text-color15);
+    color: var(--text-color4);
 }
 
 /* Style du prix de l'article */
@@ -80,7 +80,7 @@ Les éléments sont alors alignés en haut avec un espacement de 20px*/
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 1.8;
-    color: var(--text-color16);
+    color: var(--text-color9);
     margin-bottom: 15px;
 }
 
@@ -116,8 +116,8 @@ Les éléments sont alors alignés en haut avec un espacement de 20px*/
 
 /* article organise la mise en page avec une disposition de type flexbox*/
 article {
-    background-color: var(--background-color68);
-    border: 1px solid var(--background-color68);
+    background-color: var(--background-color10);
+    border: 1px solid var(--background-color10);
     border-radius: 8px;
     text-align: center;
     padding: 10px;
@@ -145,14 +145,14 @@ article p {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     margin: 5px 0;
-    color: var(--text-color15);
+    color: var(--text-color4);
 }
 
 /* Définition du style des titres h3 d'article*/
 article h3 {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
-    color: var(--text-color16);
+    color: var(--text-color9);
     margin: 10px 0 0;
 }
 
@@ -178,8 +178,8 @@ article:hover {
     flex: 1;
     position: sticky;
     top: 20px;
-    background-color: var(--background-color2);
-    border: 1px solid var(--background-color2);
+    background-color: var(--background-color4);
+    border: 1px solid var(--background-color4);
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -192,7 +192,7 @@ article:hover {
 .avis h4 {
     font-size: 18px;
     margin-bottom: 15px;
-    color: var(--text-color15);
+    color: var(--text-color4);
     text-align: center;
 }
 
@@ -212,18 +212,18 @@ article:hover {
 .avis-item p {
     font-size: 14px;
     margin: 0;
-    color: var(--text-color15);
+    color: var(--text-color4);
     line-height: 1.5;
 }
 
 .avis-item strong {
     font-weight: bold;
-    color: var(--text-color16);
+    color: var(--text-color9);
 }
 
 /*style du body */
 body{
-    background-color: var(--background-color17);
+    background-color: var(--background-color7);
 }
 
 /* style de section et h2 pour centrer le titre */

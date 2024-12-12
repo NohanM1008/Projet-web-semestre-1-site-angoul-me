@@ -1,20 +1,20 @@
 :root{
-    --background-color: darkslateblue;
-    --background-color2: lightsteelblue;
-    --text-color: #555;
-    --text-color2: #333;
+    --background-color1: darkslateblue;
+    --background-color3: lightsteelblue;
+    --text-color1: #555;
+    --text-color4: #333;
     --background-color3: gainsboro;
-    --background-color74:  #9F93FF;
+    --background-color11:  #9F93FF;
 }
 
 @media (prefers-color-scheme: dark) { /* Ce media permet de détecter si l'utilisateur du site est en mode sombre ou non, s'il est en mode sombre, les variables de couleurs changeront avvec celles qui sont définies ci-dessous */
     :root {
-        --background-color: #1F1F1F; /* Définition de variables pour le mode sombre, ici de la couleur de fond de la page */
-        --background-color2: #2F2F2F; /* Couleur de fond des encadrés */
-        --text-color: #313338; /* Couleur du texte */
-        --text-color2: #B4B4B4;
+        --background-color1: #1F1F1F; /* Définition de variables pour le mode sombre, ici de la couleur de fond de la page */
+        --background-color3: #2F2F2F; /* Couleur de fond des encadrés */
+        --text-color1: #313338; /* Couleur du texte */
+        --text-color4: #B4B4B4;
         --background-color3: #313338;
-        --background-color74:  #2F2F2F;
+        --background-color11:  #2F2F2F;
     }
 }
 
@@ -29,8 +29,8 @@
 }
 
 article {
-    background-color: var(--background-color74);
-    border: 1px solid var(--background-color74);
+    background-color: var(--background-color11);
+    border: 1px solid var(--background-color11);
     border-radius: 8px;
     text-align: center;
     padding: 10px;
@@ -55,12 +55,12 @@ article img {
 article p {
     font-size: 16px;
     margin: 5px 0;
-    color: var(--text-color2);
+    color: var(--text-color4);
 }
 
 article h3 {
     font-size: 18px;
-    color: var(--text-color);
+    color: var(--text-color1);
     margin: 10px 0 0;
 }
 
@@ -95,8 +95,8 @@ article:hover {
     flex: 1;
     position: sticky;
     top: 20px;
-    background-color: var(--background-color2);
-    border: 1px solid var(--background-color2);
+    background-color: var(--background-color3);
+    border: 1px solid var(--background-color3);
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -108,7 +108,7 @@ article:hover {
 .avis h4 {
     font-size: 18px;
     margin-bottom: 15px;
-    color: var(--text-color2);
+    color: var(--text-color4);
     text-align: center;
 }
 
@@ -131,10 +131,10 @@ article:hover {
 
 .avis-item strong {
     font-weight: bold;
-    color: var(--text-color2);
+    color: var(--text-color4);
 }
 
 body{
     background-color: var(--background-color3);
-    scrollbar-color: var(--background-color2) var(--background-color);
+    scrollbar-color: var(--background-color3) var(--background-color1);
 }

@@ -1,20 +1,16 @@
 :root{
-    --background-color4: darkslateblue;
-    --background-color5: lightsteelblue;
-    --text-color4: white;
-    --text-color5: black;
-    --background-color6: gainsboro;
-    --background-color67: gainsboro;
+    --background-color5: darkslateblue;
+    --background-color9: gainsboro;
+    --text-color5: white;
+    --text-color6: black;
 }
 
 @media (prefers-color-scheme: dark) { /* Ce media permet de détecter si l'utilisateur du site est en mode sombre ou non, s'il est en mode sombre, les variables de couleurs changeront avvec celles qui sont définies ci-dessous */
     :root {
-        --background-color4: #d4edda; /* Définition de variables pour le mode sombre, ici de la couleur de fond de la page */
-        --background-color5: #2F2F2F; /* Couleur de fond des encadrés */
-        --text-color4: #313338; /* Couleur du texte */
-        --text-color5: #B4B4B4;
-        --background-color6: #313338;
-        --background-color67: #686868;
+        --background-color5: #d4edda;
+        --background-color9: #686868;
+        --text-color5: #313338;
+        --text-color6: #B4B4B4;
     }
 }
 
@@ -27,11 +23,11 @@
     padding: 0;
 }
 body {
-    background-color: var(--background-color67);
-    color: var(--text-color5);
+    background-color: var(--background-color9);
+    color: var(--text-color6);
 }
 main {
-    background-color: var(--text-color4) !important;
+    background-color: var(--text-color5) !important;
     padding: 20px;
     margin: 20px auto;
     max-width: 800px;
@@ -41,13 +37,13 @@ main {
 
 main h1 {
     font-size: 32px;
-    color: var(--background-color4);
+    color: var(--background-color5);
     text-align: center;
     margin-bottom: 20px;
 }
 
 main h2, main h3 {
-    color: var(--background-color4);
+    color: var(--background-color5);
     margin-bottom: 10px;
 }
 

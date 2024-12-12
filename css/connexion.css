@@ -14,20 +14,20 @@ main{
 }
 
 :root{
-    --background-color2: lightsteelblue;
-    --background-color3: gainsboro;
+    --background-color3: lightsteelblue;
+    --background-color4: gainsboro;
+    --background-color10:  #9F93FF;
     --button-background-color: #007BFF; /* Couleur de l'arrière-plan dans le bouton */
     --button-text-color: #ffffff; /* Couleur du texte dans le bouton */
-    --background-color68:  #9F93FF;
 }
 
 @media (prefers-color-scheme: dark) { /* Ce media permet de détecter si l'utilisateur du site est en mode sombre ou non, s'il est en mode sombre, les variables de couleurs changeront avvec celles qui sont définies ci-dessous */
     :root { /* Définition de variables pour le mode sombre, ici de la couleur de fond de la page */
-        --background-color2: #2F2F2F; /* Couleur de fond des encadrés */
-        --background-color3: #313338;
+        --background-color3: #2F2F2F; /* Couleur de fond des encadrés */
+        --background-color4: #313338;
+        --background-color10: #1F1F1F;
         --button-background-color: #d4edda; /* Couleur de l'arrière-plan dans le bouton */
         --button-text-color: #000000; /* Couleur du texte dans le bouton */
-        --background-color68: #1F1F1F;
     }
 }
 
@@ -38,10 +38,10 @@ main{
     height: auto; /* La hauteur de l'encadré s'adapte à son contenu */
     margin: 0 auto; /* Centrer l'encadré horizontalement */
     padding: 20px; /* Espacement interne autour du contenu de l'encadré */
-    border: 1px solid var(--background-color68) !important; /* Bordure grise claire autour de l'encadré */
+    border: 1px solid var(--background-color10) !important; /* Bordure grise claire autour de l'encadré */
     border-radius: 8px; /* Coins arrondis de l'encadré */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée légère pour un effet de profondeur */
-    background-color: var(--background-color68) !important; /* Couleur de fond claire pour l'encadré */
+    background-color: var(--background-color10) !important; /* Couleur de fond claire pour l'encadré */
     /* Permet de centrer le texte et les éléments enfants (comme les boutons) par rapport à l'encadré */
     display: flex;
     flex-direction: column; /* Les éléments sont disposés en colonne */
@@ -111,10 +111,10 @@ input[type="compte"] {
     height: auto; /* La hauteur de l'encadré s'adapte à son contenu */
     margin: 0 auto; /* Centre l'encadré horizontalement */
     padding: 20px; /* Espacement interne autour du contenu */
-    border: 1px solid var(--background-color2) !important; /* Bordure grise claire autour de l'encadré */
+    border: 1px solid var(--background-color3) !important; /* Bordure grise claire autour de l'encadré */
     border-radius: 8px; /* Coins arrondis de l'encadré */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée légère pour un effet de profondeur */
-    background-color: var(--background-color2) !important; /* Couleur de fond claire pour l'encadré */
+    background-color: var(--background-color3) !important; /* Couleur de fond claire pour l'encadré */
     /* Permet de centrer le texte et les éléments enfants à l'intérieur de l'encadré */
     display: flex;
     flex-direction: column; /* Les éléments sont disposés en colonne */
@@ -147,35 +147,6 @@ input[type="compte"] {
 }
 
 
-/* Réduction au survol ou au clic pour d'autres éléments */
-.grossir2:hover, .grossir2:active {
-    transform: scale(0.8); /* Réduit l'élément au survol ou lorsqu'il est actif */
-    color: gray; /* Change la couleur du texte en gris lorsqu'il est survolé ou actif */
-}
-
-
-/* Media Query pour les écrans avec une hauteur maximale de 480px */
-@media (max-height: 480px) {
-    /* Modifie la hauteur maximale de l'encadré */
-    .encadre, .encadre2 {
-        max-height: 400px; /* Limite la hauteur de l'encadré à 400px pour les petits écrans */
-    }
-
-
-    /* Réduit la taille du texte des boutons pour les petits écrans */
-    input[type="submit"], input[type="reset"], input[type="compte"] {
-        font-size: 14px; /* Réduit la taille du texte des boutons */
-        padding: 8px 16px; /* Réduit l'espace autour du texte des boutons */
-    }
-
-
-    /* Ajuste la hauteur de la zone de texte */
-    .message-box {
-        height: 100px; /* Limite la hauteur de la zone de texte */
-    }
-}
-
-
 /* Media Query pour les écrans avec une hauteur maximale de 768px */
 @media (max-height: 768px) {
     /* Modifie la hauteur maximale de l'encadré */
@@ -198,5 +169,5 @@ input[type="compte"] {
 }
 
 body{
-    background-color: var(--background-color3);
+    background-color: var(--background-color4);
 }

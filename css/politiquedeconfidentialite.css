@@ -1,16 +1,16 @@
 /* Politique de confidentialité - Styles principaux */
 
 :root{
+    --background-color6: #f4f4f9;
     --text-color7: #333;
-    --background-color7: #f4f4f9;
     --link-color: #3498db;
     --title-color: #2c3e50;
 }
 
 @media (prefers-color-scheme: dark) { /* Ce media permet de détecter si l'utilisateur du site est en mode sombre ou non, s'il est en mode sombre, les variables de couleurs changeront avvec celles qui sont définies ci-dessous */
     :root {
+        --background-color6: #313338;
         --text-color7: #f4f4f9;
-        --background-color7: #313338;
         --link-color: grey;
         --title-color: #B4B4B4;
     }
@@ -20,7 +20,7 @@
 body {
     font-family: Arial, sans-serif; /* Utilisation de la police Arial, sans-serif en cas de problème avec Arial */
     line-height: 1.6; /* Espacement des lignes pour une meilleure lisibilité */
-    background-color: var(--background-color7); /* Couleur de fond douce et claire pour le site */
+    background-color: var(--background-color6); /* Couleur de fond douce et claire pour le site */
     color: var(--text-color7); /* Couleur de texte sombre pour un bon contraste avec le fond */
 }
 main{
@@ -46,23 +46,17 @@ main{
     color: var(--title-color); /* Couleur sombre pour une bonne lisibilité */
 }
 
-
-/* Style des liens */
 .lien {
     color: var(--link-color); /* Couleur bleue pour les liens */
     text-decoration: none; /* Suppression du soulignement par défaut */
     font-weight: bold; /* Mise en gras des liens pour les rendre plus visibles */
 }
 
-
-/* Effet au survol des liens */
 .lien:hover {
     color: #1abc9c; /* Changement de couleur au survol */
     text-decoration: underline; /* Soulignement au survol */
 }
 
-
-/* Style pour les listes ordonnées */
 ol {
     margin: 20px 40px; /* Espacement autour de la liste */
     padding: 0; /* Suppression du padding */
@@ -95,35 +89,5 @@ p {
 
     ol {
         margin: 10px 20px; /* Réduction des marges de la liste pour mieux s'adapter à l'écran */
-    }
-}
-
-
-/* Media Query pour les écrans de moins de 480px de large (smartphones très petits) */
-@media (max-width: 480px) {
-    .titre {
-        font-size: 1.3rem; /* Réduction supplémentaire de la taille du titre pour les écrans très petits */
-    }
-
-
-    .texte {
-        font-size: 0.8rem; /* Réduction de la taille du texte pour s'adapter aux petits écrans */
-        margin: 5px 10px; /* Réduction des marges autour du texte */
-    }
-
-
-    ol {
-        margin: 10px 15px; /* Réduction des marges de la liste */
-    }
-
-
-    ol li {
-        font-size: 0.9rem; /* Réduction de la taille de la police des éléments de la liste */
-    }
-
-
-    p {
-        font-size: 0.9rem; /* Réduction de la taille des paragraphes */
-        margin: 5px 10px; /* Espacement réduit pour mieux s'adapter à l'écran */
     }
 }

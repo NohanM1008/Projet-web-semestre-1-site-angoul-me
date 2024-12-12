@@ -4,20 +4,20 @@
 }
 
 :root{
-    --background-color10: gainsboro;
-    --text-color10: #1F1F1F;
+    --background-color4: gainsboro;
+    --text-color8: #1F1F1F;
 }
 
 @media (prefers-color-scheme: dark) { /* Ce media permet de détecter si l'utilisateur du site est en mode sombre ou non, s'il est en mode sombre, les variables de couleurs changeront avvec celles qui sont définies ci-dessous */
     :root {
-        --background-color10: #313338;
-        --text-color10: #B4B4B4;
+        --background-color4: #313338;
+        --text-color8: #B4B4B4;
     }
 }
 
 body{
-    background-color: var(--background-color10);
-    color: var(--text-color10);
+    background-color: var(--background-color4);
+    color: var(--text-color8);
 }
 .image {
     width: 300px;

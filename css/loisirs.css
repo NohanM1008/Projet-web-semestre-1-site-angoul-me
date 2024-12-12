@@ -1,24 +1,16 @@
-:root { /* On définit des variables pour les couleurs utlilisées dasn notre code (pour le mode clair) */
-    --background-color: darkslateblue;
-    --background-color2: lightsteelblue;
-    --text-color: white;
-    --text-color2: black;
-    --background-color3: gainsboro;
-    --background-color92: #F5F5F5;
-    --text-color234: darkslateblue;
-    --text-color237: black;
+:root {
+    --background-color4: gainsboro;
+    --background-color13: #F5F5F5;
+    --text-color6: black;
+    --text-color12: darkslateblue;
 }
 
 @media (prefers-color-scheme: dark) { /* Ce media permet de détecter si l'utilisateur du site est en mode sombre ou non, s'il est en mode sombre, les variables de couleurs changeront avvec celles qui sont définies ci-dessous */
     :root {
-        --background-color: #1F1F1F;
-        --background-color2: #2F2F2F;
-        --text-color: #d4edda;
-        --text-color2: #B4B4B4;
-        --background-color3: #313338;
-        --background-color92: #6E6E6E;
-        --text-color234: #f9f9f9;
-        --text-color237: #B4B4B4;
+        --background-color4: #313338;
+        --background-color13: #6E6E6E;
+        --text-color6: #B4B4B4;
+        --text-color12: #f9f9f9;
     }
 }
 
@@ -28,7 +20,7 @@
 }
 
 body { /* On applique une couleur de fond, on aligne tous les textes et on définit l'espacement vertical entre les lignes de texte du corps de la page */
-    background-color: var(--background-color3);
+    background-color: var(--background-color4);
     line-height: 1.6;
     text-align: center;
 }
@@ -40,12 +32,12 @@ img{ /* On définit les dimensions des images */
 
 main h1 { /* On définit la taille de police des gros titres ainsi que leurs couleurs et leur espacement */
     font-size: 32px;
-    color: var(--text-color234);
+    color: var(--text-color12);
     margin-bottom: 20px;
 }
 
 main h2, main h3 { /* On définit la taille de police des gros titres ainsi que leurs couleurs et leur espacement */
-    color: var(--text-color234);
+    color: var(--text-color12);
     margin-bottom: 15px;
     font-size: 24px;
 }
@@ -77,7 +69,7 @@ article a { /* On retire les défauts du lien pour lui ajouter une couleur et le
 }
 
 .container{ /* On définit le container principal (correspondant à la page) en stylisant les couleurs, l'arrière plan, les marges et comment seront organisés les objets dans le container */
-    background-color: var(--background-color3);
+    background-color: var(--background-color4);
     padding: 20px;
     margin: 20px auto;
     max-width: 1200px;
@@ -94,12 +86,12 @@ article a { /* On retire les défauts du lien pour lui ajouter une couleur et le
     padding: 5px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: var(--background-color92);
-    color: var(--text-color237);
+    background-color: var(--background-color13);
+    color: var(--text-color6);
 }
 
 .entete3, .entete, .entete2, .entete4 { /* On colore des textes de entêtes */
-    color: var(--text-color237);
+    color: var(--text-color6);
 }
 
 .boite{ /* Les sous-boîtes sont organisés pour pas qu'il n'y ait de problème d'organisation dans le grand container */
@@ -135,4 +127,11 @@ article a { /* On retire les défauts du lien pour lui ajouter une couleur et le
 .article11:hover { /* Au survol du curseur sur les articles, ces derniers descendent légèrement en marquant plus fortement l'ombre de la bordure */
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.entete a{
+    text-decoration: none;
+    font-size: large;
+    font-weight: bold;
+    color: grey;
 }
