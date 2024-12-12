@@ -80,7 +80,7 @@ article a { /* On retire les défauts du lien pour lui ajouter une couleur et le
 }
 
 /* On applique au éléments du container des dimensions, du style de bordure, des couleurs de texte et d'arrière plan ainsi que des marges */
-.article1 , .article2, .article3, .article4 , .article5, .article6, .article7 , .article8, .article9, .article10 , .article11{
+.article-container{
     width: 500px;
     margin: 5px;
     padding: 5px;
@@ -90,7 +90,7 @@ article a { /* On retire les défauts du lien pour lui ajouter une couleur et le
     color: var(--text-color6);
 }
 
-.entete3, .entete, .entete2, .entete4 { /* On colore des textes de entêtes */
+.entete { /* On colore des textes de entêtes */
     color: var(--text-color6);
 }
 
@@ -100,31 +100,11 @@ article a { /* On retire les défauts du lien pour lui ajouter une couleur et le
     flex-wrap: wrap;
 }
 
-.article1:hover img, /* Au survol du curseur sur les articles, les images s'aggrandissent */
-.article2:hover img,
-.article3:hover img,
-.article4:hover img,
-.article5:hover img,
-.article6:hover img,
-.article7:hover img,
-.article8:hover img,
-.article9:hover img,
-.article10:hover img,
-.article11:hover img {
+.article-container:hover img {
     transform: scale(1.05);
 }
 
-.article1:hover,
-.article2:hover,
-.article3:hover,
-.article4:hover,
-.article5:hover,
-.article6:hover,
-.article7:hover,
-.article8:hover,
-.article9:hover,
-.article10:hover,
-.article11:hover { /* Au survol du curseur sur les articles, ces derniers descendent légèrement en marquant plus fortement l'ombre de la bordure */
+.article-container:hover { /* Au survol du curseur sur les articles, ces derniers descendent légèrement en marquant plus fortement l'ombre de la bordure */
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
