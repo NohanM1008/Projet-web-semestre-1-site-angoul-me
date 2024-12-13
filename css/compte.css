@@ -10,7 +10,7 @@ main{ /* On grossit la police dans le corp principal */
     font-weight: bold;
 }
 
-.creercompte { /* les éléments seront centrés, on ajoute une couleur et on aggrandit la police */
+.creercompte { /* Les éléments seront centrés, on ajoute une couleur et on aggrandit la police */
     margin: auto;
     color: #556B61 !important;
     font-size: large;
@@ -24,67 +24,66 @@ main{ /* On grossit la police dans le corp principal */
 }
 
 @media (prefers-color-scheme: dark) { /* Ce media permet de détecter si l'utilisateur du site est en mode sombre ou non, s'il est en mode sombre, les variables de couleurs changeront avvec celles qui sont définies ci-dessous */
-    :root { /* Définition de variables pour le mode sombre, ici de la couleur de fond de la page */
-        --background-color2: #2F2F2F; /* Couleur de fond des encadrés */
+    :root {
+        --background-color2: #2F2F2F;
         --background-color12: #6E6E6E;
-        --text-color2: #B4B4B4; /* Couleur du texte */
-        --button-background-color: #d4edda; /* Couleur de l'arrière-plan dans le bouton */
-        --button-text-color: #000000; /* Couleur de la bordure de l'encadré */
+        --text-color2: #B4B4B4;
+        --button-background-color: #d4edda;
+        --button-text-color: #000000;
     }
 }
-body{
-    background-color: var(--background-color12); /* On applique un fond d'écran à toute la page */
+body{ /* On applique un fond d'écran à toute la page */
+    background-color: var(--background-color12);
 }
 
-label, legend {
-    color: var(--text-color2); /* On colore les textes dans le formulaire */
+label, legend { /* On colore les textes dans le formulaire */
+    color: var(--text-color2);
 }
 
-.encadre, .encadre2 {
-    width: 500px; /* On définit la longueur de l'encadré */ 
-    height: auto; /* On définit la hauteur de l'encadré comme auto, celà signifie qu'elle sera adaptée à la taille nécessaire du formulaire */
-    margin: 0 auto; /* On centre les éléments horizontalement dans le conteneur */
-    padding: 20px; /* Chaque élément prend un espace de 20px dans les 4 directions (afin d'espacer les éléments) */
-    border: 1px solid var(--background-color2) !important; /* On définit la taille de la bordure de l'encadré ainsi que de sa taille et du fait qu'on le voit (solid), de plus, le !important permet de bypass certains problèmes css qui empêchait la couleur de la bordure d'apparaître */
-    border-radius: 8px; /* On définit l'arondissement des bord de l'encadré */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* On définit l'ombre que l'on met au niveau de la bordure de l'encadré afin d'ajouter une touche de style dans notre formulaire */
-    background-color: var(--background-color2) !important; /* On définit la couleur de l'arrière plan de l'intérieur de l'encadré, de plus, le !important permet de bypass certains problèmes css qui empêchait la couleur de l'arrière-plan d'apparaître */
-    display: flex; /* On définit en mode flex, afin de pouvoir bien organiser nos éléments */
-    flex-direction: column; /* Les éléments iront de haut en bas (et non de gauche à droite comme habituellement) */
-    justify-content: flex-start; /* Les éléments dans l'axe principal (la colonne) partent de la gauche */
-    align-items: center; /* Les éléments dans l'axe secondaire (la ligne) seront centrés */
-    text-align: center; /* Le texte sera centré */
-    gap: 10px; /* On met un espace de 10 pixels entre chaque éléments afin que le formulaire soit propre */
+.encadre, .encadre2 { /* On définit les dimensions, les styles de bordures, l'arrière plan et l'organisation des encadrés 1 et 2 */
+    width: 500px;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid var(--background-color2) !important;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--background-color2) !important; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
 }
 
-.encadre{
+.encadre{ /* Met un espacement entre le conteneur principal et le premier encadré*/
     margin-top: 25px;
 }
 
-.encadre2{
+.encadre2{/* Met un espacement entre le conteneur principal et le deuxième encadré */
     margin-bottom: 25px;
 }
 
-.encadre2 a{
+.encadre2 a{ /* Met un beau style pour les liens appartenant au deuxième encadré */
     text-decoration: none;
     color: gray;
 }
 
-input[type="submit"], input[type="reset"] {
-    background-color: #4CAF50; /* On met une couleur à l'arrière plan du bouton  */
-    color: #d4edda; /* On met une couleur de texte dans le bouton */
-    padding: 10px 20px; /* On redéfinit un espace interne de 10 pixels en haut et en bas ainsi que 20 pixels à gauche et à droite. */
-    border: none; /* La bordure du bouton est invisible, n'a rien de particulier */
-    border-radius: 4px; /* On met un angle à la bordure */
-    cursor: pointer; /* Cela signifie que l'élément est cliquable, la souris se transforme en "main" */
-    margin-top: 10px; /* Cela met un espace de 10px entre l'élémen concerné et l'élement du dessus */
-    font-weight: bold; /*  La police du texte sera foncé */
-    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Cette transition permet que le changement de couleur de fond ne se fasse pas instantanément mais qu'elle se fasse sur une durée de 0,3s */
+input[type="submit"], input[type="reset"] { /* On met de bonnes dimensions, de belles bordures, de belles couleurs, une belle transition et un bon arière plan aux bouton "Réinitialiser" et "Créer un compte" */
+    background-color: #4CAF50;
+    color: #d4edda;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
-input[type="submit"]:hover, input[type="reset"]:hover {
-    background-color: var(--button-background-color) !important; /* Au survol du curseur, la couleur de fond du bouton change, de plus, le !important permet de bypass certains problèmes css qui empêchait la couleur de l'arrière-plan d'apparaître */
-    color: var(--button-text-color); /* Au survol du curseur, la couleur du texte du bouton change */
+input[type="submit"]:hover, input[type="reset"]:hover { /* Au survol du curseur, on chnage les couleurs de l'arrière plan et du texte du bouton */
+    background-color: var(--button-background-color) !important;
 }
 
 .creercompte { /* On agrandit la police */

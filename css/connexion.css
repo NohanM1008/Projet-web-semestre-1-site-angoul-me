@@ -1,53 +1,52 @@
-/* Définition de la police utilisée sur toute la page, avec des polices de secours */
-* {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Définit la police utilisée sur toute la page, avec des polices de secours */
+/* Les !important permettent de bypass certains problèmes css qui empêchait la cohésion de certains styles*/
+
+* { /* On définit la police */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-main{
+main{ /* On grossit la police dans le corp principal */
     font-weight: bold;
 }
 
-.connexion {
+.connexion {  /* Les éléments seront centrés, on ajoute une couleur et on aggrandit la police */
     margin: auto;
     color: #556B61 !important;
     font-size: large;
 }
 
-:root{
+:root{ /* On définit des variables pour les couleurs utlilisées dasn notre code (pour le mode clair) */
     --background-color3: lightsteelblue;
     --background-color4: gainsboro;
     --background-color10:  #9F93FF;
-    --button-background-color: #007BFF; /* Couleur de l'arrière-plan dans le bouton */
-    --button-text-color: #ffffff; /* Couleur du texte dans le bouton */
+    --button-background-color: #007BFF;
+    --button-text-color: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) { /* Ce media permet de détecter si l'utilisateur du site est en mode sombre ou non, s'il est en mode sombre, les variables de couleurs changeront avvec celles qui sont définies ci-dessous */
-    :root { /* Définition de variables pour le mode sombre, ici de la couleur de fond de la page */
-        --background-color3: #2F2F2F; /* Couleur de fond des encadrés */
+    :root {
+        --background-color3: #2F2F2F;
         --background-color4: #313338;
         --background-color10: #1F1F1F;
-        --button-background-color: #d4edda; /* Couleur de l'arrière-plan dans le bouton */
-        --button-text-color: #000000; /* Couleur du texte dans le bouton */
+        --button-background-color: #d4edda;
+        --button-text-color: #000000;
     }
 }
 
-/* Style de l'encadré principal */
-.encadre {
-    max-width: 500px; /* La largeur maximale de l'encadré est fixée à 500px */
-    width: 100%; /* L'encadré prend toute la largeur disponible jusqu'à la largeur maximale */
-    height: auto; /* La hauteur de l'encadré s'adapte à son contenu */
-    margin: 0 auto; /* Centrer l'encadré horizontalement */
-    padding: 20px; /* Espacement interne autour du contenu de l'encadré */
-    border: 1px solid var(--background-color10) !important; /* Bordure grise claire autour de l'encadré */
-    border-radius: 8px; /* Coins arrondis de l'encadré */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée légère pour un effet de profondeur */
-    background-color: var(--background-color10) !important; /* Couleur de fond claire pour l'encadré */
-    /* Permet de centrer le texte et les éléments enfants (comme les boutons) par rapport à l'encadré */
+.encadre { /* On définit les dimensions, les styles de bordures, l'arrière plan et l'organisation de l'encadré principal */
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid var(--background-color10) !important;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--background-color10) !important;
     display: flex;
-    flex-direction: column; /* Les éléments sont disposés en colonne */
-    justify-content: center; /* Centrer verticalement les éléments */
-    align-items: center; /* Centrer horizontalement les éléments */
-    text-align: center; /* Centrer le texte à l'intérieur des éléments */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     color: var(--text-color2);
     margin-top: 30px;
 }
