@@ -1,24 +1,24 @@
-<!DOCTYPE html>
-<html lang="fr"> <!-- Déclare que la page est en français -->
+<!DOCTYPE html> <!-- Déclare le type de document HTML (ici HTML5) -->
+<html lang="fr"> <!-- La langue de la page est le français -->
     <head>  <!-- La balise head contient des informations non visibles sur la page -->
         <title> Ville d'Angoulême </title> <!-- On définit le titre de la page -->
-        <link rel="icon" href="../images/logo.png" type="image/x-icon">
+        <link rel="icon" href="../images/logo.png" type="image/x-icon"> <!--Icône du site-->
         <meta charset="utf-8"> <!-- On définit l'encodage des caractères à UTF-8 pour que les caractères spéciaux fonctionnent -->
         <link rel="stylesheet" href="../css/compte.css"> <!-- Lien vers le fichier CSS pour le style de cette page -->
         <link rel="stylesheet" href="../css/footer.css"> <!-- Lien vers le fichier CSS pour le style du footer de cette page -->
         <link rel="stylesheet" href="../css/header.css"> <!-- Lien vers le fichier CSS pour le style du header de cette page -->
     </head>
-    <body> <!-- La balise body contient tout ce qui sera visible sur la page -->
+    <body> <!-- Le corps de la page, tout ce qui apparaît à l'écran -->
         <header> <!-- Balise qui contient le contenu de l'ne tête de la page-->
             <a href="../index.html"><img src="../images/logo.png" alt="Angoulême Logo"></a> <!-- Lien vers la page d'accueil avec le logo d'Angoulême -->
             <h1>Ville d'Angoulême</h1> <!-- Titre principal affiché sur la page -->
         </header>
-        <nav>
-            <ol>
-                <li class="index"><a href="../index.html">Accueil</a></li>
-                <li class="loisirs"><a href="loisirs.html">Tourisme et Loisirs</a></li>
-                <li class="histoire"><a href="histoire.html">Histoire</a></li>
-                <li class="contact"><a href="contact.html">Contact</a></li>
+        <nav> <!--Cette section permet de naviguer entre les différentes pages du site -->
+            <ol> <!--On fait un liste des éléments-->
+                <li class="index"><a href="../index.html">Accueil</a></li> <!--Renvoie à l'accueil-->
+                <li class="loisirs"><a href="loisirs.html">Tourisme et Loisirs</a></li> <!--Renvoie à la page loisirs-->
+                <li class="histoire"><a href="histoire.html">Histoire</a></li> <!--Renvoie à la page histoire-->
+                <li class="contact"><a href="contact.html">Contact</a></li> <!--Renvoie à la page contact-->
             </ol>
         </nav>
         <main> <!-- Balise principale contenant le contenu principal de la page -->
@@ -33,28 +33,28 @@
                         <input type="radio" name="genre" id="mr" class="grossir"> <!-- Bouton radio pour "Monsieur" -->
                         <label for="mr">Monsieur</label> <!-- Label pour le bouton radio "Monsieur" -->
                     </div>
-                    <br><br> <!-- Retour à la ligne -->
+                    <br><br> <!--Les balises br permettent de revenir à la ligne-->
                     <label for="nom">Nom :</label> <!-- Label pour le champ "Nom" -->
                     <input type="text" name="nom" id="nom" placeholder="ex : Montagne" class="grossir" required> <!-- Champ de texte pour le nom -->
-                    <br><br> <!-- Retour à la ligne -->              
+                    <br><br>              
                     <label for="prenom">Prénom :</label> <!-- Label pour le champ "Prénom" -->
                     <input type="text" name="prenom" id="prenom" placeholder="ex : Rosalie" class="grossir" required> <!-- Champ de texte pour le prénom -->
-                    <br><br> <!-- Retour à la ligne -->
+                    <br><br>
                     <label>Date de naissance :</label> <!-- Label pour la date de naissance -->
                     <input type="date"/> <!-- Champ pour entrer la date de naissance -->
-                    <br><br> <!-- Retour à la ligne -->
+                    <br><br>
                     <label for="mail">Mail : </label> <!-- Label pour l'email -->
                     <input type="email" name="mail" id="mail" placeholder="ex : abcd@gmail.com" class="grossir" required> <!-- Champ pour l'adresse email -->
-                    <br><br> <!-- Retour à la ligne -->
+                    <br><br>
                     <label for="identifiant">Identifiant : </label> <!-- Label pour l'identifiant -->
                     <input type="text" name="identifiant" id="identifiant" placeholder="ex : TheodortleBison" class="grossir" required> <!-- Champ pour l'identifiant -->
-                    <br><br> <!-- Retour à la ligne -->
+                    <br><br>
                     <label for="mdp">Mot de passe : </label> <!-- Label pour le mot de passe -->
                     <input type="password" name="mdp" id="mdp" placeholder="•••••••••••" class="grossir" required> <!-- Champ pour le mot de passe -->
-                    <br><br> <!-- Retour à la ligne -->
+                    <br><br>
                     <label for="mdp2">Confirmer le mot de passe : </label> <!-- Label pour confirmer le mot de passe -->
                     <input type="password" name="mdp2" id="mdp2" placeholder="•••••••••••" class="grossir" required> <!-- Champ pour la confirmation du mot de passe -->
-                    <br><br> <!-- Retour à la ligne -->
+                    <br><br>
                     <input type="submit" name="connexion" id="connexion" value="Créer un compte"> <!-- Bouton pour envoyer le formulaire -->
                     <input type="reset"> <!-- Bouton pour réinitialiser le formulaire -->
                 </fieldset>
