@@ -109,7 +109,7 @@ footer {
 
 
 .lien:hover {
-    color: var(--text-color10); /* Change la couleur du lien au survol */
+    color: #D3D3D3; /* Change la couleur du lien au survol */
 }
 
 @media (max-width: 768px) {
