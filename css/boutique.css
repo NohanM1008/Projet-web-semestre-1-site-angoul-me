@@ -1,20 +1,20 @@
 :root{
     --background-color1: darkslateblue;
     --background-color3: lightsteelblue;
+    --background-color7: #b4b4b4;
+    --background-color11:  #9F93FF;
     --text-color1: #555;
     --text-color4: #333;
-    --background-color3: gainsboro;
-    --background-color11:  #9F93FF;
 }
 
 @media (prefers-color-scheme: dark) { /* Ce media permet de détecter si l'utilisateur du site est en mode sombre ou non, s'il est en mode sombre, les variables de couleurs changeront avvec celles qui sont définies ci-dessous */
     :root {
         --background-color1: #1F1F1F; /* Définition de variables pour le mode sombre, ici de la couleur de fond de la page */
-        --background-color3: #2F2F2F; /* Couleur de fond des encadrés */
+        --background-color3: #2F2F2F;
+        --background-color7: #686868;
+        --background-color11:  #2F2F2F; /* Couleur de fond des encadrés */
         --text-color1: #313338; /* Couleur du texte */
         --text-color4: #B4B4B4;
-        --background-color3: #313338;
-        --background-color11:  #2F2F2F;
     }
 }
 
@@ -60,7 +60,7 @@ article p {
 
 article h3 {
     font-size: 18px;
-    color: var(--text-color1);
+    color: #e63946;
     margin: 10px 0 0;
 }
 
@@ -135,6 +135,6 @@ article:hover {
 }
 
 body{
-    background-color: var(--background-color3);
+    background-color: var(--background-color7);
     scrollbar-color: var(--background-color3) var(--background-color1);
 }
