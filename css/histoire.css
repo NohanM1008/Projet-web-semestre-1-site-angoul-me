@@ -2,7 +2,7 @@
     --background-color5: darkslateblue;
     --background-color9: gainsboro;
     --text-color5: white;
-    --text-color6: black;
+    --text-color6: black;/*definition des couleurs que nous allons beaucoup utiliser ce qui facilite la compréhension et l'utilisation*/
 }
 
 @media (prefers-color-scheme: dark) { /* Ce media permet de détecter si l'utilisateur du site est en mode sombre ou non, s'il est en mode sombre, les variables de couleurs changeront avvec celles qui sont définies ci-dessous */
@@ -14,7 +14,7 @@
     }
 }
 
-* {
+* {/*Selecteur universel pour appliquer des changements sur l'intégralité de la page*/
     box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-decoration: none;
@@ -23,11 +23,28 @@
     padding: 0;
 }
 body {
-    background-color: var(--background-color9);
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, var(--background-color9) 25%, var(--background-color5) 25%, var(--background-color5) 50%, var(--background-color9) 50%, var(--background-color9) 75%, var(--background-color5) 75%);;
+    background-size: 200% 200%;
+    animation-name: backgroundanimation;
     color: var(--text-color6);
+    animation-duration: 10s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    /* Nous parametrons l'animation que sera dans le background de la page*/
+}
+@keyframes backgroundanimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }/*animation du background */
 }
 main {
-    background-color: var(--text-color5) !important;
+    background-color: var(--text-color5);
     padding: 20px;
     margin: 20px auto;
     max-width: 800px;
@@ -51,4 +68,6 @@ main p {
     text-align: justify;
     margin-bottom: 15px;
 }
+/* Ici , nous ne faisons pas d'adaptation car apres avoir testé , la page s'adapte comme on le souhaite automatiquement */
+
 
