@@ -152,3 +152,35 @@ body {
     background-color: var(--background-color7);
     scrollbar-color: var(--background-color3) var(--background-color1); /* Style de la barre de défilement */
 }
+
+
+@media (max-width: 768px) {
+    .container-wrapper {
+        flex-direction: column;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+    }
+
+    .avis {
+        position: relative; /* Supprime la position sticky pour les petits écrans */
+        max-height: unset; /* Laisse la hauteur s'ajuster automatiquement */
+    }
+}
+
+@media (max-width: 480px) {
+    article img {
+        width: 120px;
+        height: 120px;
+    }
+
+    article h3 {
+        font-size: 16px;
+    }
+
+    article p {
+        font-size: 14px;
+    }
+}
