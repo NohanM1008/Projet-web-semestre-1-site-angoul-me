@@ -1,13 +1,13 @@
-/* Politique de confidentialité - Styles principaux */
-
-:root{
+/* Définition des couleurs principales pour les styles de la politique de confidentialité */
+:root {
     --background-color6: #f4f4f9;
     --text-color7: #333;
     --link-color: #3498db;
     --title-color: #2c3e50;
 }
 
-@media (prefers-color-scheme: dark) { /* Ce media permet de détecter si l'utilisateur du site est en mode sombre ou non, s'il est en mode sombre, les variables de couleurs changeront avvec celles qui sont définies ci-dessous */
+/* Adaptation des couleurs pour le mode sombre */
+@media (prefers-color-scheme: dark) {
     :root {
         --background-color6: #313338;
         --text-color7: #f4f4f9;
@@ -16,78 +16,81 @@
     }
 }
 
-/* Le corps de la page */
+/* Style général pour le corps de la page */
 body {
-    font-family: Arial, sans-serif; /* Utilisation de la police Arial, sans-serif en cas de problème avec Arial */
-    line-height: 1.6; /* Espacement des lignes pour une meilleure lisibilité */
-    background-color: var(--background-color6); /* Couleur de fond douce et claire pour le site */
-    color: var(--text-color7); /* Couleur de texte sombre pour un bon contraste avec le fond */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color6);
+    color: var(--text-color7);
 }
-main{
+
+/* Mise en page principale */
+main {
     width: 85%;
     margin: auto;
 }
 
-
-/* Style pour le titre principal */
+/* Style des titres principaux */
 .titre {
-    font-size: 2rem; /* Taille de police relativement grande pour les titres */
-    font-weight: bold; /* Mise en gras du titre */
-    text-align: center; /* Centrage du titre */
-    margin: 20px 0; /* Marges verticales autour du titre */
-    color: var(--title-color); /* Couleur sombre et professionnelle pour le titre */
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+    color: var(--title-color);
 }
 
-
-/* Style pour les textes principaux */
+/* Style général pour le texte principal */
 .texte {
-    margin: 10px 20px; /* Espacement autour du texte */
-    font-size: 1rem; /* Taille de police normale pour le texte */
-    color: var(--title-color); /* Couleur sombre pour une bonne lisibilité */
+    margin: 10px 20px;
+    font-size: 1rem;
+    color: var(--title-color);
 }
 
+/* Apparence et comportement des liens */
 .lien {
-    color: var(--link-color); /* Couleur bleue pour les liens */
-    text-decoration: none; /* Suppression du soulignement par défaut */
-    font-weight: bold; /* Mise en gras des liens pour les rendre plus visibles */
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: bold;
 }
 
+/* Effet visuel sur les liens au survol */
 .lien:hover {
-    color: #1abc9c; /* Changement de couleur au survol */
-    text-decoration: underline; /* Soulignement au survol */
+    color: #1abc9c;
+    text-decoration: underline;
 }
 
+/* Style des listes */
 ol {
-    margin: 20px 40px; /* Espacement autour de la liste */
-    padding: 0; /* Suppression du padding */
-    list-style: decimal inside; /* Utilisation de chiffres pour les listes, avec une indentation */
+    margin: 20px 40px;
+    padding: 0;
+    list-style: decimal inside;
 }
 
-
+/* Espacement entre les éléments de liste */
 ol li {
-    margin-bottom: 10px; /* Espacement entre les éléments de la liste */
+    margin-bottom: 10px;
 }
 
-
+/* Style des paragraphes */
 p {
-    margin: 10px 20px; /* Marges autour des paragraphes */
-    font-size: 1rem; /* Taille de police standard pour les paragraphes */
+    margin: 10px 20px;
+    font-size: 1rem;
 }
 
-
-/* Media Query pour les écrans de moins de 768px de large (téléphones et petits écrans) */
+/* Responsive pour les écrans de moins de 768px */
 @media (max-width: 768px) {
+    /* Ajustement de la taille des titres pour petits écrans */
     .titre {
-        font-size: 1.5rem; /* Réduction de la taille du titre pour les petits écrans */
+        font-size: 1.5rem;
     }
 
-
+    /* Réduction de la taille des textes */
     .texte {
-        font-size: 0.9rem; /* Réduction de la taille de texte pour améliorer la lisibilité sur petits écrans */
+        font-size: 0.9rem;
     }
 
-
+    /* Réduction des marges des listes */
     ol {
-        margin: 10px 20px; /* Réduction des marges de la liste pour mieux s'adapter à l'écran */
+        margin: 10px 20px;
     }
 }
