@@ -80,7 +80,7 @@ article a { /* On retire les défauts du lien pour lui ajouter une couleur et le
 }
 
 /* On applique au éléments du container des dimensions, du style de bordure, des couleurs de texte et d'arrière plan ainsi que des marges */
-.article-container{
+.contenu{
     width: 500px;
     margin: 5px;
     padding: 5px;
@@ -100,11 +100,11 @@ article a { /* On retire les défauts du lien pour lui ajouter une couleur et le
     flex-wrap: wrap;
 }
 
-.article-container:hover img {
+.contenu:hover img {
     transform: scale(1.05);
 }
 
-.article-container:hover { /* Au survol du curseur sur les articles, ces derniers descendent légèrement en marquant plus fortement l'ombre de la bordure */
+.contenu:hover { /* Au survol du curseur sur les articles, ces derniers descendent légèrement en marquant plus fortement l'ombre de la bordure */
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
