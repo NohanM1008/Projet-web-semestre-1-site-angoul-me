@@ -14,11 +14,11 @@
 
 header {
     background-color: var(--background-color1);
-    height: 80px;
+    height: 80px;/*taille du la bande du header */
     color: var(--text-color3);
     display: flex;
-    align-items: center;
-    padding: 10px 20px;
+    align-items: center;/* permet de bien centrer le texte*/
+    padding: 10px 20px;/*on définit la taille des marges */
 }
 
 header img {
@@ -29,11 +29,11 @@ header img {
     top:1%;
 }
 
-header h1 {
+header h1 {/*on selectionne les titres h1 qui sont dans le header */
     font-size: 40px;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 50%;/*Place le point de départ gauche (left) du titre à 50%*/
+    transform: translateX(-50%);/*Déplace l'élément vers la gauche de 50%*/
     margin: 0;
     font-family: 'Bebas Neue', sans-serif;
     color: white;
@@ -42,7 +42,7 @@ header h1 {
 header a {
     color: white;
     font-size: 18px;
-    text-decoration: none;
+    text-decoration: none;/*les liens ne sont donc pas 'décorés'*/
     margin-left: auto; 
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -50,11 +50,11 @@ header a {
 nav {
     background-color: var(--background-color3);
     padding: 10px;
-    display: flex;
-    justify-content: center;
+    display: flex;/*active flexbox*/
+    justify-content: center;/*Définit l'alignement horizontal des éléments enfants à l'intérieur du*/
 }
 
-nav h1 {
+nav h1 {/*modification du style du nav*/
     font-size: 22px;
     color: var(--background-color1);
     margin-right: 20px;
@@ -63,33 +63,33 @@ nav h1 {
 nav ol {
     list-style: none;
     display: flex;
-    gap: 100px;
+    gap: 100px;/*modification de l'espace entre les différents elements du nav*/
 }
 
 nav ol li {
     margin: 0;
 }
 
-nav ol li a {
+nav ol li a {/*style des elements du header*/
     color: var(--text-color3);
     font-size: 20px;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-decoration: none;
 }
 .eltact{
-    font-weight:bold;
+    font-weight:bold;/*mise en gras dans le nav de la page sur laquel on est*/
 }
 nav ol li a:hover {
-    text-decoration: underline;
+    text-decoration: underline;/*modification du style des liens du nav quand la souris passe dessus*/
 }
 @media (max-width: 768px) {
     header {
-        align-items: center;
+        align-items: center;/*centrage vertical des éléments selectionnées*/
         padding: 10px;
     }
 
     header img.logo-site {
-        margin: 0 auto 10px; /* Centre le logo */
+        margin: 0 auto 10px; /* Centre le logo pour le format téléphone*/
     }
 
     header h1 {
