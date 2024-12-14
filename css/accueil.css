@@ -1,74 +1,82 @@
 /* Généralités sur la mise en page */
 * {
-    box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-decoration: none;
-    font-size: 18px;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box; /* Inclut padding et bordures dans les dimensions */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Police par défaut */
+    text-decoration: none; /* Supprime la décoration des liens */
+    font-size: 18px; /* Taille de police par défaut */
+    margin: 0; /* Supprime les marges */
+    padding: 0; /* Supprime les espacements internes */
 }
-:root{
+
+/* Variables CSS pour les couleurs principales */
+:root {
     --background-color18: #f0f8ff;
     --background-color2: lightsteelblue;
     --text-color: #555;
     --text-color2: #d4edda;
     --background-color3: gainsboro;
-    --button-background-color: #007BFF; /* Couleur de l'arrière-plan dans le bouton */
-    --button-text-color: #ffffff; /* Couleur du texte dans le bouton */
-    --border-color: #ddd; /* Couleur de la bordure de l'encadré */
+    --button-background-color: #007BFF; /* Arrière-plan des boutons */
+    --button-text-color: #ffffff; /* Texte des boutons */
+    --border-color: #ddd; /* Bordures des encadrés */
     --text-color19: #4f4f4f;
     --text-color22: black;
     --background-color34: #B4B4B4;
 }
 
-@media (prefers-color-scheme: dark) { /* Ce media permet de détecter si l'utilisateur du site est en mode sombre ou non, s'il est en mode sombre, les variables de couleurs changeront avvec celles qui sont définies ci-dessous */
+/* Variables adaptées au mode sombre */
+@media (prefers-color-scheme: dark) {
     :root {
-        --background-color18: #1F1F1F; /* Définition de variables pour le mode sombre, ici de la couleur de fond de la page */
-        --background-color2: #2F2F2F; /* Couleur de fond des encadrés */
-        --text-color: #313338; /* Couleur du texte */
+        --background-color18: #1F1F1F;
+        --background-color2: #2F2F2F;
+        --text-color: #313338;
         --text-color2: #B4B4B4;
         --background-color3: #313338;
-        --button-background-color: #d4edda; /* Couleur de l'arrière-plan dans le bouton */
-        --button-text-color: #000000; /* Couleur du texte dans le bouton */
-        --border-color: #000000; /* Couleur de la bordure de l'encadré */
+        --button-background-color: #d4edda;
+        --button-text-color: #000000;
+        --border-color: #000000;
         --text-color19: #2F2F2F;
         --text-color22: #f0f8ff;
         --background-color34: #2C3E50;
     }
 }
 
+/* Style global pour le corps de la page */
 body {
     background-color: var(--background-color3) !important;
     color: var(--text-color22);
-    line-height: 1.6;
+    line-height: 1.6; /* Hauteur de ligne pour une meilleure lisibilité */
 }
-.ville{
+
+/* Style pour les titres de villes */
+.ville {
     color: white;
     width: 1000px;
     text-align: center;
 }
 
-/* Diaporama */
+/* Style pour le diaporama */
 #container {
     width: 75%;
     margin: auto;
     height: 400px;
-    overflow: hidden;
+    overflow: hidden; /* Cache les débordements */
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Ombre légère */
 }
 
+/* Images dans le diaporama */
 #container .diapo img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Remplit le cadre sans déformation */
+    object-fit: cover; /* Remplit le cadre sans déformer l'image */
     display: block;
 }
 
+/* Conteneur des images pour l'animation */
 #container .diapo {
-    display: flex; /* Aligne les images en ligne */
+    display: flex; /* Aligne les images horizontalement */
     height: 100%;
-    width: 400%; /* 4 images */
+    width: 400%; /* Adapté à 4 images */
     position: relative;
     animation-name: diaporama;
     animation-duration: 10s;
@@ -77,6 +85,7 @@ body {
     animation-timing-function: linear;
 }
 
+/* Animation du diaporama */
 @keyframes diaporama {
     0%, 20% {
         left: 0%;
@@ -89,11 +98,11 @@ body {
     }
 }
 
-/* Articles dans la section */
+/* Style pour les articles */
 section article img {
     width: 100%;
-    height: 200px; /* Taille fixe pour les images des articles */
-    object-fit: cover; /* Remplit le cadre sans déformation */
+    height: 200px;
+    object-fit: cover;
     border-radius: 8px;
     margin-bottom: 15px;
 }
@@ -104,24 +113,25 @@ section article {
     margin-bottom: 20px;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Ombre légère */
     transition: transform 0.3s ease;
 }
 
+/* Effet au survol des articles */
 section article:hover {
-    transform: translateY(-10px);
-    cursor: pointer; /* Cela signifie que l'élément est cliquable, la souris se transforme en "main" */
+    transform: translateY(-10px); /* Déplace légèrement vers le haut */
+    cursor: pointer; /* Indique un élément cliquable */
 }
 
-/* Responsive design */
+/* Responsive design pour les petits écrans */
 @media (max-width: 768px) {
     #container {
         width: 90%;
-        height: 300px; /* Réduit la hauteur du diaporama */
+        height: 300px; /* Réduit la hauteur */
     }
 
     #container .diapo img {
-        object-fit: contain; /* Ajuste les images pour les petits écrans */
+        object-fit: contain; /* Ajuste les images */
     }
 
     section {
@@ -129,27 +139,30 @@ section article:hover {
     }
 
     section article {
-        width: 100%;
+        width: 100%; /* Articles occupent toute la largeur */
     }
 
     section article img {
-        height: 150px; /* Taille réduite pour les petits écrans */
+        height: 150px; /* Taille réduite pour les images */
     }
 }
 
-.conteneur{
+/* Conteneurs pour organiser les sections */
+.conteneur {
     margin-top: 40px;
     margin-bottom: 30px;
     display: flex;
     flex-direction: row;
-    gap: 200 px;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    gap: 200px;
+    justify-content: space-evenly; /* Distribution uniforme */
+    flex-wrap: wrap; /* Permet de passer à une nouvelle ligne si nécessaire */
 }
 
-.conteneur1{
+/* Espacement spécifique pour chaque conteneur */
+.conteneur1 {
     margin-left: 100px;
 }
-.conteneur2{
+
+.conteneur2 {
     margin-right: 100px;
 }
