@@ -1,110 +1,119 @@
-:root{
+/* Définition des couleurs principales pour le mode clair */
+:root {
     --background-color1: darkslateblue;
     --background-color3: lightsteelblue;
     --background-color7: #b4b4b4;
-    --background-color11:  #9F93FF;
+    --background-color11: #9F93FF;
     --text-color1: #555;
     --text-color4: #333;
 }
 
-@media (prefers-color-scheme: dark) { /* Ce media permet de détecter si l'utilisateur du site est en mode sombre ou non, s'il est en mode sombre, les variables de couleurs changeront avvec celles qui sont définies ci-dessous */
+/* Adaptation des couleurs pour le mode sombre */
+@media (prefers-color-scheme: dark) {
     :root {
-        --background-color1: #1F1F1F; /* Définition de variables pour le mode sombre, ici de la couleur de fond de la page */
+        --background-color1: #1F1F1F;
         --background-color3: #2F2F2F;
         --background-color7: #686868;
-        --background-color11:  #2F2F2F; /* Couleur de fond des encadrés */
-        --text-color1: #313338; /* Couleur du texte */
+        --background-color11: #2F2F2F;
+        --text-color1: #313338;
         --text-color4: #B4B4B4;
     }
 }
 
+/* Style pour le conteneur principal de la grille */
 .container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto auto auto;
-    grid-gap: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+    grid-template-columns: repeat(2, 1fr); /* Deux colonnes égales */
+    grid-template-rows: auto auto auto; /* Hauteurs automatiques */
+    grid-gap: 20px; /* Espacement entre les éléments */
+    max-width: 800px; /* Largeur maximale de la grille */
+    margin: 0 auto; /* Centrer la grille */
+    padding: 20px; /* Espacement interne */
 }
 
+/* Style pour les articles de la grille */
 article {
     background-color: var(--background-color11);
     border: 1px solid var(--background-color11);
     border-radius: 8px;
     text-align: center;
     padding: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 300px; /* Uniformiser la hauteur */
-    transition: transform 0.3s ease; /* Ajout d'une animation de transition */
+    height: 300px; /* Hauteur uniforme */
+    transition: transform 0.3s ease; /* Transition sur les transformations */
 }
 
+/* Style pour les images des articles */
 article img {
-    width: 150px; /* Taille fixe pour les images */
+    width: 150px;
     height: 150px;
-    object-fit: cover; /* Assure une bonne mise à l'échelle des images */
+    object-fit: cover; /* Échelle proportionnelle de l'image */
     border-radius: 5px;
-    transition: transform 0.3s ease; /* Transition pour l'agrandissement */
+    transition: transform 0.3s ease; /* Transition pour les effets au survol */
     margin-bottom: 10px;
 }
 
+/* Style pour les paragraphes des articles */
 article p {
     font-size: 16px;
     margin: 5px 0;
     color: var(--text-color4);
 }
 
+/* Style pour les titres des articles */
 article h3 {
     font-size: 18px;
-    color: #e63946;
+    color: #e63946; /* Rouge pour accentuer les titres */
     margin: 10px 0 0;
 }
 
+/* Style pour les liens dans les articles */
 article a {
     text-decoration: none;
-    color: inherit;
+    color: inherit; /* Utilise la couleur actuelle du texte */
 }
 
-/* Effet au survol */
+/* Effet au survol des images */
 article:hover img {
-    transform: scale(1.2); /* Agrandit l'image de 20% */
+    transform: scale(1.2); /* Agrandissement de 20% */
 }
 
-/* Ajout d'un léger effet visuel sur l'article */
+/* Effet au survol des articles */
 article:hover {
-    transform: translateY(-5px); /* L'article se soulève légèrement */
+    transform: translateY(-5px); /* Déplacement vers le haut */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
 }
 
-/* Conteneur global pour la grille et les avis */
+/* Conteneur global regroupant la grille et la section des avis */
 .container-wrapper {
     display: flex;
     align-items: flex-start; /* Aligne les deux sections en haut */
     max-width: 1200px;
     margin: 0 auto;
-    gap: 20px; /* Espacement entre la grille et le carré des avis */
+    gap: 20px; /* Espacement entre la grille et la section des avis */
     padding: 20px;
 }
 
-/* Centrer les avis et les étoiles */
+/* Style pour la section des avis */
 .avis {
-    flex: 1;
+    flex: 1; /* Prend tout l'espace disponible */
     position: sticky;
-    top: 20px;
+    top: 20px; /* Reste visible en haut lors du défilement */
     background-color: var(--background-color3);
     border: 1px solid var(--background-color3);
     border-radius: 8px;
     padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-height: 400px;
-    overflow-y: auto;
-    text-align: center; /* Centrer tout le texte dans la section */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    max-height: 400px; /* Limite la hauteur */
+    overflow-y: auto; /* Ajoute une barre de défilement si nécessaire */
+    text-align: center; /* Centrage du texte */
 }
 
+/* Style pour le titre de la section des avis */
 .avis h4 {
     font-size: 18px;
     margin-bottom: 15px;
@@ -112,29 +121,34 @@ article:hover {
     text-align: center;
 }
 
+/* Contenu des avis */
 .avis-contenu {
     margin-bottom: 20px;
 }
 
+/* Style pour les étoiles dans les avis */
 .etoile {
     font-size: 20px;
     margin-bottom: 10px;
-    color: gold;
+    color: gold; /* Couleur dorée */
 }
 
+/* Style pour les paragraphes dans les avis */
 .avis-contenu p {
     font-size: 14px;
     margin: 0;
     color: #555;
-    line-height: 1.5;
+    line-height: 1.5; /* Meilleure lisibilité */
 }
 
+/* Style pour le texte en gras dans les avis */
 .avis-contenu strong {
     font-weight: bold;
     color: var(--text-color4);
 }
 
-body{
+/* Style global du corps de la page */
+body {
     background-color: var(--background-color7);
-    scrollbar-color: var(--background-color3) var(--background-color1);
+    scrollbar-color: var(--background-color3) var(--background-color1); /* Style de la barre de défilement */
 }
