@@ -11,9 +11,11 @@ main{ /* On grossit la police dans le corp principal */
 }
 
 .creercompte { /* Les éléments seront centrés, on ajoute une couleur et on aggrandit la police */
-    margin: auto;
-    color: #556B61 !important;
-    font-size: large;
+    position: relative;
+    text-align: center;
+    color: #6C4E90 !important;
+    font-size: 35px;
+    top: 10px;
 }
 :root { /* On définit des variables pour les couleurs utlilisées dasn notre code (pour le mode clair) */
     --background-color2: #F4F4F4;
