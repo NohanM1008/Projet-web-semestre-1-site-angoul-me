@@ -3,22 +3,27 @@
     font-weight: bold;
 }
 
-:root{
+/* Définition des couleurs principales */
+:root {
     --background-color4: gainsboro;
     --text-color8: #1F1F1F;
 }
 
-@media (prefers-color-scheme: dark) { /* Ce media permet de détecter si l'utilisateur du site est en mode sombre ou non, s'il est en mode sombre, les variables de couleurs changeront avvec celles qui sont définies ci-dessous */
+/* Adaptation des couleurs pour le mode sombre */
+@media (prefers-color-scheme: dark) {
     :root {
         --background-color4: #313338;
         --text-color8: #B4B4B4;
     }
 }
 
-body{
+/* Style du corps de la page */
+body {
     background-color: var(--background-color4);
     color: var(--text-color8);
 }
+
+/* Style et animation pour l'image */
 .image {
     width: 300px;
     height: 300px;
@@ -26,7 +31,7 @@ body{
     margin: 50px auto;
 }
 
-
+/* Animation de rotation et disparition du premier état de l'image */
 .image::before {
     content: '';
     width: 100%;
@@ -35,9 +40,10 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    animation: spin 10s linear forwards, fadeOut 10s forwards; /* Animation combine spin et fadeOut */
+    animation: spin 10s linear forwards, fadeOut 10s forwards;
 }
- 
+
+/* Animation d'apparition pour le deuxième état de l'image */
 .image::after {
     content: '';
     width: 100%;
@@ -47,48 +53,51 @@ body{
     top: 0;
     left: 0;
     opacity: 0;
-    animation: fadeIn 10s forwards; /* Le logo apparaît après 3 secondes */
+    animation: fadeIn 10s forwards;
 }
- 
+
+/* Animation de rotation */
 @keyframes spin {
     0% {
-      transform: rotate(0deg);
-      opacity: 1;
-    }
-    99%{
+        transform: rotate(0deg);
         opacity: 1;
-    }
-    100% {
-      transform: rotate(1080deg);
-      opacity: 0;
-    }
-}
- 
-@keyframes fadeOut {
-    0% {
-      opacity: 1;
     }
     99% {
         opacity: 1;
-      }
+    }
     100% {
-      opacity: 0;
+        transform: rotate(1080deg);
+        opacity: 0;
     }
 }
- 
+
+/* Animation de disparition progressive */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Animation d'apparition progressive */
 @keyframes fadeIn {
     0% {
-      opacity: 0;
+        opacity: 0;
     }
     99% {
         opacity: 0;
-      }
+    }
     100% {
-      opacity: 1;
+        opacity: 1;
     }
 }
 
-
+/* Style et animation pour le texte */
 .text {
     font-size: 20px;
     font-weight: bold;
@@ -96,67 +105,65 @@ body{
     position: relative;
 }
 
-
+/* Animation pour modifier le contenu textuel */
 .text::before {
     content: "Création de votre compte... Cela peut prendre un peu de temps...";
     display: inline-block;
     animation: text 10s forwards;
 }
+
 @keyframes text {
-    from{
+    from {
         content: "Création de votre compte... Cela peut prendre un peu de temps...";
     }
-    99%{
+    99% {
         content: "Création de votre compte... Cela peut prendre un peu de temps...";
     }
-    to{
+    to {
         content: "Création de votre compte réussie avec succès !";
     }
 }
 
-
+/* Style du conteneur principal et de sa barre de progression */
 .conteneur {
     border: solid black;
     height: 50px;
-    margin-left: 30%;
-    margin-right: 30%;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin: 20px 30%;
     position: relative;
     z-index: 0;
     border-radius: 5px;
     overflow: hidden;
-    animation: conteneur1 10s forwards; /* Ajout de 'forwards' pour maintenir l'état final */
+    animation: conteneur1 10s forwards;
 }
 
-
+/* Style de la barre de progression */
 .conteneur2 {
     position: absolute;
     background-color: #4CAF50;
     height: 100%;
-    width: 0%; /* Initialement à 0% */
+    width: 0%;
     left: 0%;
     z-index: 1;
-    animation: transi 10s forwards; /* Ajout de 'forwards' pour conserver l'état final */
+    animation: transi 10s forwards;
 }
 
-
+/* Animation pour la barre de progression */
 @keyframes transi {
     from {
-        width: 0%; /* Début de l'animation avec largeur de 0% */
+        width: 0%;
         opacity: 1;
     }
-    99%{
+    99% {
         width: 100%;
         opacity: 1;
     }
     to {
-        width: 0%; /* Réduit la largeur à 0% */
-        opacity: 0; /* Disparaît à la fin de l'animation */
+        width: 0%;
+        opacity: 0;
     }
 }
 
-
+/* Animation de disparition du conteneur */
 @keyframes conteneur1 {
     from {
         opacity: 1;
@@ -165,11 +172,12 @@ body{
         opacity: 1;
     }
     to {
-        opacity: 0; /* Disparaît progressivement à la fin de l'animation */
+        opacity: 0;
     }
 }
 
-a{
+/* Style et animation pour les liens */
+a {
     position: relative;
     text-decoration: none;
     color: grey;
@@ -179,6 +187,7 @@ a{
     font-size: 23px;
 }
 
+/* Animation pour afficher progressivement un lien */
 @keyframes lien {
     from {
         opacity: 0;
@@ -187,6 +196,6 @@ a{
         opacity: 0;
     }
     to {
-        opacity: 1; 
+        opacity: 1;
     }
 }
