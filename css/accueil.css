@@ -1,11 +1,11 @@
 /* Généralités sur la mise en page */
 * {
-    box-sizing: border-box; /* Inclut padding et bordures dans les dimensions */
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Police par défaut */
-    text-decoration: none; /* Supprime la décoration des liens */
-    font-size: 18px; /* Taille de police par défaut */
-    margin: 0; /* Supprime les marges */
-    padding: 0; /* Supprime les espacements internes */
+    box-sizing: border-box; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none; 
+    font-size: 18px;
+    margin: 0; 
+    padding: 0; 
 }
 
 /* Variables CSS pour les couleurs principales */
@@ -15,9 +15,9 @@
     --text-color: #555;
     --text-color2: #d4edda;
     --background-color3: gainsboro;
-    --button-background-color: #007BFF; /* Arrière-plan des boutons */
-    --button-text-color: #ffffff; /* Texte des boutons */
-    --border-color: #ddd; /* Bordures des encadrés */
+    --button-background-color: #007BFF; 
+    --button-text-color: #ffffff; 
+    --border-color: #ddd; 
     --text-color19: #4f4f4f;
     --text-color22: black;
     --background-color34: #B4B4B4;
@@ -68,15 +68,15 @@ body {
 #container .diapo img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Remplit le cadre sans déformer l'image */
+    object-fit: cover;
     display: block;
 }
 
 /* Conteneur des images pour l'animation */
 #container .diapo {
-    display: flex; /* Aligne les images horizontalement */
+    display: flex; 
     height: 100%;
-    width: 400%; /* Adapté à 4 images */
+    width: 400%; 
     position: relative;
     animation-name: diaporama;
     animation-duration: 10s;
@@ -120,18 +120,18 @@ section article {
 /* Effet au survol des articles */
 section article:hover {
     transform: translateY(-10px); /* Déplace légèrement vers le haut */
-    cursor: pointer; /* Indique un élément cliquable */
+    cursor: pointer;
 }
 
 /* Responsive design pour les petits écrans */
 @media (max-width: 768px) {
     #container {
         width: 90%;
-        height: 300px; /* Réduit la hauteur */
+        height: 300px; 
     }
 
     #container .diapo img {
-        object-fit: contain; /* Ajuste les images */
+        object-fit: contain; 
     }
 
     section {
@@ -139,11 +139,11 @@ section article:hover {
     }
 
     section article {
-        width: 100%; /* Articles occupent toute la largeur */
+        width: 100%; 
     }
 
     section article img {
-        height: 150px; /* Taille réduite pour les images */
+        height: 150px; 
     }
 }
 
@@ -154,8 +154,8 @@ section article:hover {
     display: flex;
     flex-direction: row;
     gap: 200px;
-    justify-content: space-evenly; /* Distribution uniforme */
-    flex-wrap: wrap; /* Permet de passer à une nouvelle ligne si nécessaire */
+    justify-content: space-evenly; 
+    flex-wrap: wrap;
 }
 
 /* Espacement spécifique pour chaque conteneur */
