@@ -82,3 +82,26 @@ nav ol li a {
 nav ol li a:hover {
     text-decoration: underline;
 }
+@media (max-width: 768px) {
+    header {
+        align-items: center;
+        padding: 10px;
+    }
+
+    header img.logo-site {
+        margin: 0 auto 10px; /* Centre le logo */
+    }
+
+    header h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    nav ol li a {
+        width: 90%; 
+        margin: 0 auto; 
+        text-align: center; 
+        padding: 10px;
+    }
+}
+

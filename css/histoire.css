@@ -23,7 +23,7 @@
     padding: 0;
 }
 body {
-    margin: 0;
+    margin: 0;/*modification du style de body*/
     padding: 0;
     background: linear-gradient(45deg, var(--background-color9) 25%, var(--background-color5) 25%, var(--background-color5) 50%, var(--background-color9) 50%, var(--background-color9) 75%, var(--background-color5) 75%);;
     background-size: 200% 200%;
@@ -68,6 +68,35 @@ main p {
     text-align: justify;
     margin-bottom: 15px;
 }
-/* Ici , nous ne faisons pas d'adaptation car apres avoir testé , la page s'adapte comme on le souhaite automatiquement */
 
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+        margin: 10px;
+        max-width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav ol li {
+        display: block; 
+        margin: 5px 0;
+    }
+    main h1 {
+        font-size: 24px;
+    }
+
+    main h2, main h3 {
+        font-size: 18px;
+    }
+
+    main p {
+        font-size: 16px; 
+    }
+}
 
