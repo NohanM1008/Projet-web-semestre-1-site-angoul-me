@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <title>Ville d'Angoulême - Bracelet</title>
-    <link rel="icon" href="../images/logo.png" type="image/x-icon">
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="../css/article.css">
+<html lang="fr"> <!-- On définit le langage (ici français)-->
+<head> <!-- La balise head anglobe tout ce qui n'apparaîtra pas dans notre page Web-->
+    <title>Ville d'Angoulême - Bracelet</title> <!-- On définit le titre-->
+    <link rel="icon" href="../images/logo.png" type="image/x-icon"><!-- On donne un logo à notre page-->
+    <meta charset="utf-8"><!-- On utilisera la chaîne de caractère utf-8-->
+    <link rel="stylesheet" href="../css/article.css"><!-- On link la page html avec la page css afin d'ajouter de l'esthétique à notre page WEB -->
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/header.css">
 </head>
 <body>
-    <header>
+    <header><!--Logo, titre et lien pour se connecter-->
         <a href="../index.html"><img src="../images/logo.png" alt="Angoulême Logo"></a>
         <a href="../html/connexion.html">Se connecter</a>
         <h1>Ville d'Angoulême</h1>
     </header>
     <nav>
-        <ol>
+        <ol><!--Liste non ordonnée pour la navigation entre les pages-->
             <li><a href="../index.html">Accueil</a></li>
             <li><a href="../html/loisirs.html">Tourisme et Loisirs</a></li>
             <li><a href="../html/histoire.html">Histoire</a></li>
@@ -23,27 +23,25 @@
         </ol>
     </nav>
     <main>
-        <!-- Article principal -->
-        <section class="article-principal">
-            <div class="image-container">
+        <section class="principal"> <!--Ici on met en avant le produit princiapl avec une image, une description (contenant le titre un prix et un texte) et un bouton pour "acheter le produit"-->
+            <div class="image">
                 <img src="../images/boutique/bracelet.png" alt="Bracelet d'Angoulême">
             </div>
             <div class="description">
-                <h1 class="article-title">Bracelet d'Angoulême</h1>
-                <h2 class="article-price">50€</h2>
-                <p class="article-text">
+                <h1 class="titre">Bracelet d'Angoulême</h1>
+                <h2 class="prix">50€</h2>
+                <p class="texte">
                     Ajoutez une touche d'élégance locale à votre style avec ce bracelet inspiré de l'histoire et de la culture d'Angoulême. Fabriqué avec des matériaux de qualité, il est à la fois raffiné et confortable.
                 </p>
-                <p class="article-text">
+                <p class="texte">
                     Disponible en cuir ou en métal argenté, ce bracelet est parfait pour toute occasion. Portez fièrement l'esprit d'Angoulême à votre poignet et laissez-vous séduire par son design intemporel.
                 </p>
-                <button class="cta-button">Ajouter au panier</button>
+                <button class="bouton">Ajouter au panier</button>
             </div>
         </section>
 
-        <!-- Liste des autres produits -->
         <h2>D'autres produits locaux d'Angoulême :</h2>
-        <section class="container">
+        <section class="container"> <!--Ici on liste les autres produits disponibles avec des liens pour accéder aux produits-->
             <article>
                 <a href="cartepostale.html">
                     <img src="../images/boutique/cartepostale.png" alt="Carte postale d'Angoulême">
@@ -74,19 +72,18 @@
             </article>
         </section>
 
-        <!-- Section des avis -->
-        <aside class="avis">
+        <aside class="avis"> <!--Ici on liste les avis, chaque avis se présente avec une note en étoile et un texte-->
             <h4>Avis des clients</h4>
-            <div class="avis-item">
-                <div class="stars">★★★★★</div>
+            <div class="avis-contenu">
+                <div class="etoile">★★★★★</div>
                 <p><strong>Emma:</strong> Un bracelet élégant et bien conçu, je l'adore !</p>
             </div>
-            <div class="avis-item">
-                <div class="stars">★★★★☆</div>
+            <div class="avis-contenu">
+                <div class="etoile">★★★★☆</div>
                 <p><strong>Paul:</strong> Très beau design, mais le cuir aurait pu être un peu plus épais.</p>
             </div>
-            <div class="avis-item">
-                <div class="stars">★★★★★</div>
+            <div class="avis-contenu">
+                <div class="etoile">★★★★★</div>
                 <p><strong>Sophie:</strong> Parfait en cadeau, très apprécié par mes amis.</p>
             </div>
         </aside>

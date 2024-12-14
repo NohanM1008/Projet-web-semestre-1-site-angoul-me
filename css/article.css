@@ -18,19 +18,8 @@
     }
 }
 
-/* Le conteneur principal organise la mise en page avec une disposition de type flexbox.
-Les éléments sont alors alignés en haut avec un espacement de 20px*/
-.container-wrapper {
-    display: flex;
-    align-items: flex-start;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 20px;
-    padding: 20px;
-}
-
 /* Ce bloc met en forme la section principale de l'article avec un fond de la couleur background-color3, des bordures idem, et un effet d'ombre. */
-.article-principal {
+.principal {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,7 +34,7 @@ Les éléments sont alors alignés en haut avec un espacement de 20px*/
 }
 
 /*  Ce bloc fait le style des images dans la section principale avec une transition qui est ajoutée pour agrandir l'image au survol avec un effet d'ombre. */
-.image-container img {
+.image img {
     width: 300px;
     height: auto;
     border-radius: 8px;
@@ -54,12 +43,12 @@ Les éléments sont alors alignés en haut avec un espacement de 20px*/
 }
 
 /* Agrandissement de l'image au survol */
-.image-container img:hover {
+.image img:hover {
     transform: scale(1.05);
 }
 
 /* Style du titre principal de l'article. */
-.article-title {
+.titre {
     font-family: 'Playfair Display', serif;
     font-size: 36px;
     font-weight: bold;
@@ -68,7 +57,7 @@ Les éléments sont alors alignés en haut avec un espacement de 20px*/
 }
 
 /* Style du prix de l'article */
-.article-price {
+.prix {
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
     color: #e63946;
@@ -76,7 +65,7 @@ Les éléments sont alors alignés en haut avec un espacement de 20px*/
 }
 
 /* Style du texte descriptif */
-.article-text {
+.texte {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 1.8;
@@ -85,7 +74,7 @@ Les éléments sont alors alignés en haut avec un espacement de 20px*/
 }
 
 /*  Style du bouton CTA */
-.cta-button {
+.bouton {
     background-color: #e63946;
     color: white;
     padding: 10px 20px;
@@ -99,7 +88,7 @@ Les éléments sont alors alignés en haut avec un espacement de 20px*/
 }
 
 /* Effet au survol : le bouton change de couleur et se soulève légèrement. */
-.cta-button:hover {
+.bouton:hover {
     background-color: #d62828;
     transform: translateY(-2px);
 }
@@ -197,26 +186,26 @@ article:hover {
 }
 
 /* ajout d'une marge*/
-.avis-item {
+.avis-contenu {
     margin-bottom: 20px;
 }
 
 /* Style de stars */
-.stars {
+.etoile {
     font-size: 20px;
     margin-bottom: 10px;
     color: gold;
 }
 
 /* style des avis des paragraphes*/
-.avis-item p {
+.avis-contenu p {
     font-size: 14px;
     margin: 0;
     color: var(--text-color4);
     line-height: 1.5;
 }
 
-.avis-item strong {
+.avis-contenu strong {
     font-weight: bold;
     color: var(--text-color9);
 }
