@@ -219,3 +219,22 @@ body{
 section + h2{
     text-align: center;
 }
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .principal {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    article {
+        height: auto;
+    }
+
+    .bouton {
+        padding: 8px 16px;
+    }
+}
