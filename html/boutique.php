@@ -21,10 +21,7 @@
                 <li><a href="histoire.html">Histoire</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ol>
-            <?php \$current = basename(
-            \$_SERVER['PHP_SELF']
-            ); 
-            ?>
+            
         </nav>
         <main>
             <div class="container">
