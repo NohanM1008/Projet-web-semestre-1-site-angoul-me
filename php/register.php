@@ -9,7 +9,7 @@ function nettoyer($donnee) {
 
 // On vérifie que le formulaire a bien été soumis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // on récupère et nettoie des données (pour améliorer la sécurité)
+    // On récupère et nettoie des données (pour améliorer la sécurité)
     $genre = isset($_POST['genre']) ? nettoyer($_POST['genre']) : "";
     $nom = nettoyer($_POST['nom']);
     $prenom = nettoyer($_POST['prenom']);
@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($erreurs)) {
         echo "<h2>Compte créé avec succès !</h2>";
         echo "<p>Bienvenue, " . $prenom . " " . $nom . " (" . $identifiant . ")</p>";
-        echo "<a href='connexion.php'>Se connecter</a>";
+        echo "<a href='connexion.html'>Se connecter</a>";
     } else { // Sinon on met un message d'erreur
         echo "<h2>Erreurs :</h2>";
         echo "<ul>";
@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "<li>" . $e . "</li>";
         }
         echo "</ul>";
-        echo "<a href='compte.php'>Retour</a>";
+        echo "<a href='compte.html'>Retour</a>";
     }
 } else {
     header("Location: compte.php");
