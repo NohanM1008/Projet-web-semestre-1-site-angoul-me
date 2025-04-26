@@ -1,50 +1,65 @@
 <?php
-// Ceci est une fonction pour éviter les failles XSS et ainsi améliorer grandement la sécurité du site
+// On permet la connexion à la base de données
+require_once 'login_bdd.php';
+
+// On vérifiee que la requête vient bien du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    // Ceci est une fonction pour éviter les failles XSS et ainsi améliorer grandement la sécurité du site 
     function nettoyer($donnee) {
         return htmlspecialchars(trim($donnee));
     }
-    // On nettoie les données (pour améliorer la sécurité)
+
+    // On récupère et on nettoie les données du formulaire
     $identifiant = nettoyer($_POST['identifiant'] ?? '');
     $mdp = nettoyer($_POST['mdp'] ?? '');
 
     $erreurs = [];
 
-    // On vérifie qu'il n'y a pas d'erreur
+    // On vérifie que tous les champs sont valides/remplis
     if (empty($identifiant)) {
-        $erreurs[] = "Veuillez entrer votre identifiant.";
+        $erreurs[] = "Veuillez entrer votre identifiant ou e-mail.";
     }
 
     if (empty($mdp)) {
         $erreurs[] = "Veuillez entrer votre mot de passe.";
     }
 
+    // S'il n'a pas d'erreurs, on vérifie les identifiants en base
     if (empty($erreurs)) {
-        // !! À ce stade normalement on vérifie dans la base de données.
-        // Mais comme on n'a pas encore de BDD, on va simuler un identifiant/mot de passe
+        try {
+            // On prépare la requête : on cherche par identifiant OU par email
+            $stmt = $conn->prepare("SELECT * FROM utilisateurs WHERE email = :email OR identifiant = :identifiant");
+            $stmt->execute([
+                'email' => $identifiant,
+                'identifiant' => $identifiant
+            ]);
 
-        $identifiantCorrect = "TheodortleBison"; // Exemple d'identifiant correct
-        $motDePasseCorrect = "password123";       // Exemple de mot de passe correct
+            $utilisateur = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        if ($identifiant === $identifiantCorrect && $mdp === $motDePasseCorrect) {
-            echo "<h2>Connexion réussie ! Bienvenue $identifiant.</h2>";
-            echo "<a href='index.html'>Aller à l'accueil</a>";
-        } else {
-            echo "<h2>Identifiant ou mot de passe incorrect.</h2>";
-            echo "<a href='connexion.html'>Réessayer</a>";
+            // On vérifier que l'utilisateur existe et que le mot de passe correspond
+            if ($utilisateur && password_verify($mdp, $utilisateur['mot_de_passe'])) {
+                echo "<h2>Connexion réussie ! Bienvenue " . htmlspecialchars($utilisateur['identifiant']) . ".</h2>";
+                echo "<a href='../index.html'>Aller à l'accueil</a>";
+            } else {
+                echo "<h2>Identifiant ou mot de passe incorrect.</h2>";
+                echo "<a href='../php/connexion.php'>Réessayer</a>";
+            }
+        } catch (Exception $e) {
+            echo "<h2>Erreur lors de la connexion : " . htmlspecialchars($e->getMessage()) . "</h2>";
         }
     } else {
-        // S'il y a des erreurs, on les affiche
+        // Affichage des erreurs
         echo "<h2>Erreurs :</h2><ul>";
         foreach ($erreurs as $e) {
-            echo "<li>" . $e . "</li>";
+            echo "<li>" . htmlspecialchars($e) . "</li>";
         }
         echo "</ul>";
-        echo "<a href='connexion.html'>Retour à la page de connexion</a>";
+        echo "<a href='../php/connexion.php'>Retour à la page de connexion</a>";
     }
 } else {
-    // Si la page est ouverte directement, on redirige
-    header("Location: connexion.php");
+    // Si quelqu'un essaie d'ouvrir directement la page login.php sans envoyer le formulaire
+    header("Location: ../php/connexion.php");
     exit();
 }
 ?>

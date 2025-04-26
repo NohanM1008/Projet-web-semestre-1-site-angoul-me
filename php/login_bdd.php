@@ -1,14 +1,16 @@
 <?php
-$host = 'localhost';  // Serveur de base de données (en local)
-$dataname = 'angouleme'; // Nom de votre base
-$username = 'root';    // Nom d'utilisateur MySQL (souvent 'root' en local)
-$password = '';        // Mot de passe MySQL (souvent vide en local)
-
+$servername = 'localhost'; // Serveur de base de données
+$username = 'root'; // Nom d'utilisateur
+$password = 'root'; // Mot de passe
+$dataname = 'maBase'; // Nom de la base de donnée
+// On essaie de se connecter
 try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
-    // On définit le mode d'erreur de PDO sur Exception
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
+    $conn = new PDO("mysql:host=$servername;dbname=$dataname", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo 'Connexion réussie';
+}
+// En cas d'erreur (exception)
+catch (Exception $e) {
     die('Erreur de connexion : ' . $e->getMessage());
 }
 ?>
