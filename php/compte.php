@@ -16,9 +16,9 @@
         <nav> <!--Cette section permet de naviguer entre les différentes pages du site -->
             <ol> <!--On fait un liste des éléments-->
                 <li class="index"><a href="../index.html">Accueil</a></li> <!--Renvoie à l'accueil-->
-                <li class="loisirs"><a href="loisirs.html">Tourisme et Loisirs</a></li> <!--Renvoie à la page loisirs-->
-                <li class="histoire"><a href="histoire.html">Histoire</a></li> <!--Renvoie à la page histoire-->
-                <li class="contact"><a href="contact.html">Contact</a></li> <!--Renvoie à la page contact-->
+                <li class="loisirs"><a href="../html/loisirs.html">Tourisme et Loisirs</a></li> <!--Renvoie à la page loisirs-->
+                <li class="histoire"><a href="../html/histoire.html">Histoire</a></li> <!--Renvoie à la page histoire-->
+                <li class="contact"><a href="contact.php">Contact</a></li> <!--Renvoie à la page contact-->
             </ol>
         </nav>
         <main> <!-- Balise principale contenant le contenu principal de la page -->
@@ -40,8 +40,8 @@
                     <label for="prenom">Prénom :</label> <!-- Label pour le champ "Prénom" -->
                     <input type="text" name="prenom" id="prenom" placeholder="ex : Rosalie" class="grossir" required> <!-- Champ de texte pour le prénom -->
                     <br><br>
-                    <label>Date de naissance :</label> <!-- Label pour la date de naissance -->
-                    <input type="date"/> <!-- Champ pour entrer la date de naissance -->
+                    <label for="date_naissance">Date de naissance :</label> <!-- Label pour la date de naissance -->
+                    <input type="date" name="date_naissance" id="date_naissance" class="grossir"/> <!-- Champ pour entrer la date de naissance -->
                     <br><br>
                     <label for="mail">Mail : </label> <!-- Label pour l'email -->
                     <input type="email" name="mail" id="mail" placeholder="ex : abcd@gmail.com" class="grossir" required> <!-- Champ pour l'adresse email -->
@@ -59,7 +59,7 @@
                     <input type="reset"> <!-- Bouton pour réinitialiser le formulaire -->
                 </fieldset>
                 <fieldset class="encadre2"> <!-- Un autre encadré pour les liens en bas du formulaire -->
-                    <a href="connexion.html">Vous avez déjà un compte ?</a> <!-- Lien vers la page de connexion si l'utilisateur a déjà un compte -->
+                    <a href="connexion.php">Vous avez déjà un compte ?</a> <!-- Lien vers la page de connexion si l'utilisateur a déjà un compte -->
                     <a href="../index.html">Retourner à l'accueil</a> <!-- Lien pour retourner à la page d'accueil -->
                 </fieldset>
             </form>
@@ -72,8 +72,7 @@
             <div class="footer-centre"> <!-- Partie centrale du footer -->
                 <!-- Section Carte -->
                 <div class="carte">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44627.94880314658!2d0.10382750595865571!3d45.64586530034062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fe2d85032bc499%3A0x405d39260eec0f0!2sAngoulême!5e0!3m2!1sfr!2sfr!4v1733300128398!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </iframe> <!-- Carte Google Maps intégrée pour localiser Angoulême -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44627.94880314658!2d0.10382750595865571!3d45.64586530034062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fe2d85032bc499%3A0x405d39260eec0f0!2sAngoulême!5e0!3m2!1sfr!2sfr!4v1733300128398!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> <!-- Carte Google Maps intégrée pour localiser Angoulême -->
                 </div>
         
                 <!-- Section Infos  -->
@@ -95,8 +94,8 @@
             <div class="footer-droite"> <!-- Partie droite du footer -->
                 <ul class="infos1">
                     <li><p>Téléphone :</p><p>05 45 38 92 89</p></li> <!-- Affiche le numéro de téléphone -->
-                    <li><a href="contact.html" class="contact1">Nous contacter</a></li> <!-- Lien vers la page de contact -->
-                    <li><a href="politiquedeconfidentialite.html" class="lien">Politique de confidentialité</a></li> <!-- Lien vers la politique de confidentialité du site -->
+                    <li><a href="contact.php" class="contact1">Nous contacter</a></li> <!-- Lien vers la page de contact -->
+                    <li><a href="../html/politiquedeconfidentialite.html" class="lien">Politique de confidentialité</a></li> <!-- Lien vers la politique de confidentialité du site -->
                 </ul>
             </div>
         </footer>               

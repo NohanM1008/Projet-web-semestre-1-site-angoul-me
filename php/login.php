@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "<h2>Erreur lors de la connexion : " . htmlspecialchars($e->getMessage()) . "</h2>";
         }
     } else {
-        // Affichage des erreurs
+        // On affiche des erreurs
         echo "<h2>Erreurs :</h2><ul>";
         foreach ($erreurs as $e) {
             echo "<li>" . htmlspecialchars($e) . "</li>";
@@ -58,7 +58,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<a href='../php/connexion.php'>Retour à la page de connexion</a>";
     }
 } else {
-    // Si quelqu'un essaie d'ouvrir directement la page login.php sans envoyer le formulaire
     header("Location: ../php/connexion.php");
     exit();
 }
