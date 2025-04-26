@@ -9,35 +9,33 @@ function nettoyer($donnee) {
 
 // On vérifie que le formulaire a bien été soumis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Récupération et nettoyage des données
+    // on récupère et nettoie des données (pour améliorer la sécurité)
     $genre = isset($_POST['genre']) ? nettoyer($_POST['genre']) : "";
     $nom = nettoyer($_POST['nom']);
     $prenom = nettoyer($_POST['prenom']);
     $email = nettoyer($_POST['mail']);
     $identifiant = nettoyer($_POST['identifiant']);
     $mdp = nettoyer($_POST['mdp']);
-    $mdp2 = nettoyer($_POST['mdp2']);
 
-    // Vérifications simples
     $erreurs = [];
-
+    // On vérifie que tous les champs ont été remplis
     if (empty($nom) || empty($prenom) || empty($email) || empty($identifiant) || empty($mdp) || empty($mdp2)) {
         $erreurs[] = "Tous les champs sont obligatoires.";
     }
-
+    // On vérifie que l'adresse email est valide
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $erreurs[] = "Adresse email invalide.";
     }
-
+    // On vérifie que les 2 mots de passe correspondent
     if ($mdp !== $mdp2) {
         $erreurs[] = "Les mots de passe ne correspondent pas.";
     }
-
+    // Si aucune erreur n'a été repéré, on mets un message de validation
     if (empty($erreurs)) {
         echo "<h2>Compte créé avec succès !</h2>";
         echo "<p>Bienvenue, " . $prenom . " " . $nom . " (" . $identifiant . ")</p>";
         echo "<a href='connexion.php'>Se connecter</a>";
-    } else {
+    } else { // Sinon on met un message d'erreur
         echo "<h2>Erreurs :</h2>";
         echo "<ul>";
         foreach ($erreurs as $e) {
