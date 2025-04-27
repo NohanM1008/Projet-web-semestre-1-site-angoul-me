@@ -38,18 +38,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $utilisateur = $stmt->fetch(PDO::FETCH_ASSOC);
 
             // Vérification du mot de passe
-            if ($utilisateur && password_verify($mdp, $utilisateur['mdp'])) {
-                echo "<h2>Connexion réussie ! Bienvenue " . htmlspecialchars($utilisateur['identifiant']) . ".</h2>";
-                echo "<a href='../index.html'>Aller à l'accueil</a>";
+            if ($utilisateur && $mdp == $utilisateur['mdp']) { // Comparaison directe sans hash
+                // Connexion réussie, gestion de la session
+                $_SESSION['user_id'] = $utilisateur['id']; // Enregistrer l'ID de l'utilisateur dans la session
+                $_SESSION['username'] = $utilisateur['identifiant']; // Enregistrer l'identifiant
+                header("Location: dashboard.php"); // Redirige vers le tableau de bord ou la page protégée
+                exit();
             } else {
-                echo "<h2>Identifiant ou mot de passe incorrect.</h2>";
-                echo "<a href='../php/connexion.php'>Réessayer</a>";
+                $erreurs[] = "Identifiant ou mot de passe incorrect.";
             }
         } catch (Exception $e) {
-            echo "<h2>Erreur lors de la connexion : " . htmlspecialchars($e->getMessage()) . "</h2>";
+            $erreurs[] = "Erreur lors de la connexion : " . htmlspecialchars($e->getMessage());
         }
-    } else {
-        // Affichage des erreurs
+    }
+
+    // Affichage des erreurs
+    if (!empty($erreurs)) {
         echo "<h2>Erreurs :</h2><ul>";
         foreach ($erreurs as $e) {
             echo "<li>" . htmlspecialchars($e) . "</li>";
@@ -58,6 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<a href='../php/connexion.php'>Retour à la page de connexion</a>";
     }
 } else {
+    // Redirige si la méthode n'est pas POST
     header("Location: ../php/connexion.php");
     exit();
 }
