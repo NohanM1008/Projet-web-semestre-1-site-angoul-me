@@ -2,22 +2,22 @@
 // On démarre la session
 session_start();
 
-// On permet la connexion à la base de données
+// Connexion à la base de données
 require_once 'connexion_bdd.php';
 
-// Ceci est une fonction pour éviter les failles XSS et ainsi améliorer grandement la sécurité du site 
+// Fonction pour éviter les failles XSS
 function nettoyer($donnee) {
     return htmlspecialchars(trim($donnee));
 }
 
-// On vérifie que le formulaire a été envoyé
+// Vérification que le formulaire est envoyé
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    // On récupère les données du formulaire
+    // Récupération et nettoyage des données
     $genre = isset($_POST['genre']) ? nettoyer($_POST['genre']) : "";
     $nom = nettoyer($_POST['nom']);
     $prenom = nettoyer($_POST['prenom']);
-    $email = nettoyer($_POST['mail']);
+    $mail = nettoyer($_POST['mail']);
     $identifiant = nettoyer($_POST['identifiant']);
     $mdp = nettoyer($_POST['mdp']);
     $mdp2 = nettoyer($_POST['mdp2']);
@@ -25,42 +25,46 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $erreurs = [];
 
-    // On vérifie que tous les champs ont bien été remplis
-    if (empty($nom) || empty($prenom) || empty($email) || empty($identifiant) || empty($mdp) || empty($mdp2)) {
+    // Vérification des champs
+    if (empty($nom) || empty($prenom) || empty($mail) || empty($identifiant) || empty($mdp) || empty($mdp2)) {
         $erreurs[] = "Tous les champs sont obligatoires.";
     }
 
-    // On vérifie que l'adresse email est bien valide
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    // Vérification de l'email
+    if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
         $erreurs[] = "Adresse email invalide.";
     }
 
-    // On vérifie que les mots de passe correspondent
+    // Vérification des mots de passe
     if ($mdp !== $mdp2) {
         $erreurs[] = "Les mots de passe ne correspondent pas.";
     }
 
-    // On vérifie si l'email ou l'identifiant existent déjà (pour éviter les incohérences/erreurs dans la BDD)
-    $stmt = $conn->prepare("SELECT * FROM utilisateurs WHERE email = :email OR identifiant = :identifiant");
-    $stmt->execute(['email' => $email, 'identifiant' => $identifiant]);
+    // Vérification si l'email ou l'identifiant existent déjà
+    $stmt = $conn->prepare("SELECT * FROM utilisateurs WHERE mail = :mail OR identifiant = :identifiant");
+    $stmt->execute([
+        'mail' => $mail,
+        'identifiant' => $identifiant
+    ]);
+
     if ($stmt->fetch()) {
         $erreurs[] = "Un compte avec cet e-mail ou identifiant existe déjà.";
     }
 
-    // S'il n'y a pas d'erreurs, on enregistre
+    // Si pas d'erreurs, on enregistre
     if (empty($erreurs)) {
         $mdp_hash = password_hash($mdp, PASSWORD_DEFAULT); // Hachage du mot de passe
 
-        $stmt = $conn->prepare("INSERT INTO utilisateurs (genre, nom, prenom, email, identifiant, mot_de_passe, date_naissance) 
-                                VALUES (:genre, :nom, :prenom, :email, :identifiant, :mot_de_passe, :date_naissance)");
+        $stmt = $conn->prepare("INSERT INTO utilisateurs (genre, nom, prenom, mail, identifiant, mdp, date_naissance) 
+                                VALUES (:genre, :nom, :prenom, :mail, :identifiant, :mdp, :date_naissance)");
 
         $stmt->execute([
             'genre' => $genre,
             'nom' => $nom,
             'prenom' => $prenom,
-            'email' => $email,
+            'mail' => $mail,
             'identifiant' => $identifiant,
-            'mot_de_passe' => $mdp_hash,
+            'mdp' => $mdp_hash,
             'date_naissance' => $date_naissance
         ]);
 
@@ -69,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<a href='connexion.php'>Se connecter</a>";
 
     } else {
-        // Sinon on affiche des erreurs
+        // Affichage des erreurs
         echo "<h2>Erreurs :</h2><ul>";
         foreach ($erreurs as $e) {
             echo "<li>" . htmlspecialchars($e) . "</li>";
