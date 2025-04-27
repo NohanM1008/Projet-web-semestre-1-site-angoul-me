@@ -10,15 +10,15 @@
     </head>
     <body> <!-- La balise body englobe tout ce qui apparaîtra dans notre page Web-->
         <header> <!--Haut de la page, contient le logo du site, le titre du site et le lien pour la page se connecter-->
-            <a href="index.html"><img src="images/logo.png" alt="Angoulême Logo"class="logo-site"></a>
+            <a href="index.php"><img src="images/logo.png" alt="Angoulême Logo"class="logo-site"></a>
             <a href="php/connexion.php">Se connecter</a>
             <h1>Ville d'Angoulême</h1>
         </header>
         <nav>
             <ol> <!--Liste non ordonnée pour la navigation entre les pages du site-->
-                <li class="index"><a class="eltact"href="index.html">Accueil</a></li>
-                <li class="loisirs"><a href="html/loisirs.html">Tourisme et Loisirs</a></li>
-                <li class="histoire"><a href="html/histoire.html">Histoire</a></li>
+                <li class="index"><a class="eltact"href="index.php">Accueil</a></li>
+                <li class="loisirs"><a href="php/loisirs.php">Tourisme et Loisirs</a></li>
+                <li class="histoire"><a href="php/histoire.php">Histoire</a></li>
                 <li class="contact"><a href="php/contact.php">Contact</a></li>
             </ol>
         </nav>
@@ -39,17 +39,17 @@
                     <article class="conteneur1"> <!--Ici le code se répète, on définit un article avec un classe pour faciliter le css puis on donne un titre à cette article, un texte et un lien vers une autre page de notre site associée avec une image-->
                         <h2>Angoulême, une ville culturelle</h2>
                         <p>Angoulême est la capitale mondiale de la BD, capitale du cinéma français, membre des villes créatives de l'Unesco</p>
-                        <a href="html/loisirs.html">Découvrez-en plus sur les activités culturelles d'Angoulême<img src="images/accueil/angouleme_bd.jpg" alt="Image BD Angoulême"/></a>
+                        <a href="php/loisirs.php">Découvrez-en plus sur les activités culturelles d'Angoulême<img src="images/accueil/angouleme_bd.jpg" alt="Image BD Angoulême"/></a>
                     </article>
                     <article class="conteneur2">
                         <h2>Une ville historique</h2>
                         <p>Notre ville a une histoire et une architecture atypique avec notamment ses remparts faisant le tour du centre-ville et sa position en hauteur, dominant la Charente et l'agglomération ou encore sa magnifique cathédrale</p>
-                        <a href="html/histoire.html">Découvrez-en plus sur l'histoire d'Angoulême<img src="images/accueil/cathedrale.jpg" alt="Image cathédrale"/></a>
+                        <a href="php/histoire.php">Découvrez-en plus sur l'histoire d'Angoulême<img src="images/accueil/cathedrale.jpg" alt="Image cathédrale"/></a>
                     </article>
                     <article class="conteneur3">
                         <h2>Des loisirs et activités diverses</h2>
                         <p>Notre ville offre une panoplie de loisirs et d'événements annuels : festival de la BD, festival du film, circuit des remparts... et bien d'autres encore !</p>
-                        <a href="html/loisirs.html">Découvrez-en plus sur les activités d'Angoulême<img src="images/accueil/circuit.jpg" alt="Image circuit des remparts"/></a>
+                        <a href="php/loisirs.">Découvrez-en plus sur les activités d'Angoulême<img src="images/accueil/circuit.jpg" alt="Image circuit des remparts"/></a>
                     </article>
                 </div>
             </section>
@@ -85,7 +85,7 @@
                 <ul class="infos1">
                     <li><p>Téléphone :</p><p>05 45 38 92 89</p></li> <!-- Affiche le numéro de téléphone -->
                     <li><a href="php/contact.php" class="contact1">Nous contacter</a></li> <!-- Lien vers la page de contact -->
-                    <li><a href="html/politiquedeconfidentialite.html" class="lien">Politique de confidentialité</a></li> <!-- Lien vers la politique de confidentialité -->
+                    <li><a href="php/politiquedeconfidentialite.php" class="lien">Politique de confidentialité</a></li> <!-- Lien vers la politique de confidentialité -->
                 </ul>
             </div>
         </footer>

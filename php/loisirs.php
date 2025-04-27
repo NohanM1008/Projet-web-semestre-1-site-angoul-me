@@ -10,16 +10,16 @@
     </head>
     <body> <!-- La balise body anglobe tout ce qui apparaîtra dans notre page Web-->
         <header> <!--Logo, titre et lien pour se connecter-->
-            <a href="../index.html"><img src="../images/logo.png" alt="Angoulême Logo"></a>
-            <a href="php/connexion.php">Se connecter</a>
+            <a href="../index.php"><img src="../images/logo.png" alt="Angoulême Logo"></a>
+            <a href="connexion.php">Se connecter</a>
             <h1>Ville d'Angoulême</h1>
         </header>
         <nav>
             <ol> <!--Liste non ordonnée pour la navigation entre les pages-->
-              <li><a href="../index.html">Accueil</a></li>
-              <li><a class="eltact"href="../html/loisirs.html">Tourisme et Loisirs</a></li>
-              <li><a href="../html/histoire.html">Histoire</a></li>
-              <li><a href="php/contact.php">Contact</a></li>
+              <li><a href="../index.php">Accueil</a></li>
+              <li><a class="eltact"href="loisirs.php">Tourisme et Loisirs</a></li>
+              <li><a href="histoire.php">Histoire</a></li>
+              <li><a href="contact.php">Contact</a></li>
             </ol>
         </nav>
         <main>
@@ -188,8 +188,8 @@
             <div class="footer-droite"> <!-- Partie droite du footer -->
                 <ul class="infos1">
                     <li><p>Téléphone :</p><p>05 45 38 92 89</p></li> <!-- Affiche le numéro de téléphone -->
-                    <li><a href="php/contact.php" class="contact1">Nous contacter</a></li> <!-- Lien vers la page de contact -->
-                    <li><a href="politiquedeconfidentialite.html" class="lien">Politique de confidentialité</a></li> <!-- Lien vers la politique de confidentialité -->
+                    <li><a href="contact.php" class="contact1">Nous contacter</a></li> <!-- Lien vers la page de contact -->
+                    <li><a href="politiquedeconfidentialite.php" class="lien">Politique de confidentialité</a></li> <!-- Lien vers la politique de confidentialité -->
                 </ul>
             </div>
         </footer>

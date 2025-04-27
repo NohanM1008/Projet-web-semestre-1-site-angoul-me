@@ -13,20 +13,20 @@ session_start();
     </head>
     <body> <!-- Le corps de la page, tout ce qui apparaît à l'écran -->
         <header> <!-- Balise qui contient le contenu de l'entête de la page-->
-            <a href="../index.html"><img src="../images/logo.png" alt="Angoulême Logo"class="logo-site"></a> <!-- Lien vers la page d'accueil avec le logo d'Angoulême -->
+            <a href="../index.php"><img src="../images/logo.png" alt="Angoulême Logo"class="logo-site"></a> <!-- Lien vers la page d'accueil avec le logo d'Angoulême -->
             <a href="connexion.php">Se connecter</a> <!--Lien qui renvoie vers la page de connexion-->
             <h1>Ville d'Angoulême</h1> <!-- Titre principal affiché sur la page -->
         </header>
         <nav> <!--Cette section permet de naviguer entre les différentes pages du site -->
             <ol> <!--On fait un liste des éléments-->
-                <li><a href="../index.html">Accueil</a></li> <!--Renvoie à l'accueil-->
-                <li><a href="../html/loisirs.html">Tourisme et loisirs</a></li> <!--Renvoie à la page loisirs-->
-                <li><a href="../html/histoire.html">Histoire</a></li> <!--Renvoie à la page histoire-->
+                <li><a href="../index.php">Accueil</a></li> <!--Renvoie à l'accueil-->
+                <li><a href="loisirs.php">Tourisme et loisirs</a></li> <!--Renvoie à la page loisirs-->
+                <li><a href="histoire.php">Histoire</a></li> <!--Renvoie à la page histoire-->
                 <li><a href="contact.php">Contact</a></li> <!--Renvoie à la page contact-->
             </ol>
         </nav>
         <main> <!-- Balise principale contenant le contenu principal de la page -->
-            <form method="post" action="../php/login.php"> <!-- Formulaire pour la connexion, méthode "post" pour envoyer les données -->
+            <form method="post" action="login.php"> <!-- Formulaire pour la connexion, méthode "post" pour envoyer les données -->
                 <fieldset class="encadre"> <!-- Encadré contenant les champs de saisie -->
                     <legend class="connexion">Se connecter</legend> <!-- Titre de l'encadré -->
                     <label for="nom" class="grossir2">Identifiant ou e-mail :</label> <!-- Libellé pour le champ "identifiant" -->
@@ -43,7 +43,7 @@ session_start();
                     <a href="compte.php"><input type="compte" name="compte" class="compte" value="Créer un compte"></a> <!-- Lien vers la page pour créer un compte, sous forme de bouton -->
                 </fieldset>
                 <fieldset class="encadre2"> <!-- Deuxième encadré pour les options de navigation -->
-                    <p><a href="../index.html">Retourner à l'accueil</a></p> <!-- Lien vers la page d'accueil -->
+                    <p><a href="../index.php">Retourner à l'accueil</a></p> <!-- Lien vers la page d'accueil -->
                 </fieldset>
             </form>
         </main>
@@ -78,7 +78,7 @@ session_start();
                 <ul class="infos1">
                     <li><p>Téléphone :</p><p>05 45 38 92 89</p></li> <!-- Affiche le numéro de téléphone -->
                     <li><a href="contact.php" class="contact1">Nous contacter</a></li> <!-- Lien vers la page de contact -->
-                    <li><a href="../html/politiquedeconfidentialite.html" class="lien">Politique de confidentialité</a></li> <!-- Lien vers la politique de confidentialité -->
+                    <li><a href="politiquedeconfidentialite.php" class="lien">Politique de confidentialité</a></li> <!-- Lien vers la politique de confidentialité -->
                 </ul>
             </div>
         </footer>

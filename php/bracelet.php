@@ -116,7 +116,7 @@
             <ul class="infos1">
                 <li><p>Téléphone :</p><p>05 45 38 92 89</p></li>
                 <li><a href="php/contact.php" class="contact1">Nous contacter</a></li>
-                <li><a href="politiquedeconfidentialite.html" class="lien">Politique de confidentialité</a></li>
+                <li><a href="politiquedeconfidentialite.php" class="lien">Politique de confidentialité</a></li>
             </ul>
         </div>
     </footer>
