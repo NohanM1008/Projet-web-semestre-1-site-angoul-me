@@ -3,7 +3,7 @@
 session_start();
 
 // Connexion à la base de données
-require_once 'connexion_bdd.php';
+require_once 'register_bdd.php';
 
 // Fonction pour éviter les failles XSS
 function nettoyer($donnee) {
