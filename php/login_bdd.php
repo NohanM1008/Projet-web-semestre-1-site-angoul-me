@@ -1,4 +1,5 @@
 <?php
+session_start();
 $servername = 'localhost'; // Serveur de base de données
 $username = 'root'; // Nom d'utilisateur
 $password = 'root'; // Mot de passe

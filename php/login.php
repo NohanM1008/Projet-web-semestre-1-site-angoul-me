@@ -1,4 +1,5 @@
 <?php
+session_start();
 // On permet la connexion à la base de données
 require_once 'login_bdd.php';
 
