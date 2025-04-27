@@ -1,0 +1,56 @@
+/* Style général du container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Titre de la page */
+.container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 2em;
+}
+
+/* Style du tableau */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Entêtes du tableau */
+table thead {
+    background-color: #007BFF;
+    color: white;
+}
+
+/* Chaque cellule */
+table th, table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Alternance de couleurs sur les lignes */
+table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Lignes hover */
+table tbody tr:hover {
+    background-color: #e0f7fa;
+}
+
+/* Texte du paragraphe si aucun utilisateur */
+.container p {
+    text-align: center;
+    color: #888;
+    margin-top: 30px;
+    font-size: 1.2em;
+}
