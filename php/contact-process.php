@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo '<a href="contact.php">Retourner au formulaire</a>';
         exit;
     }
-
+}
 $servername = 'localhost'; // Serveur de base de données
 $username = 'root'; // Nom d'utilisateur
 $password = 'root'; // Mot de passe
@@ -33,7 +33,7 @@ $dataname = 'maBase'; // Nom de la base de donnée
 // On essaie de se connecter
 
 try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    $pdo = new PDO("mysql:host=$servername;dbname=$dataname", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Préparation de la requête SQL pour insérer les données dans la table "contacts"
