@@ -25,7 +25,7 @@
         <main> <!-- Balise principale contenant le contenu principal de la page -->
             <fieldset class="encadre"> <!-- <fieldset> crée un encadré pour structurer le formulaire -->
                 <legend class="contact">Contact</legend> <!-- Légende pour le bloc de formulaire, avec un titre "Contact" -->
-                <form method="post" action="#"> <!-- Le formulaire envoie ses données via la méthode POST -->
+                <form method="post" action="../php/contact-process.php"> <!-- Le formulaire envoie ses données via la méthode POST -->
                     <fieldset class="encadre1">
                         <!-- Un autre encadré pour regrouper les informations sur l'utilisateur -->
                         <legend class="infos">Informations sur vous</legend> <!-- Légende "Informations sur vous" -->
@@ -86,9 +86,6 @@
                             <label for="description">Message :</label> <br> <!-- Label pour le champ "Message" -->
                         </div>
                         <textarea rows="10" cols="50" name="description" id="description" maxlength="200" class="message-box" class="grossir"></textarea> <!-- Zone de texte pour le message -->
-                        <br><br>
-                        <label for="document">Joindre des fichiers:</label> <!-- Label pour le champ de téléchargement de fichiers -->
-                        <input type="file" id="document" name="document" class="grossir"> <!-- Champ pour sélectionner un fichier à télécharger -->
                         <br><br>
                         <input type="submit" name="Envoyer" id="soumission" class="grossir"> <!-- Bouton pour soumettre le formulaire -->
                         <input type="reset" class="grossir"> <!-- Bouton pour réinitialiser le formulaire -->
