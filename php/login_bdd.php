@@ -2,7 +2,7 @@
 $servername = 'localhost'; // Serveur de base de données
 $username = 'root'; // Nom d'utilisateur
 $password = 'root'; // Mot de passe
-$dataname = 'maBase'; // Nom de la base de donnée
+$dataname = 'projet'; // Nom de la base de donnée
 // On essaie de se connecter
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dataname", $username, $password);
