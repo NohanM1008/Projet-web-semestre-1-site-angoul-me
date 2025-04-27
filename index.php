@@ -13,12 +13,12 @@ session_start();
     </head>
     <body> <!-- La balise body englobe tout ce qui apparaîtra dans notre page Web-->
     <header>
-        <a href="../index.php"><img src="../images/logo.png" alt="Angoulême Logo"></a>
+        <a href="index.php"><img src="images/logo.png" alt="Angoulême Logo"></a>
 
         <?php if (isset($_SESSION['id'])): ?>
-            <a href="infoperso.php" class="btn-connexion">Mon profil</a>
+            <a href="php/infoperso.php" class="btn-connexion">Mon profil</a>
         <?php else: ?>
-            <a href="connexion.php" class="btn-connexion">Se connecter</a>
+            <a href="php/connexion.php" class="btn-connexion">Se connecter</a>
         <?php endif; ?>
 
         <h1>Ville d'Angoulême</h1>
