@@ -13,7 +13,7 @@ session_start();
     </head>
     <body> <!-- La balise body englobe tout ce qui apparaîtra dans notre page Web-->
     <header>
-        <a href="../index.php"><img src="../images/logo.png" alt="Angoulême Logo"></a>
+        <a href="index.php"><img src="images/logo.png" alt="Angoulême Logo"></a>
 
         <?php if (isset($_SESSION['id'])): ?>
             <a href="php/infoperso.php" class="btn-connexion">Mon profil</a>
