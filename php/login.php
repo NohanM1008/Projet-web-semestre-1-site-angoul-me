@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Connexion réussie, gestion de la session
                 $_SESSION['user_id'] = $utilisateur['id']; // Enregistrer l'ID de l'utilisateur dans la session
                 $_SESSION['username'] = $utilisateur['identifiant']; // Enregistrer l'identifiant
-                header("Location: index.html"); // Redirige vers le tableau de bord ou la page protégée
+                header("Location: ../index.html"); // Redirige vers le tableau de bord ou la page protégée
                 exit();
             } else {
                 $erreurs[] = "Identifiant ou mot de passe incorrect.";
