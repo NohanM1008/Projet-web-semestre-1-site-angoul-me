@@ -3,7 +3,7 @@
 session_start();
 
 // Connexion à la base de données
-require_once 'login_bdd.php'; // Assure-toi que ce fichier est bien configuré
+require_once 'login_bdd.php'; // Connexion à la base de données avec PDO
 
 // Fonction pour éviter les failles XSS
 function nettoyer($donnee) {
@@ -41,12 +41,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Vérification si l'email ou l'identifiant existent déjà
-    $stmt = $conn->prepare("SELECT * FROM utilisateurs WHERE mail = ? OR identifiant = ?");
-    $stmt->bind_param("ss", $mail, $identifiant); // Utilisation de bind_param pour lier les paramètres
-    $stmt->execute();
-    $result = $stmt->get_result();
+    $stmt = $conn->prepare("SELECT * FROM utilisateurs WHERE mail = :mail OR identifiant = :identifiant");
+    $stmt->execute([
+        'mail' => $mail,
+        'identifiant' => $identifiant
+    ]);
+    $utilisateur = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    if ($result->num_rows > 0) {
+    if ($utilisateur) {
         $erreurs[] = "Un compte avec cet e-mail ou identifiant existe déjà.";
     }
 
@@ -55,18 +57,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mdp_hash = password_hash($mdp, PASSWORD_DEFAULT); // Hachage du mot de passe
 
         $stmt = $conn->prepare("INSERT INTO utilisateurs (genre, nom, prenom, mail, identifiant, mdp, date_naissance) 
-                                VALUES (?, ?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("sssssss", $genre, $nom, $prenom, $mail, $identifiant, $mdp_hash, $date_naissance); // Lier les paramètres
+                                VALUES (:genre, :nom, :prenom, :mail, :identifiant, :mdp, :date_naissance)");
 
-        if ($stmt->execute()) {
-            echo "<h2>Compte créé avec succès !</h2>";
-            echo "<p>Bienvenue, " . htmlspecialchars($prenom) . " " . htmlspecialchars($nom) . " (" . htmlspecialchars($identifiant) . ")</p>";
-            echo "<a href='connexion.php'>Se connecter</a>";
-        } else {
-            echo "<h2>Erreur lors de l'enregistrement.</h2>";
-        }
+        $stmt->execute([
+            'genre' => $genre,
+            'nom' => $nom,
+            'prenom' => $prenom,
+            'mail' => $mail,
+            'identifiant' => $identifiant,
+            'mdp' => $mdp_hash,
+            'date_naissance' => $date_naissance
+        ]);
 
-        $stmt->close();
+        echo "<h2>Compte créé avec succès !</h2>";
+        echo "<p>Bienvenue, " . htmlspecialchars($prenom) . " " . htmlspecialchars($nom) . " (" . htmlspecialchars($identifiant) . ")</p>";
+        echo "<a href='connexion.php'>Se connecter</a>";
+
     } else {
         // Affichage des erreurs
         echo "<h2>Erreurs :</h2><ul>";
