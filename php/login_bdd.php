@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start(); // Démarre la session si elle n'est pas déjà active
+}
 $servername = 'localhost'; // Serveur de base de données
 $username = 'root'; // Nom d'utilisateur
 $password = 'root'; // Mot de passe
