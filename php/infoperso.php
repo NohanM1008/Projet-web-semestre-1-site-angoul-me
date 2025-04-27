@@ -7,7 +7,7 @@ session_start();
     <meta charset="utf-8">
     <title>Ville d'Angoulême</title>
     <link rel="icon" href="../images/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/header.css"> <!-- test -->
+    <link rel="stylesheet" href="../css/header.css"> <!-- lien vers ton CSS -->
 
 </head>
 <body>
