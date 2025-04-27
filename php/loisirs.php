@@ -9,11 +9,17 @@
         <link rel="stylesheet" href="../css/header.css">
     </head>
     <body> <!-- La balise body anglobe tout ce qui apparaîtra dans notre page Web-->
-        <header> <!--Logo, titre et lien pour se connecter-->
-            <a href="../index.php"><img src="../images/logo.png" alt="Angoulême Logo"></a>
-            <a href="connexion.php">Se connecter</a>
-            <h1>Ville d'Angoulême</h1>
-        </header>
+    <header>
+        <a href="../index.php"><img src="../images/logo.png" alt="Angoulême Logo"></a>
+
+        <?php if (isset($_SESSION['id'])): ?>
+            <a href="infoperso.php" class="btn-connexion">Mon profil</a>
+        <?php else: ?>
+            <a href="connexion.php" class="btn-connexion">Se connecter</a>
+        <?php endif; ?>
+
+        <h1>Ville d'Angoulême</h1>
+    </header>
         <nav>
             <ol> <!--Liste non ordonnée pour la navigation entre les pages-->
               <li><a href="../index.php">Accueil</a></li>

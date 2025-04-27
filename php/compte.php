@@ -12,10 +12,17 @@ session_start();
         <link rel="stylesheet" href="../css/header.css"> <!-- Lien vers le fichier CSS pour le style du header de cette page -->
     </head>
     <body> <!-- Le corps de la page, tout ce qui apparaît à l'écran -->
-        <header> <!-- Balise qui contient le contenu de l'ne tête de la page-->
-            <a href="../index.php"><img src="../images/logo.png" alt="Angoulême Logo"></a> <!-- Lien vers la page d'accueil avec le logo d'Angoulême -->
-            <h1>Ville d'Angoulême</h1> <!-- Titre principal affiché sur la page -->
-        </header>
+    <header>
+        <a href="../index.php"><img src="../images/logo.png" alt="Angoulême Logo"></a>
+
+        <?php if (isset($_SESSION['id'])): ?>
+            <a href="infoperso.php" class="btn-connexion">Mon profil</a>
+        <?php else: ?>
+            <a href="connexion.php" class="btn-connexion">Se connecter</a>
+        <?php endif; ?>
+
+        <h1>Ville d'Angoulême</h1>
+    </header>
         <nav> <!--Cette section permet de naviguer entre les différentes pages du site -->
             <ol> <!--On fait un liste des éléments-->
                 <li class="index"><a href="../index.php">Accueil</a></li> <!--Renvoie à l'accueil-->
