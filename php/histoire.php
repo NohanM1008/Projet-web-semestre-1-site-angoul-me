@@ -1,36 +1,7 @@
 <?php
-session_start();
+$pageTitle = "Ville d'Angoulême";
+include 'header.php';
 ?>
-<!DOCTYPE html>
-<html lang="fr"> <!--definition de la langue -->
-    <head>  
-        <title> Ville d'Angoulême </title> <!-- On définit le titre-->
-        <link rel="icon" href="../images/logo.png" type="image/x-icon">
-        <meta charset="utf-8"> <!-- On utilisera la chaîne de caractère utf-8 pour avoir acces aux symboles propres a notre clavier-->
-        <link rel="stylesheet" href="../css/histoire.css"> 
-        <link rel="stylesheet" href="../css/footer.css"><!--liens permettant de naviguer dans a travers les pages ou permettant d'avoir des styles differents pour une page précise -->
-        <link rel="stylesheet" href="../css/header.css">
-    </head>
-    <body> <!-- La balise body englobe tout ce qui apparaîtra dans notre page Web-->
-    <header>
-        <a href="../index.php"><img src="../images/logo.png" alt="Angoulême Logo"></a>
-
-        <?php if (isset($_SESSION['id'])): ?>
-            <a href="infoperso.php" class="btn-connexion">Mon profil</a>
-        <?php else: ?>
-            <a href="connexion.php" class="btn-connexion">Se connecter</a>
-        <?php endif; ?>
-
-        <h1>Ville d'Angoulême</h1>
-    </header>
-        <nav>
-            <ol><!--Liste non ordonnée pour la navigation entre les pages du site-->
-                <li><a href="../index.php">Accueil</a></li>
-                <li><a href="loisirs.php">Tourisme et Loisirs</a></li>
-                <li><a class="eltact" href="histoire.php">Histoire</a></li>
-                <li><a href="contact.php">Contact</a></li>
-            </ol>
-        </nav>
         <body>
             <!--Les titres sont définit avec h puis un numéro allant de 1 a 6 , plus le chiffre apres est grand , plus le texte est petit , h1 est un titre et h2 un sous titre --> 
             <main>

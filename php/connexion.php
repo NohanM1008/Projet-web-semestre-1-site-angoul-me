@@ -1,36 +1,7 @@
 <?php
-session_start();
+$pageTitle = "Ville d'Angoulême";
+include 'header.php';
 ?>
-<!DOCTYPE html> <!-- Déclare le type de document HTML (ici HTML5) -->
-<html lang="fr"> <!-- La langue de la page est le français -->
-    <head>  <!-- La balise head contient des informations non visibles sur la page -->
-        <title> Ville d'Angoulême </title> <!-- On définit le titre de la page -->
-        <link rel="icon" href="../images/logo.png" type="image/x-icon"> <!--Icône du site-->
-        <meta charset="utf-8"> <!-- On définit l'encodage des caractères, ici UTF-8 pour supporter les caractères spéciaux -->
-        <link rel="stylesheet" href="../css/connexion.css"> <!-- Lien vers le fichier CSS pour le style de cette page -->
-        <link rel="stylesheet" href="../css/footer.css"> <!-- Lien vers le fichier CSS pour le style du footer de cette page -->
-        <link rel="stylesheet" href="../css/header.css"> <!-- Lien vers le fichier CSS pour le style du header de cette page -->
-    </head>
-    <body> <!-- Le corps de la page, tout ce qui apparaît à l'écran -->
-    <header>
-        <a href="../index.php"><img src="../images/logo.png" alt="Angoulême Logo"></a>
-
-        <?php if (isset($_SESSION['id'])): ?>
-            <a href="infoperso.php" class="btn-connexion">Mon profil</a>
-        <?php else: ?>
-            <a href="connexion.php" class="btn-connexion">Se connecter</a>
-        <?php endif; ?>
-
-        <h1>Ville d'Angoulême</h1>
-    </header>
-        <nav> <!--Cette section permet de naviguer entre les différentes pages du site -->
-            <ol> <!--On fait un liste des éléments-->
-                <li><a href="../index.php">Accueil</a></li> <!--Renvoie à l'accueil-->
-                <li><a href="loisirs.php">Tourisme et loisirs</a></li> <!--Renvoie à la page loisirs-->
-                <li><a href="histoire.php">Histoire</a></li> <!--Renvoie à la page histoire-->
-                <li><a href="contact.php">Contact</a></li> <!--Renvoie à la page contact-->
-            </ol>
-        </nav>
         <main> <!-- Balise principale contenant le contenu principal de la page -->
             <form method="post" action="login.php"> <!-- Formulaire pour la connexion, méthode "post" pour envoyer les données -->
                 <fieldset class="encadre"> <!-- Encadré contenant les champs de saisie -->
