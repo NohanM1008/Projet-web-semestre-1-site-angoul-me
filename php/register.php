@@ -54,7 +54,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Si pas d'erreurs, on enregistre
     if (empty($erreurs)) {
-        $mdp_hash = password_hash($mdp, PASSWORD_DEFAULT); // Hachage du mot de passe
+        // Pas de hachage du mot de passe ici
+        $mdp_clair = $mdp; // Utilisation du mot de passe en clair
 
         $stmt = $conn->prepare("INSERT INTO utilisateurs (genre, nom, prenom, mail, identifiant, mdp, date_naissance) 
                                 VALUES (:genre, :nom, :prenom, :mail, :identifiant, :mdp, :date_naissance)");
@@ -65,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             'prenom' => $prenom,
             'mail' => $mail,
             'identifiant' => $identifiant,
-            'mdp' => $mdp_hash,
+            'mdp' => $mdp_clair,
             'date_naissance' => $date_naissance
         ]);
 
