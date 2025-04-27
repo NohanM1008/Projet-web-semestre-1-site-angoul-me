@@ -10,42 +10,42 @@
     </head>
     <body> <!-- La balise body anglobe tout ce qui apparaîtra dans notre page Web-->
         <header><!--Logo, titre et lien pour se connecter-->
-            <a href="../index.html"><img src="../images/logo.png" alt="Angoulême Logo"class="logo-site"></a>
-            <a href="php/connexion.php">Se connecter</a>
+            <a href="../index.php"><img src="../images/logo.png" alt="Angoulême Logo"class="logo-site"></a>
+            <a href="connexion.php">Se connecter</a>
             <h1>Ville d'Angoulême</h1>
         </header>
         <nav>
             <ol><!--Liste non ordonnée pour la navigation entre les pages-->
-                <li><a href="../index.html">Accueil</a></li>
-                <li><a href="loisirs.html">Tourisme et loisirs</a></li>
-                <li><a href="histoire.html">Histoire</a></li>
-                <li><a href="php/contact.php">Contact</a></li>
+                <li><a href="../index.php">Accueil</a></li>
+                <li><a href="loisirs.php">Tourisme et loisirs</a></li>
+                <li><a href="histoire.php">Histoire</a></li>
+                <li><a href="contact.php">Contact</a></li>
             </ol>
         </nav>
         <main><!--Le main contient un ensemble d'article composé d'un lien associé à une image du produit ansi qu'un titre (le prix du produit)-->
             <div class="container">
             <article class="produit1">
-                <a href="tasse.html"><img src="../images/boutique/tasse.png" alt="Tasse d'Angoulême"><p>Tasse d'Angoulême</p></a>
+                <a href="tasse.php"><img src="../images/boutique/tasse.png" alt="Tasse d'Angoulême"><p>Tasse d'Angoulême</p></a>
                 <h3>10€</h3>
             </article>
             <article class="produit2">
-                <a href="cartepostale.html"><img src="../images/boutique/cartepostale.png" alt="Carte postale d'Angoulême"><p>Carte postale d'Angoulême</p></a>
+                <a href="cartepostale.php"><img src="../images/boutique/cartepostale.png" alt="Carte postale d'Angoulême"><p>Carte postale d'Angoulême</p></a>
                 <h3>5€</h3>
             </article>
             <article class="produit3">
-                <a href="bracelet.html"><img src="../images/boutique/bracelet.png" alt="Bracelet d'Angoulême"><p>Bracelet d'Angoulême</p></a>
+                <a href="bracelet.php"><img src="../images/boutique/bracelet.png" alt="Bracelet d'Angoulême"><p>Bracelet d'Angoulême</p></a>
                 <h3>50€</h3>
             </article>
             <article class="produit4">
-                <a href="portecle.html"><img src="../images/boutique/portecle.png" alt="Porte-clé d'Angoulême"><p>Porte-clé d'Angoulême</p></a>
+                <a href="portecle.php"><img src="../images/boutique/portecle.png" alt="Porte-clé d'Angoulême"><p>Porte-clé d'Angoulême</p></a>
                 <h3>2,50€</h3>
             </article>
             <article class="produit5">
-                <a href="magnet.html"><img src="../images/boutique/magnet.png" alt="Magnet d'Angoulême"><p>Magnet d'Angoulême</p></a>
+                <a href="magnet.php"><img src="../images/boutique/magnet.png" alt="Magnet d'Angoulême"><p>Magnet d'Angoulême</p></a>
                 <h3>3,50€</h3>
             </article>
             <article class="produit6">
-                <a href="peluche.html"><img src="../images/boutique/peluche.png" alt="Peluche d'Angoulême"><p>Peluche d'Angoulême</p></a>
+                <a href="peluche.php"><img src="../images/boutique/peluche.png" alt="Peluche d'Angoulême"><p>Peluche d'Angoulême</p></a>
                 <h3>800€</h3>
             </article>
             </div>
@@ -151,7 +151,7 @@
                     </dl>
                 </div>
        
-                <!-- Section Logos -->
+                <!-- Section Logos -->    
                 <div class="logos">
                     <a href="https://www.facebook.com/villeangouleme" target="_blank"><img src="../images/footer/facebook.png" alt="Facebook d'Angoulême" /></a> <!-- Lien vers le Facebook d'Angoulême -->
                     <a href="https://www.instagram.com/villeangouleme/" target="_blank"><img src="../images/footer/instagram.png" alt="Instagram d'Angoulême" /></a> <!-- Lien vers l'Instagram d'Angoulême -->
@@ -163,8 +163,8 @@
             <div class="footer-droite"> <!-- Partie droite du footer -->
                 <ul class="infos1">
                     <li><p>Téléphone :</p><p>05 45 38 92 89</p></li> <!-- Affiche le numéro de téléphone -->
-                    <li><a href="php/contact.php" class="contact1">Nous contacter</a></li> <!-- Lien vers la page de contact -->
-                    <li><a href="politiquedeconfidentialite.html" class="lien">Politique de confidentialité</a></li> <!-- Lien vers la politique de confidentialité -->
+                    <li><a href="contact.php" class="contact1">Nous contacter</a></li> <!-- Lien vers la page de contact -->
+                    <li><a href="politiquedeconfidentialite.php" class="lien">Politique de confidentialité</a></li> <!-- Lien vers la politique de confidentialité -->
                 </ul>
             </div>
         </footer>
