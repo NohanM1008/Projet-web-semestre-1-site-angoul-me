@@ -1,6 +1,6 @@
 <?php
 $pageTitle = "Ville d'Angoulême";
-$css = "histoire"
+$css = "histoire";
 include 'header.php';
 ?>
         <body>

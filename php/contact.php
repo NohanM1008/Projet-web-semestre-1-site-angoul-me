@@ -1,6 +1,6 @@
 <?php
 $pageTitle = "Ville d'Angoulême";
-$css = "contact"
+$css = "contact";
 include 'header.php';
 ?>
         <main> <!-- Balise principale contenant le contenu principal de la page -->

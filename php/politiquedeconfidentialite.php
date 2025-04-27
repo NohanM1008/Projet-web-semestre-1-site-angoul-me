@@ -1,6 +1,6 @@
 <?php
 $pageTitle = "Ville d'Angoulême";
-$css = "politiquedeconfidentialite"
+$css = "politiquedeconfidentialite";
 include 'header.php';
 ?>
         <main>
