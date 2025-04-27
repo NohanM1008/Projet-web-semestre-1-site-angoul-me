@@ -6,7 +6,7 @@ include 'header.php';
             <p>
                 <!-- Début du contenu principal de la page -->
                 <div class="titre"> Politique de confidentialité</div> <!-- Titre de la section principale, affiché en plus grand grâce à la classe "titre" dans le CSS. -->
-                <br><div class="texte">La Ville d’Angoulême s’engage à ce que les traitements de données personnelles effectués sur <a href="../index.html" class="lien">https://www.angouleme.fr/</a> soient conformes au règlement général sur la protection des données (RGPD) et à la loi Informatique et Libertés</div> <!-- Paragraphe décrivant l'engagement de la ville concernant la protection des données personnelles, avec un lien vers le site officiel. -->
+                <br><div class="texte">La Ville d’Angoulême s’engage à ce que les traitements de données personnelles effectués sur <a href="../index.php" class="lien">https://www.angouleme.fr/</a> soient conformes au règlement général sur la protection des données (RGPD) et à la loi Informatique et Libertés</div> <!-- Paragraphe décrivant l'engagement de la ville concernant la protection des données personnelles, avec un lien vers le site officiel. -->
                 <br>
                 <br><div class="texte">La présente politique de confidentialité a pour but d’exposer :</div>
                 <br>

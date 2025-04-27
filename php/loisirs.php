@@ -133,7 +133,7 @@ include 'header.php';
 
             <article class="pied2">
               <a href="https://www.angouleme-tourisme.com/" target="_blank">Visitez le site de l'Office de Tourisme </a><br>
-              <a id="boutique" href="../html/boutique.html">Retrouvez tout nos  goodies liés au tourisme dans notre boutique en cliquant ici !</a>
+              <a id="boutique" href="boutique.php">Retrouvez tout nos  goodies liés au tourisme dans notre boutique en cliquant ici !</a>
             </article>
           </div>
         </main>
