@@ -1,5 +1,6 @@
 <?php
 $pageTitle = "Ville d'Angoulême";
+$css = "boutique"
 include 'header.php';
 ?>
         <main><!--Le main contient un ensemble d'article composé d'un lien associé à une image du produit ansi qu'un titre (le prix du produit)-->

@@ -1,5 +1,6 @@
 <?php
 $pageTitle = "Ville d'Angoulême - Tasse";
+$css = "article"
 include 'header.php';
 ?>
     <main>

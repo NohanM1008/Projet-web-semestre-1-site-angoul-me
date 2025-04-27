@@ -1,5 +1,6 @@
 <?php
 $pageTitle = "Ville d'Angoulême - Carte Postale";
+$css = "article"
 include 'header.php';
 ?>
     <main>

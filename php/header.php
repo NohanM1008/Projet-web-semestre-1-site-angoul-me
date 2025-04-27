@@ -7,7 +7,7 @@ session_start();
         <title><?php echo htmlspecialchars($pageTitle); ?></title>
         <link rel="icon" href="../images/logo.png" type="image/x-icon">
         <meta charset="utf-8"> <!-- On utilisera la chaîne de caractère utf-8-->
-        <link rel="stylesheet" href="../css/boutique.css"> <!-- On link la page html avec la page css afin d'ajouter de l'esthétique à notre page WEB -->
+        <link rel="stylesheet" href="../css/<?php echo htmlspecialchars($css); ?>.css"> <!-- On link la page html avec la page css afin d'ajouter de l'esthétique à notre page WEB -->
         <link rel="stylesheet" href="../css/footer.css">
         <link rel="stylesheet" href="../css/header.css">
     </head>
