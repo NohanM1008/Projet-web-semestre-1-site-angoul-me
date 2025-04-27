@@ -10,16 +10,16 @@
 </head>
 <body>
     <header><!--Logo, titre et lien pour se connecter-->
-        <a href="../index.html"><img src="../images/logo.png" alt="Angoulême Logo"></a>
-        <a href="php/connexion.php">Se connecter</a>
+        <a href="../index.php"><img src="../images/logo.png" alt="Angoulême Logo"></a>
+        <a href="connexion.php">Se connecter</a>
         <h1>Ville d'Angoulême</h1>
     </header>
     <nav>
         <ol><!--Liste non ordonnée pour la navigation entre les pages-->
-            <li><a href="../index.html">Accueil</a></li>
-            <li><a href="../html/loisirs.html">Tourisme et Loisirs</a></li>
-            <li><a href="../html/histoire.html">Histoire</a></li>
-            <li><a href="php/contact.php">Contact</a></li>
+            <li><a href="../index.php">Accueil</a></li>
+            <li><a href="loisirs.php">Tourisme et Loisirs</a></li>
+            <li><a href="histoire.php">Histoire</a></li>
+            <li><a href="contact.php">Contact</a></li>
         </ol>
     </nav>
     <main>
@@ -43,28 +43,28 @@
         <h2>D'autres produits locaux d'Angoulême :</h2>
         <section class="container"><!--Ici on liste les autres produits disponibles avec des liens pour accéder aux produits-->
             <article>
-                <a href="cartepostale.html">
+                <a href="cartepostale.php">
                     <img src="../images/boutique/cartepostale.png" alt="Carte postale d'Angoulême">
                     <p>Carte postale d'Angoulême</p>
                 </a>
                 <h3>5€</h3>
             </article>
             <article>
-                <a href="magnet.html">
+                <a href="magnet.php">
                     <img src="../images/boutique/magnet.png" alt="Magnet d'Angoulême">
                     <p>Magnet d'Angoulême</p>
                 </a>
                 <h3>3,50€</h3>
             </article>
             <article>
-                <a href="bracelet.html">
+                <a href="bracelet.php">
                     <img src="../images/boutique/bracelet.png" alt="Bracelet d'Angoulême">
                     <p>Bracelet d'Angoulême</p>
                 </a>
                 <h3>50€</h3>
             </article>
             <article>
-                <a href="tasse.html">
+                <a href="tasse.php">
                     <img src="../images/boutique/tasse.png" alt="Tasse d'Angoulême">
                     <p>Tasse d'Angoulême</p>
                 </a>
@@ -115,8 +115,8 @@
         <div class="footer-droite">
             <ul class="infos1">
                 <li><p>Téléphone :</p><p>05 45 38 92 89</p></li>
-                <li><a href="php/contact.php" class="contact1">Nous contacter</a></li>
-                <li><a href="politiquedeconfidentialite.html" class="lien">Politique de confidentialité</a></li>
+                <li><a href="contact.php" class="contact1">Nous contacter</a></li>
+                <li><a href="politiquedeconfidentialite.php" class="lien">Politique de confidentialité</a></li>
             </ul>
         </div>
     </footer>

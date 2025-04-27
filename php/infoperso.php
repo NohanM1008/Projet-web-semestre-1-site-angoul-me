@@ -12,10 +12,10 @@ session_start();
 </head>
 <body>
     <header>
-        <a href="../index.html"><img src="../images/logo.png" alt="Angoulême Logo"></a>
+        <a href="../index.php"><img src="../images/logo.png" alt="Angoulême Logo"></a>
 
         <?php if (isset($_SESSION['id'])): ?>
-            <a href="profil.php" class="btn-connexion">Mon profil</a>
+            <a href="infoperso.php" class="btn-connexion">Mon profil</a>
         <?php else: ?>
             <a href="connexion.php" class="btn-connexion">Se connecter</a>
         <?php endif; ?>
@@ -25,10 +25,10 @@ session_start();
 
     <nav>
         <ol>
-            <li><a href="../index.html">Accueil</a></li>
-            <li><a href="../html/loisirs.html">Tourisme et loisirs</a></li>
-            <li><a href="../html/histoire.html">Histoire</a></li>
-            <li><a href="../contact.php">Contact</a></li>
+            <li><a href="../index.php">Accueil</a></li>
+            <li><a href="loisirs.php">Tourisme et loisirs</a></li>
+            <li><a href="histoire.php">Histoire</a></li>
+            <li><a href="contact.php">Contact</a></li>
         </ol>
     </nav>
 </body>
@@ -93,7 +93,7 @@ session_start();
             <ul class="infos1">
                 <li><p>Téléphone :</p><p>05 45 38 92 89</p></li>
                 <li><a href="contact.php" class="contact1">Nous contacter</a></li>
-                <li><a href="../html/politiquedeconfidentialite.html" class="lien">Politique de confidentialité</a></li>
+                <li><a href="politiquedeconfidentialite.php" class="lien">Politique de confidentialité</a></li>
             </ul>
         </div>
     </footer>
