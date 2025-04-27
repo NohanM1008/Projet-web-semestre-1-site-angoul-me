@@ -35,10 +35,10 @@ $dataname = 'projet'; // Nom de la base de donnée
 try {
     $pdo = new PDO("mysql:host=$servername;dbname=$dataname", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-    // Préparation de la requête SQL pour insérer les données dans la table "contacts"
-    $stmt = $pdo->prepare("INSERT INTO contacts (genre, nom, prenom, email, telephone, objet, precision, description) 
-                           VALUES (:genre, :nom, :prenom, :email, :telephone, :objet, :precision, :description)");
+    
+    // Préparation de la requête SQL pour insérer les données dans la table "contact"
+    $stmt = $pdo->prepare("INSERT INTO contact (genre, nom, prenom, mail, telephone, objet, precision_demande, message) 
+                            VALUES (:genre, :nom, :prenom, :email, :telephone, :objet, :precision, :description)");
 
     // Lier les paramètres à la requête préparée
     $stmt->bindParam(':genre', $genre);

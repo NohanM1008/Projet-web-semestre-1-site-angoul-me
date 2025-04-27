@@ -21,7 +21,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $identifiant = nettoyer($_POST['identifiant']);
     $mdp = nettoyer($_POST['mdp']);
     $mdp2 = nettoyer($_POST['mdp2']);
-    $date_naissance = isset($_POST['date_naissance']) ? nettoyer($_POST['date_naissance']) : null;
+    $date_naissance = htmlspecialchars($_POST['date_naissance'] ?? null);
+
 
     $erreurs = [];
 

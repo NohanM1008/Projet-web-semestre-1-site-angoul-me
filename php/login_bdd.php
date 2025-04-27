@@ -7,7 +7,6 @@ $dataname = 'projet'; // Nom de la base de donnée
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dataname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo 'Connexion réussie';
 }
 // En cas d'erreur (exception)
 catch (Exception $e) {
