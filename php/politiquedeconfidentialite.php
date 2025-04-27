@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html> <!-- Déclare le type de document HTML (ici HTML5) -->
 <html lang="fr"> <!-- La langue de la page est le français -->
     <head>  <!-- La balise head contient des informations non visibles sur la page -->

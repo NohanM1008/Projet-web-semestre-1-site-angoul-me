@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="fr"> <!-- Je commence la page html en définissant le langage (ici français)-->
     <head>  <!-- La balise head englobe tout ce qui n'apparaîtra pas dans notre page Web-->
