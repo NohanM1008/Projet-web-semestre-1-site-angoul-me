@@ -69,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <head>
         <meta charset="UTF-8">
         <title>Création de compte</title>
-        <link rel="stylesheet" href="style_message.css">
+        <link rel="stylesheet" href="../css/style_message.css">
     </head>
     <body>
 
@@ -77,7 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <?php if ($success): ?>
             <div class="success">
                 <h2>Compte créé avec succès !</h2>
-                <p>Bienvenue, <?= htmlspecialchars($prenom) ?> <?= htmlspecialchars($nom) ?> (<?= htmlspecialchars($identifiant) ?>)</p>
+                <p>Bienvenue, <?= $prenom ?> <?= $nom ?> (<?= $identifiant ?>)</p>
                 <a href="connexion.php">Se connecter</a>
             </div>
             <?php else: ?>
