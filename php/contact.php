@@ -51,11 +51,11 @@ include 'header.php';
                         </div>
                         <select id="objet" name="objet" class="grossir"> <!-- Liste déroulante pour sélectionner l'objet du message -->
                             <option value="0">- Séléctionner -</option>
-                            <option value="loge">Question sur le logement</option> <!-- Option pour "Logement" -->
-                            <option value="prop">Question sur la propreté de la ville</option> <!-- Option pour "Propreté" -->
-                            <option value="muni">Prendre rendez-vous avec municipalité</option> <!-- Option pour "Rendez-vous municipalité" -->
-                            <option value="empl">Demande d'emploi</option> <!-- Option pour "Demande d'emploi" -->
-                            <option value="autr">Autres demandes (à préciser)</option> <!-- Option pour "Autres demandes" -->
+                            <option value="logement">Question sur le logement</option> <!-- Option pour "Logement" -->
+                            <option value="propreté">Question sur la propreté de la ville</option> <!-- Option pour "Propreté" -->
+                            <option value="municipalité">Prendre rendez-vous avec municipalité</option> <!-- Option pour "Rendez-vous municipalité" -->
+                            <option value="emploi">Demande d'emploi</option> <!-- Option pour "Demande d'emploi" -->
+                            <option value="autre">Autres demandes (à préciser)</option> <!-- Option pour "Autres demandes" -->
                         </select>
                         <br><br>
                         <div class="active">
