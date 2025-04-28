@@ -1,9 +1,35 @@
 <?php
 session_start();
-// On permet la connexion à la base de données
+
+// Vérifie si l'utilisateur est déjà connecté
+if (!isset($_SESSION['user_id']) && isset($_COOKIE['session_user'])) {
+    try {
+        // Rechercher l'utilisateur à partir du cookie
+        $stmt = $conn->prepare("SELECT * FROM utilisateurs WHERE identifiant = :identifiant");
+        $stmt->execute([
+            'identifiant' => htmlspecialchars($_COOKIE['session_user'])
+        ]);
+
+        $utilisateur = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($utilisateur) {
+            // Reconnecter automatiquement
+            $_SESSION['user_id'] = $utilisateur['id'];
+            $_SESSION['username'] = $utilisateur['identifiant'];
+        } else {
+            // Cookie invalide => supprimer le cookie
+            setcookie('session_user', '', time() - 3600, "/");
+        }
+    } catch (Exception $e) {
+        // En cas d'erreur, on supprime aussi le cookie
+        setcookie('session_user', '', time() - 3600, "/");
+    }
+}
+
+// Connexion à la base de données
 require_once 'login_bdd.php';
 
-// On vérifie que la requête vient bien du formulaire
+// Vérifie que la requête vient du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Fonction pour éviter les failles XSS
@@ -11,13 +37,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         return htmlspecialchars(trim($donnee));
     }
 
-    // On récupère et on nettoie les données du formulaire
+    // Récupération et nettoyage des données
     $identifiant = nettoyer($_POST['identifiant'] ?? '');
     $mdp = nettoyer($_POST['mdp'] ?? '');
 
     $erreurs = [];
 
-    // Vérification des champs
+    // Vérifications des champs
     if (empty($identifiant)) {
         $erreurs[] = "Veuillez entrer votre identifiant ou e-mail.";
     }
@@ -29,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // S'il n'y a pas d'erreurs
     if (empty($erreurs)) {
         try {
-            // Recherche dans la base de données par identifiant OU mail
+            // Recherche utilisateur par identifiant ou mail
             $stmt = $conn->prepare("SELECT * FROM utilisateurs WHERE mail = :identifiant OR identifiant = :identifiant");
             $stmt->execute([
                 'identifiant' => $identifiant
@@ -37,12 +63,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             $utilisateur = $stmt->fetch(PDO::FETCH_ASSOC);
 
-            // Vérification du mot de passe
-            if ($utilisateur && $mdp == $utilisateur['mdp']) { // Comparaison directe sans hash
+            // Vérification du mot de passe (sans hash, comparaison directe)
+            if ($utilisateur && $mdp == $utilisateur['mdp']) {
                 // Connexion réussie, gestion de la session
-                $_SESSION['user_id'] = $utilisateur['id']; // Enregistrer l'ID de l'utilisateur dans la session
-                $_SESSION['username'] = $utilisateur['identifiant']; // Enregistrer l'identifiant
-                header("Location: ../index.php"); // Redirige vers le tableau de bord ou la page protégée
+                $_SESSION['user_id'] = $utilisateur['id'];
+                $_SESSION['username'] = $utilisateur['identifiant'];
+
+                // Création d'un cookie de session personnalisé
+                setcookie('session_user', $utilisateur['identifiant'], time() + 3600, "/"); // 1h de durée, disponible sur tout le site
+
+                header("Location: ../index.php");
                 exit();
             } else {
                 $erreurs[] = "Identifiant ou mot de passe incorrect.";
@@ -52,7 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    // Affichage des erreurs
+    // Affichage des erreurs s'il y en a
     if (!empty($erreurs)) {
         echo "<h2>Erreurs :</h2><ul>";
         foreach ($erreurs as $e) {
@@ -62,7 +92,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<a href='../php/connexion.php'>Retour à la page de connexion</a>";
     }
 } else {
-    // Redirige si la méthode n'est pas POST
+    // Si la méthode n'est pas POST, redirige
     header("Location: ../php/connexion.php");
     exit();
 }
