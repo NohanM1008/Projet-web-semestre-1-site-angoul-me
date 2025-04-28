@@ -10,9 +10,9 @@ include 'header.php';
                     <br>
                     <label>Genre</label> <!-- Label pour le choix du genre -->
                     <div class="alignement"> <!-- L'utilisation de la balis div pour organiser les boutons radio sur une même ligne -->
-                        <input type="radio" name="genre" id="mme" class="grossir"> <!-- Bouton radio pour "Madame" -->
+                        <input type="radio" name="genre" id="mme" value="Femme" class="grossir"> <!-- Bouton radio pour "Madame" -->
                         <label for="mme">Madame</label> <!-- Label pour le bouton radio "Madame" -->
-                        <input type="radio" name="genre" id="mr" class="grossir"> <!-- Bouton radio pour "Monsieur" -->
+                        <input type="radio" name="genre" id="mr" value="Homme" class="grossir"> <!-- Bouton radio pour "Monsieur" -->
                         <label for="mr">Monsieur</label> <!-- Label pour le bouton radio "Monsieur" -->
                     </div>
                     <br><br> <!--Les balises br permettent de revenir à la ligne-->
