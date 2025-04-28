@@ -53,7 +53,7 @@ include 'header.php';
                             <option value="0">- Séléctionner -</option>
                             <option value="Question sur le logement">Question sur le logement</option> <!-- Option pour "Logement" -->
                             <option value="Question sur la propreté de la ville">Question sur la propreté de la ville</option> <!-- Option pour "Propreté" -->
-                            <option value="Prendre rendez-vous avec municipalité"></option> <!-- Option pour "Rendez-vous municipalité" -->
+                            <option value="Prendre rendez-vous avec municipalité">Prendre rendez-vous avec municipalité</option> <!-- Option pour "Rendez-vous municipalité" -->
                             <option value="Demande d'emploi">Demande d'emploi</option> <!-- Option pour "Demande d'emploi" -->
                             <option value="Autres demandes (à préciser)">Autres demandes (à préciser)</option> <!-- Option pour "Autres demandes" -->
                         </select>
