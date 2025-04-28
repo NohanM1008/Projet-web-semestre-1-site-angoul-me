@@ -15,11 +15,11 @@ include 'header.php';
                         </div>
                         <div class="alignement"> <!-- Conteneur pour organiser les boutons radio -->
                             <div class="madame">
-                                <input type="radio" name="genre" id="mme" value="Femme" class="grossir"> <!-- Bouton radio pour "Madame" -->
+                                <input type="radio" name="genre" id="mme" class="grossir"> <!-- Bouton radio pour "Madame" -->
                                 <label for="mme">Madame</label> <!-- Label associé au bouton radio -->
                             </div>
                             <div class="monsieur">
-                                <input type="radio" name="genre" id="mr" value="Homme" class="grossir"> <!-- Bouton radio pour "Monsieur" -->
+                                <input type="radio" name="genre" id="mr" class="grossir"> <!-- Bouton radio pour "Monsieur" -->
                                 <label for="mr">Monsieur</label> <!-- Label associé au bouton radio -->
                             </div>
                         </div>
@@ -51,17 +51,17 @@ include 'header.php';
                         </div>
                         <select id="objet" name="objet" class="grossir"> <!-- Liste déroulante pour sélectionner l'objet du message -->
                             <option value="0">- Séléctionner -</option>
-                            <option value="logement">Question sur le logement</option> <!-- Option pour "Logement" -->
-                            <option value="propreté">Question sur la propreté de la ville</option> <!-- Option pour "Propreté" -->
-                            <option value="municipalité">Prendre rendez-vous avec municipalité</option> <!-- Option pour "Rendez-vous municipalité" -->
-                            <option value="emploi">Demande d'emploi</option> <!-- Option pour "Demande d'emploi" -->
-                            <option value="autre">Autres demandes (à préciser)</option> <!-- Option pour "Autres demandes" -->
+                            <option value="Question sur le logement">Question sur le logement</option> <!-- Option pour "Logement" -->
+                            <option value="Question sur la propreté de la ville">Question sur la propreté de la ville</option> <!-- Option pour "Propreté" -->
+                            <option value="Prendre rendez-vous avec municipalité"></option> <!-- Option pour "Rendez-vous municipalité" -->
+                            <option value="Demande d'emploi">Demande d'emploi</option> <!-- Option pour "Demande d'emploi" -->
+                            <option value="Autres demandes (à préciser)">Autres demandes (à préciser)</option> <!-- Option pour "Autres demandes" -->
                         </select>
                         <br><br>
                         <div class="active">
-                            <label for="précision">Si autres demandes, préciser:</label> <!-- Label pour le champ "Précision" -->
+                            <label for="precision_demande">Si autres demandes, préciser:</label> <!-- Label pour le champ "Précision" -->
                         </div>
-                        <input type="text" name="précision" id="précision" class="grossir"> <!-- Champ de saisie pour préciser l'objet -->
+                        <input type="text" name="precision_demande" id="precision_demande" class="grossir"> <!-- Champ de saisie pour préciser l'objet -->
                         <br><br>
                         <div class="active">
                             <label for="description">Message :</label> <br> <!-- Label pour le champ "Message" -->
