@@ -15,11 +15,11 @@ include 'header.php';
                         </div>
                         <div class="alignement"> <!-- Conteneur pour organiser les boutons radio -->
                             <div class="madame">
-                                <input type="radio" name="genre" id="mme" class="grossir"> <!-- Bouton radio pour "Madame" -->
+                                <input type="radio" name="genre" id="mme" value="Femme" class="grossir"> <!-- Bouton radio pour "Madame" -->
                                 <label for="mme">Madame</label> <!-- Label associé au bouton radio -->
                             </div>
                             <div class="monsieur">
-                                <input type="radio" name="genre" id="mr" class="grossir"> <!-- Bouton radio pour "Monsieur" -->
+                                <input type="radio" name="genre" id="mr" value="Homme" class="grossir"> <!-- Bouton radio pour "Monsieur" -->
                                 <label for="mr">Monsieur</label> <!-- Label associé au bouton radio -->
                             </div>
                         </div>
