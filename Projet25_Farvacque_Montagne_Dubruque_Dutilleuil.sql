@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `Projet25_Farvacque_Montagne_Dubruque_Dutilleuil`
+-- Base de données : `Projet25_Farvacque_Montagne_Dubruque_Dutilleul`
 --
 
 -- --------------------------------------------------------
