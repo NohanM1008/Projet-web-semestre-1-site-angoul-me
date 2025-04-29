@@ -1,5 +1,12 @@
 <?php
 session_start();
+
+// Vérifie s'il y a un cookie 'session_user' et que la session 'id' n'est pas encore définie
+if (!isset($_SESSION['id']) && isset($_COOKIE['session_user'])) {
+    // Restauration de la session à partir du cookie
+    $_SESSION['id'] = $_COOKIE['session_user'];
+    // Optionnel : tu peux charger d'autres infos de l'utilisateur ici depuis la base
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr"> <!-- Je commence pas page html en définissant le langage (ici français)-->
@@ -11,18 +18,17 @@ session_start();
         <link rel="stylesheet" href="../css/footer.css">
         <link rel="stylesheet" href="../css/header.css">
     </head>
-    <body> <!-- La balise body anglobe tout ce qui apparaîtra dans notre page Web-->
     <header>
-        <a href="../index.php"><img src="../images/logo.png" alt="Angoulême Logo"></a>
+    <a href="../index.php"><img src="../images/logo.png" alt="Angoulême Logo"></a>
 
-        <?php if (isset($_SESSION['id'])): ?>
-            <a href="infoperso.php" class="btn-connexion">Mon profil</a>
-        <?php else: ?>
-            <a href="connexion.php" class="btn-connexion">Se connecter</a>
-        <?php endif; ?>
+    <?php if (isset($_SESSION['id'])): ?>
+        <a href="infoperso.php" class="btn-connexion">Mon profil</a>
+    <?php else: ?>
+        <a href="connexion.php" class="btn-connexion">Se connecter</a>
+    <?php endif; ?>
 
-        <h1>Ville d'Angoulême</h1>
-    </header>
+    <h1>Ville d'Angoulême</h1>
+</header>
         <nav>
             <ol><!--Liste non ordonnée pour la navigation entre les pages-->
                 <li><a href="../index.php">Accueil</a></li>
