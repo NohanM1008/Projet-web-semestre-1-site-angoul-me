@@ -1,56 +1,75 @@
-/* Style général du container */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 40px auto;
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
+:root {
+    --background-color3: lightsteelblue;
+    --background-color4: gainsboro;
+    --background-color10: #9F93FF;
+    --button-background-color: #007BFF;
+    --button-text-color: #ffffff;
+    --text-color: #2c3e50;
+    --border-color: #cccccc;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color3: #2F2F2F;
+        --background-color4: #313338;
+        --background-color10: #1F1F1F;
+        --button-background-color: #d4edda;
+        --button-text-color: #000000;
+        --text-color: #ffffff;
+        --border-color: #444444;
+    }
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color4);
+    color: var(--text-color);
+}
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    background-color: var(--background-color3);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Titre de la page */
-.container h2 {
+
+h2 {
     text-align: center;
+    font-size: 1.6em;
     margin-bottom: 20px;
-    color: #333;
-    font-size: 2em;
+    color: var(--text-color);
 }
 
-/* Style du tableau */
-table {
-    width: 100%;
-    border-collapse: collapse;
+.profil-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
     margin-top: 20px;
+    width: 100%;
 }
 
-/* Entêtes du tableau */
-table thead {
-    background-color: #007BFF;
-    color: white;
-}
-
-/* Chaque cellule */
-table th, table td {
+.profil {
+    background-color: var(--background-color3);
+    border: 1px solid var(--background-color10);
     padding: 15px;
+    border-radius: 8px;
     text-align: center;
-    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+    color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
 }
 
-/* Alternance de couleurs sur les lignes */
-table tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
+.profil:hover {
+    transform: scale(1.05);
 }
 
-/* Lignes hover */
-table tbody tr:hover {
-    background-color: #e0f7fa;
+@media (prefers-color-scheme: dark) {
+    .profil {
+        color: #e1e1e1;
+    }
 }
 
-/* Texte du paragraphe si aucun utilisateur */
-.container p {
-    text-align: center;
-    color: #888;
-    margin-top: 30px;
-    font-size: 1.2em;
-}

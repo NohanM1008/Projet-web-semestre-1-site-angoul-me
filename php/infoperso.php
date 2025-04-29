@@ -1,72 +1,54 @@
 <?php
 session_start();
-?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <title>Ville d'Angoulême</title>
-    <link rel="icon" href="../images/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/header.css"> 
 
-</head>
+if (!isset($_SESSION['id'])) {
+    header("Location: connexion.php");
+    exit;
+}
+$host = 'localhost';
+$dbname = 'projet';
+$username = 'root';
+$password = 'root';
+
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
+} catch (PDOException $e) {
+    die("Erreur de connexion : " . $e->getMessage());
+}
+$sql = "SELECT id, genre, nom, prenom, date_naissance, mail, identifiant 
+        FROM utilisateurs 
+        WHERE id = :id";
+
+$stmt = $pdo->prepare($sql);
+$stmt->bindParam(':id', $_SESSION['id'], PDO::PARAM_INT);
+$stmt->execute();
+$utilisateur = $stmt->fetch(PDO::FETCH_ASSOC);
+
+$pageTitle = "Ville d'Angoulême";
+$css = "infoperso"; 
+include 'header.php';
+?>
+
 <body>
-    <header>
-        <a href="../index.php"><img src="../images/logo.png" alt="Angoulême Logo"></a>
+<main class="encadre">
+    <h2>Mon profil</h2>
 
-        <?php if (isset($_SESSION['id'])): ?>
-            <a href="infoperso.php" class="btn-connexion">Mon profil</a>
-        <?php else: ?>
-            <a href="connexion.php" class="btn-connexion">Se connecter</a>
-        <?php endif; ?>
+    <?php if ($utilisateur): ?>
+        <div class="profil">
+            <div class="profil"><strong>ID :</strong> <?= htmlspecialchars($utilisateur['id']) ?></div>
+            <div class="profil"><strong>Genre :</strong> <?= htmlspecialchars($utilisateur['genre']) ?></div>
+            <div class="profil"><strong>Nom :</strong> <?= htmlspecialchars($utilisateur['nom']) ?></div>
+            <div class="profil"><strong>Prénom :</strong> <?= htmlspecialchars($utilisateur['prenom']) ?></div>
+            <div class="profil"><strong>Date de naissance :</strong> <?= htmlspecialchars($utilisateur['date_naissance']) ?></div>
+            <div class="profil"><strong>Email :</strong> <?= htmlspecialchars($utilisateur['mail']) ?></div>
+            <div class="profil"><strong>Identifiant :</strong> <?= htmlspecialchars($utilisateur['identifiant']) ?></div>
+        </div>
+    <?php else: ?>
+        <p>Utilisateur introuvable.</p>
+    <?php endif; ?>
+</main>
 
-        <h1>Ville d'Angoulême</h1>
-    </header>
 
-    <nav>
-        <ol>
-            <li><a href="../index.php">Accueil</a></li>
-            <li><a href="loisirs.php">Tourisme et loisirs</a></li>
-            <li><a href="histoire.php">Histoire</a></li>
-            <li><a href="contact.php">Contact</a></li>
-        </ol>
-    </nav>
+<?php include 'footer.php'; ?>
 </body>
-<div class="container">
-        <h2>Liste des Utilisateurs</h2>
-
-        <?php if (count($utilisateurs) > 0): ?>
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Genre</th>
-                        <th>Nom</th>
-                        <th>Prénom</th>
-                        <th>Date de naissance</th>
-                        <th>Email</th>
-                        <th>Identifiant</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach ($utilisateurs as $utilisateur): ?>
-                        <tr>
-                            <td><?= htmlspecialchars($utilisateur['id']) ?></td>
-                            <td><?= htmlspecialchars($utilisateur['genre']) ?></td>
-                            <td><?= htmlspecialchars($utilisateur['nom']) ?></td>
-                            <td><?= htmlspecialchars($utilisateur['prenom']) ?></td>
-                            <td><?= htmlspecialchars($utilisateur['date_naissance']) ?></td>
-                            <td><?= htmlspecialchars($utilisateur['mail']) ?></td>
-                            <td><?= htmlspecialchars($utilisateur['identifiant']) ?></td>
-                        </tr>
-                    <?php endforeach; ?>
-                </tbody>
-            </table>
-        <?php else: ?>
-            <p>Aucun utilisateur trouvé.</p>
-        <?php endif; ?>
-    </div>
-
-<?php
-include 'footer.php';
-?>
+</html>
