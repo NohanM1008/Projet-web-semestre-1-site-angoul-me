@@ -28,11 +28,9 @@ $utilisateurs = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <table>
                 <thead>
                     <tr>
-                        <th>ID</th>
                         <th>Genre</th>
                         <th>Nom</th>
                         <th>Prénom</th>
-
                         <th>Email</th>
 
                     </tr>
@@ -40,7 +38,6 @@ $utilisateurs = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <tbody>
                     <?php foreach ($utilisateurs as $utilisateur): ?>
                         <tr>
-                            <td><?= htmlspecialchars($utilisateur['id']) ?></td>
                             <td><?= htmlspecialchars($utilisateur['genre']) ?></td>
                             <td><?= htmlspecialchars($utilisateur['nom']) ?></td>
                             <td><?= htmlspecialchars($utilisateur['prenom']) ?></td>
