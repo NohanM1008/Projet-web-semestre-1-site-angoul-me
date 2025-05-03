@@ -16,7 +16,7 @@ session_start();
     <a href="../index.php"><img src="images/logo.png" alt="Angoulême Logo"></a>
 
     <?php if (isset($_SESSION['id'])): ?>
-        <a href="php/infoperso.php" class="btn-connexion">Mon profil</a>
+        <a href="php/infoperso.php" class="btn-connexion">Membres</a>
     <?php else: ?>
         <a href="php/connexion.php" class="btn-connexion">Se connecter</a>
     <?php endif; ?>

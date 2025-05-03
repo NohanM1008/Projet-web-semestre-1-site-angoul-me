@@ -22,7 +22,7 @@ if (!isset($_SESSION['id']) && isset($_COOKIE['session_user'])) {
     <a href="../index.php"><img src="../images/logo.png" alt="Angoulême Logo"></a>
 
     <?php if (isset($_SESSION['id'])): ?>
-        <a href="infoperso.php" class="btn-connexion">Mon profil</a>
+        <a href="infoperso.php" class="btn-connexion">Membres</a>
     <?php else: ?>
         <a href="connexion.php" class="btn-connexion">Se connecter</a>
     <?php endif; ?>
