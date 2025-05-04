@@ -70,12 +70,5 @@ table tr:nth-child(even) {
     background-color: var(--background-color4);
 }
 
-table tr:hover {
-    background-color: var(--background-color3);
-}
-p {
-    text-align: center;
-    font-size: 1.1rem;
-    color: var(--text-color);
-}
+
 
