@@ -23,7 +23,7 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: var(--background-color3);
-    color: var(--text-color);
+    color: var(--button-background-color4);
     margin: 0;
     padding: 0;
 }
