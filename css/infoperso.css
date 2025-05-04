@@ -20,7 +20,6 @@
     }
 }
 
-/* Base */
 body {
     font-family: 'Arial', sans-serif;
     background-color: var(--background-color3);
@@ -29,7 +28,6 @@ body {
     padding: 0;
 }
 
-/* Titre */
 h2 {
     text-align: center;
     font-size: 2rem;
@@ -37,7 +35,6 @@ h2 {
     color: var(--text-color);
 }
 
-/* Conteneur principal */
 .container {
     max-width: 1000px;
     margin: 20px auto;
@@ -47,7 +44,6 @@ h2 {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Tableau */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -78,14 +74,12 @@ table tr:hover {
     background-color: var(--background-color3);
 }
 
-/* Message aucun utilisateur */
 p {
     text-align: center;
     font-size: 1.1rem;
     color: var(--text-color);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     table th, table td {
         padding: 10px;
