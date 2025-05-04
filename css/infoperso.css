@@ -62,7 +62,7 @@ table th, table td {
 
 table th {
     background-color: var(--background-color10);
-    color: white;
+    color: var(--background-color3);
     font-weight: bold;
 }
 
